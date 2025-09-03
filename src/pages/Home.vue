@@ -13,7 +13,7 @@
   <div class="home bg-white overflow-hidden font-['Noto_Sans_TC']">
     <S1 />
     <S2 />
-    <Order />
+    <!-- <Order /> -->
   </div>
 </template>
 
