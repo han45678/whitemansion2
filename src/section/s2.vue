@@ -13,10 +13,10 @@
 
 .s2 {
   width: 100%;
-  min-height: 100vh;
-  max-height: size(1093);
   img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
