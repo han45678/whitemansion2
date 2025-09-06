@@ -31,7 +31,6 @@ import 'swiper/css/pagination';
         />
         <div class="pic">
             <Swiper
-                :spaceBetween="20"
                 :slidesPerView="1"
                 :loop="true"
                 :autoplay="true"

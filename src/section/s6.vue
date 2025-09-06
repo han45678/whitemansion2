@@ -10,7 +10,6 @@ const order = ref(0);
 
 <template>
     <section class="s6 text-[#000] font-['Noto_Sans_TC']">
-        
         <div class="item">
             <div class="title">
                 <h3 class="text-[#E1554B]">國際團隊</h3>
@@ -44,245 +43,263 @@ const order = ref(0);
 
             <!-- 文字 -->
             <transition name="fade">
-              <div class="text" v-if="order === 0">
-                  <div class="item_content">
-                      <h4>全案規劃｜U.tech技聯組工程顧問</h4>
-                      <p>
-                          以品質為核心，兼顧市場需求的全能建築工程顧問團隊。
-                          跳脫傳統設計框架，轉化跨國合作經驗為在地觀點，
-                          客觀帶入國際專業標準，讓建築紮根生活。
-                      </p>
-                  </div>
-                  <div class="item_content">
-                      <h4>建築設計｜蔡詠爲建築師事務所</h4>
-                      <p>
-                          認為家是歸來與出發的場域，能沉靜地洗滌心靈；
-                          以人為本位的設計根基、對人性的體貼與深思恆久不變，
-                          致力尋找台灣的建築語彙，以建築服務人居。
-                      </p>
-                  </div>
-              </div>
+                <div
+                    class="text"
+                    v-if="order === 0"
+                >
+                    <div class="item_content">
+                        <h4>全案規劃｜U.tech技聯組工程顧問</h4>
+                        <p>
+                            以品質為核心，兼顧市場需求的全能建築工程顧問團隊。
+                            跳脫傳統設計框架，轉化跨國合作經驗為在地觀點，
+                            客觀帶入國際專業標準，讓建築紮根生活。
+                        </p>
+                    </div>
+                    <div class="item_content">
+                        <h4>建築設計｜蔡詠爲建築師事務所</h4>
+                        <p>
+                            認為家是歸來與出發的場域，能沉靜地洗滌心靈；
+                            以人為本位的設計根基、對人性的體貼與深思恆久不變，
+                            致力尋找台灣的建築語彙，以建築服務人居。
+                        </p>
+                    </div>
+                </div>
             </transition>
             <transition name="fade">
-              <div class="text" v-if="order === 1">
-                  <div class="item_content no_line">
-                      <h4>公設規劃｜三向＋先奕設計團隊</h4>
-                      <p>
-                          尊重在地場域文化的特質，將空間設計視為與環境共生的三維度構型；擅長引入不同型態的在地藝術創作，將當代設計與傳統思考完美揉合。
-                      </p>
-                  </div>
-              </div>
+                <div
+                    class="text"
+                    v-if="order === 1"
+                >
+                    <div class="item_content no_line">
+                        <h4>公設規劃｜三向＋先奕設計團隊</h4>
+                        <p>
+                            尊重在地場域文化的特質，將空間設計視為與環境共生的三維度構型；擅長引入不同型態的在地藝術創作，將當代設計與傳統思考完美揉合。
+                        </p>
+                    </div>
+                </div>
             </transition>
             <transition name="fade">
-              <div class="text" v-if="order === 2">
-                  <div class="item_content no_line">
-                      <h4>景觀美學｜三生規劃</h4>
-                      <p>
-                          強調景觀設計除了美感之外，必須兼顧使用者的開放與適切；期待利用景觀美學創造生態、生活與生產的環境永續性，創造地方識別的特殊意象。
-                      </p>
-                  </div>
-              </div>
+                <div
+                    class="text"
+                    v-if="order === 2"
+                >
+                    <div class="item_content no_line">
+                        <h4>景觀美學｜三生規劃</h4>
+                        <p>
+                            強調景觀設計除了美感之外，必須兼顧使用者的開放與適切；期待利用景觀美學創造生態、生活與生產的環境永續性，創造地方識別的特殊意象。
+                        </p>
+                    </div>
+                </div>
             </transition>
             <transition name="fade">
-              <div class="text" v-if="order === 3">
-                  <div class="item_content no_line">
-                      <h4>燈光表情｜偶得設計</h4>
-                      <p>
-                          用看不見的光，看見世界的美好！囊括國內外各大去計獎項的偶得設計，體貼城市整體光環境，與周遭既有建築溫柔相伴，並兼顧主體的自明性與辨識度。
-                      </p>
-                  </div>
-              </div>
+                <div
+                    class="text"
+                    v-if="order === 3"
+                >
+                    <div class="item_content no_line">
+                        <h4>燈光表情｜偶得設計</h4>
+                        <p>
+                            用看不見的光，看見世界的美好！囊括國內外各大去計獎項的偶得設計，體貼城市整體光環境，與周遭既有建築溫柔相伴，並兼顧主體的自明性與辨識度。
+                        </p>
+                    </div>
+                </div>
             </transition>
 
             <!-- 圖片 -->
             <transition name="fade">
-              <div class="pic" v-if="order === 0">
-                  <Swiper
-                      :spaceBetween="20"
-                      :slidesPerView="1"
-                      :loop="true"
-                      :autoplay="true"
-                      :modules="[Pagination, Autoplay]"
-                      :pagination="{ clickable: true }"
-                  >
-                      <SwiperSlide class="relative">
-                          <img
-                              src="./s6/1-1.webp"
-                              alt="pic"
-                          />
-                          <p class="absolute text-[#fff]">
-                              新化系統交流道(國3X國8)
-                          </p>
-                      </SwiperSlide>
-                      <SwiperSlide class="relative">
-                          <img
-                              src="./s6/1-2.webp"
-                              alt="pic"
-                          />
-                          <p class="absolute text-[#fff]">新港社大道</p>
-                      </SwiperSlide>
-                      <SwiperSlide class="relative">
-                          <img
-                              src="./s6/1-3.webp"
-                              alt="pic"
-                          />
-                          <p class="absolute text-[#fff]">北外環快速道路</p>
-                      </SwiperSlide>
-                      <SwiperSlide class="relative">
-                          <img
-                              src="./s6/1-4.webp"
-                              alt="pic"
-                          />
-                          <p class="absolute text-[#fff]">
-                              衛福部署立醫院新化分院
-                          </p>
-                      </SwiperSlide>
-                      <SwiperSlide class="relative">
-                          <img
-                              src="./s6/1-5.webp"
-                              alt="pic"
-                          />
-                          <p class="absolute text-[#fff]">
-                              衛福部署立醫院新化分院
-                          </p>
-                      </SwiperSlide>
-                  </Swiper>
-              </div>
+                <div
+                    class="pic"
+                    v-if="order === 0"
+                >
+                    <Swiper
+                        :slidesPerView="1"
+                        :loop="true"
+                        :autoplay="true"
+                        :modules="[Pagination, Autoplay]"
+                        :pagination="{ clickable: true }"
+                    >
+                        <SwiperSlide class="relative">
+                            <img
+                                src="./s6/1-1.webp"
+                                alt="pic"
+                            />
+                            <p class="absolute text-[#fff]">
+                                新化系統交流道(國3X國8)
+                            </p>
+                        </SwiperSlide>
+                        <SwiperSlide class="relative">
+                            <img
+                                src="./s6/1-2.webp"
+                                alt="pic"
+                            />
+                            <p class="absolute text-[#fff]">新港社大道</p>
+                        </SwiperSlide>
+                        <SwiperSlide class="relative">
+                            <img
+                                src="./s6/1-3.webp"
+                                alt="pic"
+                            />
+                            <p class="absolute text-[#fff]">北外環快速道路</p>
+                        </SwiperSlide>
+                        <SwiperSlide class="relative">
+                            <img
+                                src="./s6/1-4.webp"
+                                alt="pic"
+                            />
+                            <p class="absolute text-[#fff]">
+                                衛福部署立醫院新化分院
+                            </p>
+                        </SwiperSlide>
+                        <SwiperSlide class="relative">
+                            <img
+                                src="./s6/1-5.webp"
+                                alt="pic"
+                            />
+                            <p class="absolute text-[#fff]">
+                                衛福部署立醫院新化分院
+                            </p>
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
             </transition>
             <transition name="fade">
-              <div class="pic" v-if="order === 1">
-                  <Swiper
-                      :spaceBetween="20"
-                      :slidesPerView="1"
-                      :loop="true"
-                      :autoplay="true"
-                      :modules="[Pagination, Autoplay]"
-                      :pagination="{ clickable: true }"
-                  >
-                      <SwiperSlide class="relative">
-                          <img
-                              src="./s6/2-1.webp"
-                              alt="pic"
-                          />
-                          <p class="absolute text-[#fff]">
-                              三向＋先奕設計團隊
-                          </p>
-                      </SwiperSlide>
-                      <SwiperSlide class="relative">
-                          <img
-                              src="./s6/2-2.webp"
-                              alt="pic"
-                          />
-                          <p class="absolute text-[#fff]">園山一號院-私宅</p>
-                      </SwiperSlide>
-                      <SwiperSlide class="relative">
-                          <img
-                              src="./s6/2-3.webp"
-                              alt="pic"
-                          />
-                          <p class="absolute text-[#fff]">台北 信義聯勤-私宅</p>
-                      </SwiperSlide>
-                      <SwiperSlide class="relative">
-                          <img
-                              src="./s6/2-4.webp"
-                              alt="pic"
-                          />
-                          <p class="absolute text-[#fff]">
-                              台中 大陸麗格-私宅
-                          </p>
-                      </SwiperSlide>
-                  </Swiper>
-              </div>
+                <div
+                    class="pic"
+                    v-if="order === 1"
+                >
+                    <Swiper
+                        :slidesPerView="1"
+                        :loop="true"
+                        :autoplay="true"
+                        :modules="[Pagination, Autoplay]"
+                        :pagination="{ clickable: true }"
+                    >
+                        <SwiperSlide class="relative">
+                            <img
+                                src="./s6/2-1.webp"
+                                alt="pic"
+                            />
+                            <p class="absolute text-[#fff]">
+                                三向＋先奕設計團隊
+                            </p>
+                        </SwiperSlide>
+                        <SwiperSlide class="relative">
+                            <img
+                                src="./s6/2-2.webp"
+                                alt="pic"
+                            />
+                            <p class="absolute text-[#fff]">園山一號院-私宅</p>
+                        </SwiperSlide>
+                        <SwiperSlide class="relative">
+                            <img
+                                src="./s6/2-3.webp"
+                                alt="pic"
+                            />
+                            <p class="absolute text-[#fff]">
+                                台北 信義聯勤-私宅
+                            </p>
+                        </SwiperSlide>
+                        <SwiperSlide class="relative">
+                            <img
+                                src="./s6/2-4.webp"
+                                alt="pic"
+                            />
+                            <p class="absolute text-[#fff]">
+                                台中 大陸麗格-私宅
+                            </p>
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
             </transition>
             <transition name="fade">
-              <div class="pic" v-if="order === 2">
-                  <Swiper
-                      :spaceBetween="20"
-                      :slidesPerView="1"
-                      :loop="true"
-                      :autoplay="true"
-                      :modules="[Pagination, Autoplay]"
-                      :pagination="{ clickable: true }"
-                  >
-                      <SwiperSlide class="relative">
-                          <img
-                              src="./s6/3-1.webp"
-                              alt="pic"
-                          />
-                          <p class="absolute text-[#fff]">
-                              三生規劃
-                          </p>
-                      </SwiperSlide>
-                      <SwiperSlide class="relative">
-                          <img
-                              src="./s6/3-2.webp"
-                              alt="pic"
-                          />
-                          <p class="absolute text-[#fff]">新化老街</p>
-                      </SwiperSlide>
-                      <SwiperSlide class="relative">
-                          <img
-                              src="./s6/3-3.webp"
-                              alt="pic"
-                          />
-                          <p class="absolute text-[#fff]">新化大目降文化園區</p>
-                      </SwiperSlide>
-                      <SwiperSlide class="relative">
-                          <img
-                              src="./s6/3-4.webp"
-                              alt="pic"
-                          />
-                          <p class="absolute text-[#fff]">
-                              台南市末廣町街屋立面改善
-                          </p>
-                      </SwiperSlide>
-                  </Swiper>
-              </div>
+                <div
+                    class="pic"
+                    v-if="order === 2"
+                >
+                    <Swiper
+                        :slidesPerView="1"
+                        :loop="true"
+                        :autoplay="true"
+                        :modules="[Pagination, Autoplay]"
+                        :pagination="{ clickable: true }"
+                    >
+                        <SwiperSlide class="relative">
+                            <img
+                                src="./s6/3-1.webp"
+                                alt="pic"
+                            />
+                            <p class="absolute text-[#fff]">三生規劃</p>
+                        </SwiperSlide>
+                        <SwiperSlide class="relative">
+                            <img
+                                src="./s6/3-2.webp"
+                                alt="pic"
+                            />
+                            <p class="absolute text-[#fff]">新化老街</p>
+                        </SwiperSlide>
+                        <SwiperSlide class="relative">
+                            <img
+                                src="./s6/3-3.webp"
+                                alt="pic"
+                            />
+                            <p class="absolute text-[#fff]">
+                                新化大目降文化園區
+                            </p>
+                        </SwiperSlide>
+                        <SwiperSlide class="relative">
+                            <img
+                                src="./s6/3-4.webp"
+                                alt="pic"
+                            />
+                            <p class="absolute text-[#fff]">
+                                台南市末廣町街屋立面改善
+                            </p>
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
             </transition>
             <transition name="fade">
-              <div class="pic" v-if="order === 3">
-                  <Swiper
-                      :spaceBetween="20"
-                      :slidesPerView="1"
-                      :loop="true"
-                      :autoplay="true"
-                      :modules="[Pagination, Autoplay]"
-                      :pagination="{ clickable: true }"
-                  >
-                      <SwiperSlide class="relative">
-                          <img
-                              src="./s6/4-1.webp"
-                              alt="pic"
-                          />
-                          <p class="absolute text-[#fff]">
-                              偶得設計
-                          </p>
-                      </SwiperSlide>
-                      <SwiperSlide class="relative">
-                          <img
-                              src="./s6/4-2.webp"
-                              alt="pic"
-                          />
-                          <p class="absolute text-[#fff]">新竹市美術館</p>
-                      </SwiperSlide>
-                      <SwiperSlide class="relative">
-                          <img
-                              src="./s6/4-3.webp"
-                              alt="pic"
-                          />
-                          <p class="absolute text-[#fff]">太子建設 君峰會</p>
-                      </SwiperSlide>
-                      <SwiperSlide class="relative">
-                          <img
-                              src="./s6/4-4.webp"
-                              alt="pic"
-                          />
-                          <p class="absolute text-[#fff]">
-                              惠宇千曦
-                          </p>
-                      </SwiperSlide>
-                  </Swiper>
-              </div>
+                <div
+                    class="pic"
+                    v-if="order === 3"
+                >
+                    <Swiper
+                        :slidesPerView="1"
+                        :loop="true"
+                        :autoplay="true"
+                        :modules="[Pagination, Autoplay]"
+                        :pagination="{ clickable: true }"
+                    >
+                        <SwiperSlide class="relative">
+                            <img
+                                src="./s6/4-1.webp"
+                                alt="pic"
+                            />
+                            <p class="absolute text-[#fff]">偶得設計</p>
+                        </SwiperSlide>
+                        <SwiperSlide class="relative">
+                            <img
+                                src="./s6/4-2.webp"
+                                alt="pic"
+                            />
+                            <p class="absolute text-[#fff]">新竹市美術館</p>
+                        </SwiperSlide>
+                        <SwiperSlide class="relative">
+                            <img
+                                src="./s6/4-3.webp"
+                                alt="pic"
+                            />
+                            <p class="absolute text-[#fff]">太子建設 君峰會</p>
+                        </SwiperSlide>
+                        <SwiperSlide class="relative">
+                            <img
+                                src="./s6/4-4.webp"
+                                alt="pic"
+                            />
+                            <p class="absolute text-[#fff]">惠宇千曦</p>
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
             </transition>
         </div>
     </section>
@@ -309,7 +326,7 @@ const order = ref(0);
     }
     .item {
         display: grid;
-        grid-template-columns: 52% 48%; 
+        grid-template-columns: 52% 48%;
         grid-template-areas:
             'title pic'
             'text pic';
@@ -329,11 +346,10 @@ const order = ref(0);
                 'pic'
                 'text';
             grid-template-rows: unset;
-            
         }
         .title {
             grid-area: title;
-            align-self: start; 
+            align-self: start;
             h3 {
                 font-weight: 700;
                 font-size: size(42);
@@ -419,10 +435,10 @@ const order = ref(0);
                         border-bottom: size-m(1) solid #e1554b;
                         margin-bottom: size-m(15);
                     }
-                    &.no_line{
-                      padding-bottom: 0;
-                      border-bottom: none;
-                      margin-bottom: 0;
+                    &.no_line {
+                        padding-bottom: 0;
+                        border-bottom: none;
+                        margin-bottom: 0;
                     }
                 }
             }

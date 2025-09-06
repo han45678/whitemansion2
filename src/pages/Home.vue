@@ -7,6 +7,7 @@ import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
 import S6 from "@/section/s6.vue"
+import S7 from "@/section/s7.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
@@ -47,6 +48,7 @@ onMounted(() => {
     <S4 />
     <S5 />
     <S6 />
+    <S7 />
     <!-- <Order /> -->
   </div>
 </template>
