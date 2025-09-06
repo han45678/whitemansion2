@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <section class="s2 text-#595757 relative">
+  <section class="s2 text-[#000] relative">
     <img src="./s2/pic.webp" alt="pic">
   </section>
 </template>

@@ -161,43 +161,34 @@ const order = ref(0);
                   >
                       <SwiperSlide class="relative">
                           <img
-                              src="./s6/1-1.webp"
+                              src="./s6/2-1.webp"
                               alt="pic"
                           />
                           <p class="absolute text-[#fff]">
-                              新化系統交流道(國3X國8)
+                              三向＋先奕設計團隊
                           </p>
                       </SwiperSlide>
                       <SwiperSlide class="relative">
                           <img
-                              src="./s6/1-2.webp"
+                              src="./s6/2-2.webp"
                               alt="pic"
                           />
-                          <p class="absolute text-[#fff]">新港社大道</p>
+                          <p class="absolute text-[#fff]">園山一號院-私宅</p>
                       </SwiperSlide>
                       <SwiperSlide class="relative">
                           <img
-                              src="./s6/1-3.webp"
+                              src="./s6/2-3.webp"
                               alt="pic"
                           />
-                          <p class="absolute text-[#fff]">北外環快速道路</p>
+                          <p class="absolute text-[#fff]">台北 信義聯勤-私宅</p>
                       </SwiperSlide>
                       <SwiperSlide class="relative">
                           <img
-                              src="./s6/1-4.webp"
+                              src="./s6/2-4.webp"
                               alt="pic"
                           />
                           <p class="absolute text-[#fff]">
-                              衛福部署立醫院新化分院
-                          </p>
-                      </SwiperSlide>
-                      <SwiperSlide class="relative">
-                          <img
-                              src="./s6/1-5.webp"
-                              alt="pic"
-                          />
-                          <p class="absolute text-[#fff]">
-                              衛福部署立醫院新化分院
+                              台中 大陸麗格-私宅
                           </p>
                       </SwiperSlide>
                   </Swiper>
@@ -215,43 +206,34 @@ const order = ref(0);
                   >
                       <SwiperSlide class="relative">
                           <img
-                              src="./s6/1-1.webp"
+                              src="./s6/3-1.webp"
                               alt="pic"
                           />
                           <p class="absolute text-[#fff]">
-                              新化系統交流道(國3X國8)
+                              三生規劃
                           </p>
                       </SwiperSlide>
                       <SwiperSlide class="relative">
                           <img
-                              src="./s6/1-2.webp"
+                              src="./s6/3-2.webp"
                               alt="pic"
                           />
-                          <p class="absolute text-[#fff]">新港社大道</p>
+                          <p class="absolute text-[#fff]">新化老街</p>
                       </SwiperSlide>
                       <SwiperSlide class="relative">
                           <img
-                              src="./s6/1-3.webp"
+                              src="./s6/3-3.webp"
                               alt="pic"
                           />
-                          <p class="absolute text-[#fff]">北外環快速道路</p>
+                          <p class="absolute text-[#fff]">新化大目降文化園區</p>
                       </SwiperSlide>
                       <SwiperSlide class="relative">
                           <img
-                              src="./s6/1-4.webp"
+                              src="./s6/3-4.webp"
                               alt="pic"
                           />
                           <p class="absolute text-[#fff]">
-                              衛福部署立醫院新化分院
-                          </p>
-                      </SwiperSlide>
-                      <SwiperSlide class="relative">
-                          <img
-                              src="./s6/1-5.webp"
-                              alt="pic"
-                          />
-                          <p class="absolute text-[#fff]">
-                              衛福部署立醫院新化分院
+                              台南市末廣町街屋立面改善
                           </p>
                       </SwiperSlide>
                   </Swiper>
@@ -269,43 +251,34 @@ const order = ref(0);
                   >
                       <SwiperSlide class="relative">
                           <img
-                              src="./s6/1-1.webp"
+                              src="./s6/4-1.webp"
                               alt="pic"
                           />
                           <p class="absolute text-[#fff]">
-                              新化系統交流道(國3X國8)
+                              偶得設計
                           </p>
                       </SwiperSlide>
                       <SwiperSlide class="relative">
                           <img
-                              src="./s6/1-2.webp"
+                              src="./s6/4-2.webp"
                               alt="pic"
                           />
-                          <p class="absolute text-[#fff]">新港社大道</p>
+                          <p class="absolute text-[#fff]">新竹市美術館</p>
                       </SwiperSlide>
                       <SwiperSlide class="relative">
                           <img
-                              src="./s6/1-3.webp"
+                              src="./s6/4-3.webp"
                               alt="pic"
                           />
-                          <p class="absolute text-[#fff]">北外環快速道路</p>
+                          <p class="absolute text-[#fff]">太子建設 君峰會</p>
                       </SwiperSlide>
                       <SwiperSlide class="relative">
                           <img
-                              src="./s6/1-4.webp"
+                              src="./s6/4-4.webp"
                               alt="pic"
                           />
                           <p class="absolute text-[#fff]">
-                              衛福部署立醫院新化分院
-                          </p>
-                      </SwiperSlide>
-                      <SwiperSlide class="relative">
-                          <img
-                              src="./s6/1-5.webp"
-                              alt="pic"
-                          />
-                          <p class="absolute text-[#fff]">
-                              衛福部署立醫院新化分院
+                              惠宇千曦
                           </p>
                       </SwiperSlide>
                   </Swiper>
