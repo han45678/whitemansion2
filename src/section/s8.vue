@@ -15,24 +15,47 @@ import 'swiper/css/pagination';
                 :pagination="{ clickable: true }"
                 :slides-per-view="'auto'"
                 :space-between="20"
+                :breakpoints="{
+                    768: {
+                        slidesPerView: 1
+                    }
+                }"
             >
                 <SwiperSlide class="relative">
                     <img
+                        class="hidden md:block"
                         src="./s8/1.webp"
+                        alt="pic"
+                    />
+                    <img
+                        class="block md:hidden"
+                        src="./s8/1m.webp"
                         alt="pic"
                     />
                     <p class="absolute text-[#fff]">新化系統交流道(國3X國8)</p>
                 </SwiperSlide>
                 <SwiperSlide class="relative">
                     <img
+                        class="hidden md:block"
                         src="./s8/2.webp"
+                        alt="pic"
+                    />
+                    <img
+                        class="block md:hidden"
+                        src="./s8/1m.webp"
                         alt="pic"
                     />
                     <p class="absolute text-[#fff]">新港社大道</p>
                 </SwiperSlide>
                 <SwiperSlide class="relative">
                     <img
+                        class="hidden md:block"
                         src="./s8/3.webp"
+                        alt="pic"
+                    />
+                    <img
+                        class="block md:hidden"
+                        src="./s8/1m.webp"
                         alt="pic"
                     />
                     <p class="absolute text-[#fff]">北外環快速道路</p>
