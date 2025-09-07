@@ -3,7 +3,10 @@
 <template>
     <section class="s12 text-[#000] font-['Noto_Sans_TC']">
         <!-- 手機板 -->
-        <div class="text block md:hidden" data-aos="zoom-in">
+        <div
+            class="text block md:hidden"
+            data-aos="zoom-in"
+        >
             <h2>ALL IN ONE<span>精裝修</span></h2>
             <h4>大南科共榮圈</h4>
             <ul>
@@ -77,7 +80,7 @@
             src="./s12/pic.webp"
             alt="pic"
             data-aos="zoom-in"
-            data-aos-offset="200"  
+            data-aos-offset="200"
         />
     </section>
 </template>
@@ -157,7 +160,7 @@
             display: flex;
             justify-content: center;
             margin-top: size(25);
-            margin-bottom: size(230);
+            margin-bottom: size(15);
             @media screen and (max-width: 768px) {
                 margin-top: size-m(8.5);
                 margin-bottom: size-m(7);
@@ -187,7 +190,7 @@
             @media screen and (max-width: 768px) {
                 font-weight: 700;
                 font-size: size-m(26);
-                margin-top: size-m(37);
+                margin-top: 0;
             }
         }
 
@@ -207,14 +210,21 @@
             }
         }
         a {
+            display: block;
+            margin-bottom: size(160);
+            font-size: size(100);
+            font-weight: 500;
             @media screen and (max-width: 768px) {
+                margin-bottom: size-m(35);
                 text-decoration: none;
                 font-size: size-m(44);
-                font-weight: 500;
                 display: flex;
                 justify-content: center;
-
-                span {
+            }
+            span {
+                font-weight: 500;
+                font-size: size(55);
+                @media screen and (max-width: 768px) {
                     font-size: size-m(24);
                     margin-right: size-m(7.5);
                     margin-top: size-m(6);

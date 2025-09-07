@@ -1,21 +1,21 @@
 <template>
-  <div class="contact-info mx-auto bg-[#D9374B] flex flex-col items-center justify-between">
-    <div class="logo"></div>
+  <div class="contact-info mx-auto flex flex-col items-center justify-between">
+    <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-between items-center rounded-full" @click="modalOpen = true; modalType = 'phone'">
+      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
         <img src="@/section/form/phone.svg" alt="戀JIA" srcset="" />
         <div class="flex-1">{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center rounded-full" @click="modalOpen = true; modalType = 'fb'">
+      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'fb'">
         <img src="@/section/form/messenger.svg" alt="戀JIA" srcset="" />
         <div class="flex-1">FB 諮詢</div>
       </div>
-      <div class="flex contact-item justify-between items-center rounded-full btfanpage" @click="open()">
+      <div class="flex contact-item justify-between items-center btfanpage" @click="open()">
         <img src="@/section/form/fb.svg" alt="戀JIA" srcset="" />
         <div class="flex-1">前往粉絲專頁</div>
       </div>
     </div>
-    <div class="address-wrap flex justify-between w-full contact-item-box no-gap md:rounded-full overflow-hidden">
+    <div class="address-wrap flex justify-between w-full contact-item-box no-gap  overflow-hidden">
       <div class="flex contact-item justify-between items-center address">
         <div>{{ info.address }}</div>
       </div>
@@ -107,8 +107,9 @@
     gap: size(20);
 
     .contact-item {
+      border: 1px solid #E1554B;
       background-color: #FFDFE3;
-      color: #595757;
+      color: #000;
       width: 100%;
       padding: 0 size(55);
       font-size: size(16);
