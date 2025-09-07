@@ -59,6 +59,6 @@ onMounted(() => {
     <S10 />
     <S11 />
     <S12 />
-    <Order />
+    <Order /> 
   </div>
 </template>

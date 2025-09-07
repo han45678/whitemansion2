@@ -40,6 +40,13 @@
                 <li>新化軸心</li>
                 <li>邊間 2~3 房</li>
             </ul>
+            <a
+                href="tel:065802368"
+                class="text-[#000]"
+            >
+                <span>06</span>
+                580-2368
+            </a>
             <img
                 class="logo"
                 src="./s1/logo.svg"
@@ -67,9 +74,10 @@
         />
         <img
             class="pic"
-            src="./s1/pic.webp"
+            src="./s12/pic.webp"
             alt="pic"
             data-aos="zoom-in"
+            data-aos-offset="200"  
         />
     </section>
 </template>
