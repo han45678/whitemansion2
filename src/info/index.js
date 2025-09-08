@@ -28,7 +28,7 @@ export default {
         ["貴賓專線", "06-5802368"],
         ["物業管理", "長安置業股份有限公司"]
     ],
-    gtmCode: ["GTM-P7LPC64"], // 可放置多個
+    gtmCode: ["GTM-5SCBP733"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
