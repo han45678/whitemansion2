@@ -11,11 +11,11 @@ import { ref } from 'vue';
             />
         </div>
         <div class="text">
-            <h3>
+            <h3 data-aos="fade-in">
                 大南科共榮圈，<br />
                 自住置產最優選。
             </h3>
-            <p>
+            <p data-aos="fade-up">
                 隨大南方新矽谷落地，南科共榮圈成為長線焦點。新化座落南科、沙崙雙核心之間，低基期
                 × ALL IN ONE精裝修，小成本兼顧自住與置產，迎接產業大未來。
             </p>

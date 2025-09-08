@@ -59,7 +59,7 @@ import 'swiper/css/pagination';
             此為廣告效果示意，為單一建物電腦3d透視表現，
             周遭環境係電腦合成，建設公司保有建物外觀修正之權利
         </div>
-        <div class="title">
+        <div class="title"  data-aos="fade-in">
             <h3>白派流域，重劃築新境。</h3>
             <h4>長築白樓2</h4>
             <p>

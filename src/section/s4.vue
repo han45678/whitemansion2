@@ -9,7 +9,7 @@ import 'swiper/css/pagination';
     <section class="s4 text-[#000] font-['Noto_Sans_TC'] relative">
         <div class="wrapper">
             <div class="item">
-                <div class="pic">
+                <div class="pic" data-aos="fade-in">
                     <Swiper
                         :slidesPerView="1"
                         :loop="true"
@@ -66,11 +66,11 @@ import 'swiper/css/pagination';
                     </Swiper>
                 </div>
                 <div class="text">
-                    <h3>
+                    <h3 data-aos="fade-in">
                         置產大南科<br />
                         慧眼秒懂新化基期<span>。</span>
                     </h3>
-                    <ul>
+                    <ul data-aos="fade-in">
                         <li>
                             <span class="text-[#E1554B]">低基期低供給｜</span>
                             土地整合難度高，新住宅大樓供給少
@@ -91,7 +91,7 @@ import 'swiper/css/pagination';
                 </div>
             </div>
             <div class="item">
-                <div class="pic">
+                <div class="pic" data-aos="fade-in">
                     <Swiper
                         :slidesPerView="1"
                         :loop="true"
@@ -144,11 +144,11 @@ import 'swiper/css/pagination';
                     </Swiper>
                 </div>
                 <div class="text">
-                    <h3>
+                    <h3 data-aos="fade-in">
                         生活大南科<br />
                         新化埕心繁華富域<span>。</span>
                     </h3>
-                    <ul>
+                    <ul data-aos="fade-in">
                         <li>
                             <span class="text-[#E1554B]">緊鄰新化高中旁｜</span>
                             軸心重劃區收攘商圈與生活餘裕

@@ -3,8 +3,8 @@
 <template>
     <section class="s3 text-[#fff] font-['Noto_Sans_TC']">
         <div class="text">
-            <h3>南科15分鐘｜小成本進場大未來。</h3>
-            <p>
+            <h3 data-aos="fade-in">南科15分鐘｜小成本進場大未來。</h3>
+            <p data-aos="fade-in">
                 南科擴大效應｜南科三期版圖擴大，南科產值超越竹科<br />
                 台積電產業鍊｜高端奈米場落腳南科，預告未來前景<br />
                 土地有感增值｜游資搶進開發熱區，追逐有限資源<br />

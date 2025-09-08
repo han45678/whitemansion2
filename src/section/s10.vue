@@ -5,35 +5,35 @@ import { ref } from 'vue';
 <template>
     <article class="s10">
         <ul>
-            <li>
+            <li data-aos="fade-in">
                 <h4 class="text-[#E1554B]">ALL IN ONE精裝修</h4>
                 <p class="text-[#000]">
                     一條龍服務精省<br />
                     入住快又安心
                 </p>
             </li>
-            <li>
+            <li data-aos="fade-in" data-aos-delay="200">
                 <h4 class="text-[#E1554B]">預組工法</h4>
                 <p class="text-[#000]">
                     日本晴空塔等級<br />
                     進口螺紋鋼筋
                 </p>
             </li>
-            <li>
+            <li data-aos="fade-in" data-aos-delay="400">
                 <h4 class="text-[#E1554B]">三方勘驗</h4>
                 <p class="text-[#000]">
                     監造、建築師、<br />
                     結構技師把關
                 </p>
             </li>
-            <li>
+            <li data-aos="fade-in" data-aos-delay="600">
                 <h4 class="text-[#E1554B]">生產履歷</h4>
                 <p class="text-[#000]">
                     官方依實際進度<br />
                     公告工程紀錄
                 </p>
             </li>
-            <li>
+            <li data-aos="fade-in" data-aos-delay="800">
                 <h4 class="text-[#E1554B]">售後服務</h4>
                 <p class="text-[#000]">
                     line即時線上客服<br />

@@ -33,8 +33,8 @@ import 'swiper/css/pagination';
         </div>
         <div class="text">
             <span class="text-[#595757] block md:hidden">＊3d示意圖僅供參考，以上之傢俱、飾品、畫作及植栽為情境示意表現，建設公司保有修正之權利</span>
-            <h3>精緻而實用，放大「家」的生活維度。</h3>
-            <div class="content_text">
+            <h3  data-aos="fade-in">精緻而實用，放大「家」的生活維度。</h3>
+            <div class="content_text" data-aos="fade-up">
                 <span class="text-[#595757] hidden md:block">＊3d示意圖僅供參考，以上之傢俱、飾品、畫作及植栽為情境示意表現，建設公司保有修正之權利</span>
                 <p>
                     長磯機構｜長築興業以「實用 ×

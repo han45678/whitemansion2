@@ -32,10 +32,10 @@ const orderType = ref(true);
                         alt="pic"
                     />
                     <div class="pic_text">
-                        <h3 class="hidden md:block">
+                        <h3 class="hidden md:block" data-aos="fade-up">
                             ALL IN ONE精裝修・圓夢更輕鬆
                         </h3>
-                        <h3 class="block md:hidden">
+                        <h3 class="block md:hidden" data-aos="fade-up">
                             ALL IN ONE精裝修<br />圓夢更輕鬆
                         </h3>
                         <p>
@@ -56,10 +56,10 @@ const orderType = ref(true);
                         alt="pic"
                     />
                     <div class="pic_text">
-                        <h3 class="hidden md:block">
+                        <h3 class="hidden md:block" data-aos="fade-up">
                             ALL IN ONE精裝修・圓夢更輕鬆
                         </h3>
-                        <h3 class="block md:hidden">
+                        <h3 class="block md:hidden" data-aos="fade-up">
                             ALL IN ONE精裝修<br />圓夢更輕鬆
                         </h3>
                         <p>
@@ -80,10 +80,10 @@ const orderType = ref(true);
                         alt="pic"
                     />
                     <div class="pic_text">
-                        <h3 class="hidden md:block">
+                        <h3 class="hidden md:block"  data-aos="fade-up">
                             ALL IN ONE精裝修・圓夢更輕鬆
                         </h3>
-                        <h3 class="block md:hidden">
+                        <h3 class="block md:hidden"  data-aos="fade-up">
                             ALL IN ONE精裝修<br />圓夢更輕鬆
                         </h3>
                         <p>
@@ -116,10 +116,10 @@ const orderType = ref(true);
                         alt="pic"
                     />
                     <div class="pic_text">
-                        <h3 class="hidden md:block">
+                        <h3 class="hidden md:block"  data-aos="fade-up">
                             ALL IN ONE精裝修・圓夢更輕鬆
                         </h3>
-                        <h3 class="block md:hidden">
+                        <h3 class="block md:hidden"  data-aos="fade-up">
                             ALL IN ONE精裝修<br />圓夢更輕鬆
                         </h3>
                         <p>
@@ -140,10 +140,10 @@ const orderType = ref(true);
                         alt="pic"
                     />
                     <div class="pic_text">
-                        <h3 class="hidden md:block">
+                        <h3 class="hidden md:block"  data-aos="fade-up">
                             ALL IN ONE精裝修・圓夢更輕鬆
                         </h3>
-                        <h3 class="block md:hidden">
+                        <h3 class="block md:hidden"  data-aos="fade-up">
                             ALL IN ONE精裝修<br />圓夢更輕鬆
                         </h3>
                         <p>
@@ -164,10 +164,10 @@ const orderType = ref(true);
                         alt="pic"
                     />
                     <div class="pic_text">
-                        <h3 class="hidden md:block">
+                        <h3 class="hidden md:block"  data-aos="fade-up">
                             ALL IN ONE精裝修・圓夢更輕鬆
                         </h3>
-                        <h3 class="block md:hidden">
+                        <h3 class="block md:hidden"  data-aos="fade-up">
                             ALL IN ONE精裝修<br />圓夢更輕鬆
                         </h3>
                         <p>
@@ -184,7 +184,7 @@ const orderType = ref(true);
                     class="item"
                     v-if="orderType"
                 >
-                    <div class="title">
+                    <div class="title"  data-aos="fade-up">
                         <h3>2房精裝修</h3>
                         <h4>25-27坪｜光合角間</h4>
                     </div>
@@ -198,7 +198,7 @@ const orderType = ref(true);
                     class="item"
                     v-else
                 >
-                    <div class="title">
+                    <div class="title" data-aos="fade-up">
                         <h3>3房精裝修</h3>
                         <h4>35-36坪｜向陽邊間</h4>
                     </div>

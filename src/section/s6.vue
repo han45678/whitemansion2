@@ -12,8 +12,8 @@ const order = ref(0);
     <section class="s6 text-[#000] font-['Noto_Sans_TC']">
         <div class="item">
             <div class="title">
-                <h3 class="text-[#E1554B]">國際團隊</h3>
-                <ul>
+                <h3 class="text-[#E1554B]" data-aos="fade-in">國際團隊</h3>
+                <ul data-aos="fade-in">
                     <li
                         :class="{ active: order === 0 }"
                         @click="order = 0"
@@ -46,6 +46,7 @@ const order = ref(0);
                 <div
                     class="text"
                     v-if="order === 0"
+                    data-aos="fade-up"
                 >
                     <div class="item_content">
                         <h4>全案規劃｜U.tech技聯組工程顧問</h4>
@@ -69,6 +70,7 @@ const order = ref(0);
                 <div
                     class="text"
                     v-if="order === 1"
+                    data-aos="fade-up"
                 >
                     <div class="item_content no_line">
                         <h4>公設規劃｜三向＋先奕設計團隊</h4>
@@ -82,6 +84,7 @@ const order = ref(0);
                 <div
                     class="text"
                     v-if="order === 2"
+                    data-aos="fade-up"
                 >
                     <div class="item_content no_line">
                         <h4>景觀美學｜三生規劃</h4>
@@ -95,6 +98,7 @@ const order = ref(0);
                 <div
                     class="text"
                     v-if="order === 3"
+                    data-aos="fade-up"
                 >
                     <div class="item_content no_line">
                         <h4>燈光表情｜偶得設計</h4>
@@ -110,6 +114,7 @@ const order = ref(0);
                 <div
                     class="pic"
                     v-if="order === 0"
+                    data-aos="fade-up"
                 >
                     <Swiper
                         :slidesPerView="1"
@@ -166,6 +171,7 @@ const order = ref(0);
                 <div
                     class="pic"
                     v-if="order === 1"
+                    data-aos="fade-up"
                 >
                     <Swiper
                         :slidesPerView="1"
@@ -215,6 +221,7 @@ const order = ref(0);
                 <div
                     class="pic"
                     v-if="order === 2"
+                    data-aos="fade-up"
                 >
                     <Swiper
                         :slidesPerView="1"
@@ -262,6 +269,7 @@ const order = ref(0);
                 <div
                     class="pic"
                     v-if="order === 3"
+                    data-aos="fade-up"
                 >
                     <Swiper
                         :slidesPerView="1"

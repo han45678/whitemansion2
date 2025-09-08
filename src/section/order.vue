@@ -1,7 +1,7 @@
 <template>
     <div class="order relative bg-[#FFF] text-center font-['Noto_Sans_TC']">
         <!-- Title -->
-        <div class="title mx-auto order-title text-left text-[#595757]">
+        <div class="title mx-auto order-title text-left text-[#E1554B]">
             {{ info.order.title }}
         </div>
         <!-- Title Image -->
@@ -144,7 +144,7 @@
     .order-title {
         font-size: size(43);
         font-weight: 500;
-        margin-bottom: size(45);
+        margin-bottom: size(25);
     }
 
     .textarea,
@@ -171,10 +171,12 @@
         margin: 0 auto;
         margin-bottom: size(40);
     }
-    .policy{
-      width: size(1480);
-      margin: 0 auto;
-      display: flex;
+    .policy {
+        width: size(1480);
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 510px auto 500px;
+        justify-content: space-between;
     }
     .title {
         width: size(1480);

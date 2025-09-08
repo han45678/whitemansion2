@@ -8,7 +8,10 @@ import 'swiper/css/pagination';
 <template>
     <section class="s5 text-[#000] font-['Noto_Sans_TC'] relative">
         <div class="text">
-            <div class="logo_pic">
+            <div
+                class="logo_pic"
+                data-aos="fade-in"
+            >
                 <img
                     src="./s5/logo_1.svg"
                     alt="logo"
@@ -18,18 +21,19 @@ import 'swiper/css/pagination';
                     alt="logo"
                 />
             </div>
-            <h3>超越家的本質。</h3>
+            <h3 data-aos="fade-in">超越家的本質。</h3>
             <span class="line" />
-            <p>
+            <p data-aos="fade-up">
                 長築興業將建築視為生活總和的美學載體，融合國際視野與在地思維，整合房產專業資源；以服務品牌的專屬物管，打造差異化特徵，重新定義住宅標準，守護居者恆久的資產價值。
             </p>
         </div>
         <img
+            data-aos="fade-right"
             class="text_pic absolute"
             src="./s5/text.svg"
             alt="text"
         />
-        <div class="pic">
+        <div class="pic" data-aos="fade-in">
             <Swiper
                 :slidesPerView="1"
                 :loop="true"

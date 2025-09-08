@@ -1,82 +1,4 @@
-<template>
-    <div
-        class="viewbox"
-        ref="viewbox"
-    >
-        <img
-            ref="viewImg"
-            src="@/section/s2/map.jpg"
-            alt=""
-            srcset=""
-        />
-        <div
-            class="mask"
-            v-bind:class="{ hide: swiped }"
-            v-if="$isMobile()"
-        >
-            <img
-                src="@/components/fullview/finger.svg"
-                alt=""
-                srcset=""
-            />
-        </div>
-    </div>
-</template>
 
-<style lang="scss">
-@import '@/assets/style/function.scss';
-
-.viewbox {
-    position: relative;
-    width: 100%;
-    height: 100%;
-
-    > img {
-        height: 100%;
-        max-width: unset;
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .viewbox {
-        height: 100%;
-        overflow: hidden;
-
-        img {
-            height: 100%;
-        }
-
-        > img {
-            width: auto;
-        }
-
-        .mask {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            left: 0;
-            top: 0;
-            z-index: 3;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            pointer-events: none;
-            opacity: 1;
-            transition: all 1s;
-            background-color: rgba($color: #005890, $alpha: 0.5);
-
-            img {
-                height: 47px;
-            }
-
-            &.hide {
-                opacity: 0;
-            }
-        }
-    }
-}
-</style>
 <script setup>
 import BScroll from '@better-scroll/core';
 import { onMounted, ref, computed, getCurrentInstance } from 'vue';
@@ -113,3 +35,84 @@ onMounted(() => {
     });
 });
 </script>
+
+<template>
+    <div
+        class="viewbox"
+        ref="viewbox"
+    >
+        <img
+            ref="viewImg"
+            src="@/section/s2/map.webp"
+            alt=""
+            srcset=""
+        />
+        <div
+            class="mask"
+            v-bind:class="{ hide: swiped }"
+            v-if="$isMobile()"
+        >
+            <img
+                src="../components/fullview/finger.svg"
+                alt=""
+                srcset=""
+            />
+        </div>
+    </div>
+</template>
+
+<style lang="scss">
+@import '@/assets/style/function.scss';
+
+.viewbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    > img {
+        height: 100%;
+        max-width: unset;
+        background: url('@/section/s2/map.webp') 50%;
+        background-size: 100% auto;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .viewbox {
+        height: size-m(430) !important;
+        height: 100%;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+        }
+        > img {
+            width: auto;
+        }
+
+        .mask {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: 3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            pointer-events: none;
+            opacity: 1;
+            transition: all 1s;
+            background-color: rgba($color: #005890, $alpha: 0.5);
+
+            img {
+                height: 47px;
+            }
+
+            &.hide {
+                opacity: 0;
+            }
+        }
+    }
+}
+</style>
