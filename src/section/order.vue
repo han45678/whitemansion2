@@ -89,7 +89,7 @@
 
         <!-- Policy -->
         <div class="policy">
-            <div class="flex gap-2 items-center justify-center control">
+            <div class="flex gap-2 items-center control">
                 <input
                     type="checkbox"
                     v-model="formData.policyChecked"
@@ -99,7 +99,7 @@
                 <p>
                     本人知悉並同意<label
                         for="policy-modal"
-                        class="modal-button text-[#D9374B] font-bold cursor-pointer hover:opacity-70"
+                        class="modal-button font-bold cursor-pointer hover:opacity-70"
                         >「個資告知事項聲明」</label
                     >內容
                 </p>
@@ -117,7 +117,7 @@
 
             <!-- Send -->
             <div
-                class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#D9374B] text-white rounded-full"
+                class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#D9374B] text-white"
                 @click="send()"
             >
                 送出表單
@@ -134,7 +134,7 @@
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
 .order {
@@ -151,12 +151,17 @@
     .input,
     .select {
         border: 1px solid #e1554b;
+        font-weight: 400;
         &::placeholder,
         option:first-child {
             color: #595757;
             font-size: size(16);
             padding-left: size(20);
             padding: 0;
+            @media screen and (max-width: 768px) {
+                font-size: size-m(14);
+                padding-left: size(10);
+            }
         }
     }
 
@@ -177,6 +182,9 @@
         display: grid;
         grid-template-columns: 510px auto 500px;
         justify-content: space-between;
+        @media screen and (max-width: 768px) {
+            display: block;
+        }
     }
     .title {
         width: size(1480);
@@ -210,13 +218,17 @@
         text-indent: 0.9em;
         // color: #231815;
         // background-color: #fff;
-        width: size(350);
+        width: 100%;
         height: 3.3em;
         line-height: 3.3;
         border: 0;
         // border-radius: 1.6em;
         z-index: 10;
         position: relative;
+        @media screen and (max-width: 768px) {
+            box-sizing: border-box;
+            width: 100%;
+        }
     }
 
     .control {
@@ -268,7 +280,7 @@
 
         .send {
             font-size: size-m(21);
-            width: size-m(318);
+            width: 100%;
         }
 
         .control {

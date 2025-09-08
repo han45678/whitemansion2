@@ -62,3 +62,9 @@ onMounted(() => {
     <Order /> 
   </div>
 </template>
+
+<style>
+.aos-init{
+  transition: all 1s ease !important;
+}
+</style>

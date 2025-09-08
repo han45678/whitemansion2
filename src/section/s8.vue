@@ -69,6 +69,9 @@ import 'swiper/css/pagination';
 
         .swiper-slide {
             width: auto !important;
+            @media screen and (max-width: 768px) {
+                    width: 100% !important;
+                }
 
             img {
                 height: auto;
@@ -106,7 +109,7 @@ import 'swiper/css/pagination';
                     width: size-m(8);
                     height: size-m(8);
                     margin-left: size-m(8);
-                    display: block;
+                    display: inline-block;
                 }
 
                 &.swiper-pagination-bullet-active {

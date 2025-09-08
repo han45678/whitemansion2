@@ -68,64 +68,6 @@
     </div>
 
     <!-- Mobile contact info -->
-    <div
-        v-if="$isMobile()"
-        class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center"
-    >
-        <div
-            class="flex flex-1 flex-col contact-item justify-center items-center"
-            @click="
-                modalOpen = true;
-                modalType = 'phone';
-            "
-        >
-            <img
-                src="@/section/form/phone.svg"
-                alt="戀JIA"
-                srcset=""
-            />
-            <div>撥打電話</div>
-        </div>
-        <div
-            class="flex flex-1 flex-col contact-item justify-center items-center"
-            @click="
-                modalOpen = true;
-                modalType = 'fb';
-            "
-        >
-            <img
-                src="@/section/form/messenger.svg"
-                alt="戀JIA"
-                srcset=""
-            />
-            <div>FB 諮詢</div>
-        </div>
-        <div
-            class="flex flex-1 flex-col contact-item justify-center items-center"
-            @click="scrollTo('.order')"
-        >
-            <img
-                src="@/section/form/pen.svg"
-                alt="戀JIA"
-                srcset=""
-            />
-            <div>預約賞屋</div>
-        </div>
-        <div
-            class="flex flex-1 flex-col contact-item justify-center items-center"
-            @click="
-                modalOpen = true;
-                modalType = 'gmap';
-            "
-        >
-            <img
-                src="@/section/form/gmap.svg"
-                alt="戀JIA"
-                srcset=""
-            />
-            <div>地圖導航</div>
-        </div>
-    </div>
 
     <!-- Modal -->
     <input
@@ -213,7 +155,7 @@
 
 .contact-info {
     width: size(1200);
-    padding: size(68) size(160) size(56) size(160);
+    padding: size(0) size(160) size(56) size(160);
     margin-top: size(73);
     position: relative;
     @media screen and (max-width: 768px) {
@@ -313,7 +255,7 @@
             flex-direction: column;
 
             &.address-wrap {
-                border-radius: size-m(50);
+                // border-radius: size-m(50);
                 margin-top: size-m(20);
             }
 
