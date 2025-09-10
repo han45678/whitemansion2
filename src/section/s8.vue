@@ -148,9 +148,10 @@ import 'swiper/css/pagination';
                 display: flex;
             }
             img {
-                height: auto;
+                height: size(600);
 
                 @media screen and (max-width: 768px) {
+                    height: auto;
                     width: 100%;
                 }
             }
