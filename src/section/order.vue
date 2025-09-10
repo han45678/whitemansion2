@@ -7,100 +7,52 @@
         <!-- Form -->
         <div class="form mx-auto relative flex items-start justify-center">
             <div class="left h-full flex flex-col justify-between items-center">
-                <input
-                    type="text"
-                    placeholder="*姓名"
-                    class="input w-full rounded-none"
-                    :value="formData.name"
-                    @input="(event) => (formData.name = event.target.value)"
-                />
-                <input
-                    type="text"
-                    placeholder="*手機"
-                    class="input w-full rounded-none"
-                    :value="formData.phone"
-                    @input="(event) => (formData.phone = event.target.value)"
-                />
-                <select
-                    class="select w-full rounded-none"
-                    v-model="formData.city"
-                >
-                    <option
-                        value=""
-                        selected
-                        disabled
-                    >
-                        *居住縣市
+                <input type="text" placeholder="姓名*" class="input w-full rounded-none" :value="formData.name"
+                    @input="(event) => (formData.name = event.target.value)" />
+                <input type="text" placeholder="聯絡電話*" class="input w-full rounded-none" :value="formData.phone"
+                    @input="(event) => (formData.phone = event.target.value)" />
+                <select class="select w-full rounded-none" v-model="formData.city">
+                    <option value="" selected disabled>
+                        選擇縣市*
                     </option>
-                    <option
-                        v-for="city in cityList"
-                        :value="city.value"
-                    >
+                    <option v-for="city in cityList" :value="city.value">
                         {{ city.label }}
                     </option>
                 </select>
-                <select
-                    class="select w-full rounded-none"
-                    v-model="formData.area"
-                >
-                    <option
-                        value=""
-                        selected
-                        disabled
-                    >
-                        *居住地區
+                <select class="select w-full rounded-none" v-model="formData.area">
+                    <option value="" selected disabled>
+                        選擇區域*
                     </option>
-                    <option
-                        v-for="area in areaList"
-                        :value="area.value"
-                    >
+                    <option v-for="area in areaList" :value="area.value">
                         {{ area.label }}
                     </option>
                 </select>
             </div>
             <div class="right h-full">
-                <textarea
-                    :value="formData.note"
-                    @input="(event) => (formData.note = event.target.value)"
-                    class="textarea w-full h-full rounded-none"
-                    placeholder="備註訊息"
-                ></textarea>
+                <textarea :value="formData.note" @input="(event) => (formData.note = event.target.value)"
+                    class="textarea w-full h-full rounded-none" placeholder="請輸入您的留言"></textarea>
             </div>
         </div>
 
         <!-- Policy -->
         <div class="policy">
             <div class="flex gap-2 items-center control">
-                <input
-                    type="checkbox"
-                    v-model="formData.policyChecked"
-                    :checked="formData.policyChecked"
-                    class="checkbox bg-white rounded-md"
-                />
+                <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
+                    class="checkbox bg-white rounded-md" />
                 <p>
-                    本人知悉並同意<label
-                        for="policy-modal"
-                        class="modal-button font-bold cursor-pointer hover:opacity-70 text-[#E1554B] "
-                        >「個資告知事項聲明」</label
-                    >內容
+                    本人知悉並同意<label for="policy-modal"
+                        class="modal-button cursor-pointer hover:opacity-70 ">「個資告知事項聲明」</label>內容
                 </p>
             </div>
             <Policy />
 
             <!-- Recaptcha -->
-            <vue-recaptcha
-                class="flex justify-center mt-8 z-10"
-                ref="recaptcha"
-                :sitekey="info.recaptcha_site_key_v2"
-                @verify="onRecaptchaVerify"
-                @expired="onRecaptchaUnVerify"
-            />
+            <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
+                @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
             <!-- Send -->
-            <div
-                class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#E1554B] text-white"
-                @click="send()"
-            >
+            <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#E1554B] text-white"
+                @click="send()">
                 立即預約
             </div>
         </div>
@@ -133,12 +85,15 @@
     .select {
         border: 1px solid #e1554b;
         font-weight: 400;
+        color: #595757;
+        font-size: size(16);
+
         &::placeholder,
         option:first-child {
             color: #595757;
-            font-size: size(16);
             padding-left: size(20);
             padding: 0;
+
             @media screen and (max-width: 768px) {
                 font-size: size-m(14);
                 padding-left: size(10);
@@ -157,19 +112,23 @@
         margin: 0 auto;
         margin-bottom: size(40);
     }
+
     .policy {
         width: size(1480);
         margin: 0 auto;
         display: grid;
-        grid-template-columns: 510px auto 500px;
+        grid-template-columns: size(500) size(480) size(500);
         justify-content: space-between;
+
         @media screen and (max-width: 768px) {
             display: block;
         }
     }
+
     .title {
         width: size(1480);
     }
+
     .form {
         width: size(1480);
         height: 300px;
@@ -197,8 +156,6 @@
         font-size: size(22);
         letter-spacing: 0.9em;
         text-indent: 0.9em;
-        // color: #231815;
-        // background-color: #fff;
         width: 100%;
         height: 3.3em;
         line-height: 3.3;
@@ -208,6 +165,7 @@
         // border-radius: 1.6em;
         z-index: 10;
         position: relative;
+
         @media screen and (max-width: 768px) {
             box-sizing: border-box;
             width: 100%;
@@ -215,7 +173,7 @@
     }
 
     .control {
-        font-size: size(16);
+        font-size: size(20);
         color: #000;
         position: relative;
     }

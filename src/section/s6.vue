@@ -38,39 +38,21 @@ function changeOrder(target) {
     <section class="s6 text-[#000] font-['Noto_Sans_TC']">
         <div class="item">
             <div class="title">
-                <h3
-                    class="text-[#E1554B]"
-                    data-aos="fade-in"
-                >
+                <h3 class="text-[#E1554B]">
                     國際團隊
                 </h3>
-                <ul data-aos="fade-in">
-                    <li
-                        :class="{ active: order === 0 }"
-                        @click="changeOrder(0)"
-                    >
+                <ul>
+                    <li :class="{ active: order === 0 }" @click="changeOrder(0)">
                         <span>全案規劃及建築設計</span>
                     </li>
-                    <li
-                        class="block md:hidden"
-                        style="opacity: 0; width: 100%; height: 1px; padding: 0"
-                    />
-                    <li
-                        :class="{ active: order === 1 }"
-                        @click="changeOrder(1)"
-                    >
+                    <li class="block md:hidden" style="opacity: 0; width: 100%; height: 1px; padding: 0" />
+                    <li :class="{ active: order === 1 }" @click="changeOrder(1)">
                         <span>公設規劃</span>
                     </li>
-                    <li
-                        :class="{ active: order === 2 }"
-                        @click="changeOrder(2)"
-                    >
+                    <li :class="{ active: order === 2 }" @click="changeOrder(2)">
                         <span>景觀美學</span>
                     </li>
-                    <li
-                        :class="{ active: order === 3 }"
-                        @click="changeOrder(3)"
-                    >
+                    <li :class="{ active: order === 3 }" @click="changeOrder(3)">
                         <span>燈光表情</span>
                     </li>
                 </ul>
@@ -78,14 +60,8 @@ function changeOrder(target) {
 
             <!-- 文字 -->
             <transition name="fade">
-                <div
-                    ref="text"
-                    class="text"
-                    v-if="order === 0"
-                    data-aos="fade-up"
-                    :style="{minHeight: textHeight + 'px'  }"
-                >
-                    <div class="item_content">
+                <div ref="text" class="text" v-if="order === 0" :style="{ minHeight: textHeight + 'px' }">
+                    <div class="item_content" data-aos="fade-up" data-aos-duration="200">
                         <h4>全案規劃｜U.tech技聯組工程顧問</h4>
                         <p>
                             以品質為核心，兼顧市場需求的全能建築工程顧問團隊。
@@ -93,7 +69,7 @@ function changeOrder(target) {
                             客觀帶入國際專業標準，讓建築紮根生活。
                         </p>
                     </div>
-                    <div class="item_content">
+                    <div class="item_content" data-aos="fade-up" data-aos-duration="400">
                         <h4>建築設計｜蔡詠爲建築師事務所</h4>
                         <p>
                             認為家是歸來與出發的場域，能沉靜地洗滌心靈；
@@ -104,11 +80,7 @@ function changeOrder(target) {
                 </div>
             </transition>
             <transition name="fade">
-                <div
-                    class="text"
-                    v-if="order === 1"
-                    :style="{minHeight: textHeight + 'px'  }"
-                >
+                <div class="text" v-if="order === 1" :style="{ minHeight: textHeight + 'px' }">
                     <div class="item_content no_line">
                         <h4>公設規劃｜三向＋先奕設計團隊</h4>
                         <p>
@@ -118,11 +90,7 @@ function changeOrder(target) {
                 </div>
             </transition>
             <transition name="fade">
-                <div
-                    class="text"
-                    v-if="order === 2"
-                    :style="{minHeight: textHeight + 'px'  }"
-                >
+                <div class="text" v-if="order === 2" :style="{ minHeight: textHeight + 'px' }">
                     <div class="item_content no_line">
                         <h4>景觀美學｜三生規劃</h4>
                         <p>
@@ -132,11 +100,7 @@ function changeOrder(target) {
                 </div>
             </transition>
             <transition name="fade">
-                <div
-                    class="text"
-                    v-if="order === 3"
-                    :style="{minHeight: textHeight + 'px'  }"
-                >
+                <div class="text" v-if="order === 3" :style="{ minHeight: textHeight + 'px' }">
                     <div class="item_content no_line">
                         <h4>燈光表情｜偶得設計</h4>
                         <p>
@@ -148,107 +112,62 @@ function changeOrder(target) {
 
             <!-- 圖片 -->
             <transition name="fade">
-                <div
-                    class="pic"
-                    v-if="order === 0"
-                    data-aos="fade-up"
-                >
-                    <Swiper
-                        :slidesPerView="1"
-                        :loop="true"
-                        :autoplay="true"
-                        :modules="[Pagination, Autoplay]"
-                        :pagination="{ clickable: true }"
-                    >
+                <div class="pic" v-if="order === 0" data-aos="fade-up">
+                    <Swiper :slidesPerView="1" :loop="true" :autoplay="true" :modules="[Pagination, Autoplay]"
+                        :pagination="{ clickable: true }">
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s6/1-1.webp"
-                                alt="pic"
-                            />
+                            <img src="./s6/1-1.webp" alt="pic" />
                             <p class="absolute text-[#fff]">
                                 技聯組實績 惠宇千曦
                             </p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s6/1-2.webp"
-                                alt="pic"
-                            />
+                            <img src="./s6/1-2.webp" alt="pic" />
                             <p class="absolute text-[#fff]">
                                 技聯組實績 惠宇敦北
                             </p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s6/1-3.webp"
-                                alt="pic"
-                            />
+                            <img src="./s6/1-3.webp" alt="pic" />
                             <p class="absolute text-[#fff]">
                                 技聯組實績 惠宇敦南
                             </p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s6/1-4.webp"
-                                alt="pic"
-                            />
+                            <img src="./s6/1-4.webp" alt="pic" />
                             <p class="absolute text-[#fff]">
                                 技聯組實績 惠宇樂觀
                             </p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s6/1-5.webp"
-                                alt="pic"
-                            />
+                            <img src="./s6/1-5.webp" alt="pic" />
                             <p class="absolute text-[#fff]">蔡詠爲建築師</p>
                         </SwiperSlide>
                     </Swiper>
                 </div>
             </transition>
             <transition name="fade">
-                <div
-                    class="pic"
-                    v-if="order === 1"
-                    data-aos="fade-up"
-                >
-                    <Swiper
-                        :slidesPerView="1"
-                        :loop="true"
-                        :autoplay="true"
-                        :modules="[Pagination, Autoplay]"
-                        :pagination="{ clickable: true }"
-                    >
+                <div class="pic" v-if="order === 1" data-aos="fade-up">
+                    <Swiper :slidesPerView="1" :loop="true" :autoplay="true" :modules="[Pagination, Autoplay]"
+                        :pagination="{ clickable: true }">
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s6/2-1.webp"
-                                alt="pic"
-                            />
+                            <img src="./s6/2-1.webp" alt="pic" />
                             <p class="absolute text-[#fff]">
                                 三向＋先奕設計團隊
                             </p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s6/2-2.webp"
-                                alt="pic"
-                            />
+                            <img src="./s6/2-2.webp" alt="pic" />
                             <p class="absolute text-[#fff]">園山一號院-私宅</p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s6/2-3.webp"
-                                alt="pic"
-                            />
+                            <img src="./s6/2-3.webp" alt="pic" />
                             <p class="absolute text-[#fff]">
                                 台北 信義聯勤-私宅
                             </p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s6/2-4.webp"
-                                alt="pic"
-                            />
+                            <img src="./s6/2-4.webp" alt="pic" />
                             <p class="absolute text-[#fff]">
                                 台中 大陸麗格-私宅
                             </p>
@@ -257,46 +176,25 @@ function changeOrder(target) {
                 </div>
             </transition>
             <transition name="fade">
-                <div
-                    class="pic"
-                    v-if="order === 2"
-                    data-aos="fade-up"
-                >
-                    <Swiper
-                        :slidesPerView="1"
-                        :loop="true"
-                        :autoplay="true"
-                        :modules="[Pagination, Autoplay]"
-                        :pagination="{ clickable: true }"
-                    >
+                <div class="pic" v-if="order === 2" data-aos="fade-up">
+                    <Swiper :slidesPerView="1" :loop="true" :autoplay="true" :modules="[Pagination, Autoplay]"
+                        :pagination="{ clickable: true }">
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s6/3-1.webp"
-                                alt="pic"
-                            />
+                            <img src="./s6/3-1.webp" alt="pic" />
                             <p class="absolute text-[#fff]">三生規劃</p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s6/3-2.webp"
-                                alt="pic"
-                            />
+                            <img src="./s6/3-2.webp" alt="pic" />
                             <p class="absolute text-[#fff]">新化老街</p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s6/3-3.webp"
-                                alt="pic"
-                            />
+                            <img src="./s6/3-3.webp" alt="pic" />
                             <p class="absolute text-[#fff]">
                                 新化大目降文化園區
                             </p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s6/3-4.webp"
-                                alt="pic"
-                            />
+                            <img src="./s6/3-4.webp" alt="pic" />
                             <p class="absolute text-[#fff]">
                                 台南市末廣町街屋立面改善
                             </p>
@@ -305,44 +203,23 @@ function changeOrder(target) {
                 </div>
             </transition>
             <transition name="fade">
-                <div
-                    class="pic"
-                    v-if="order === 3"
-                    data-aos="fade-up"
-                >
-                    <Swiper
-                        :slidesPerView="1"
-                        :loop="true"
-                        :autoplay="true"
-                        :modules="[Pagination, Autoplay]"
-                        :pagination="{ clickable: true }"
-                    >
+                <div class="pic" v-if="order === 3" data-aos="fade-up">
+                    <Swiper :slidesPerView="1" :loop="true" :autoplay="true" :modules="[Pagination, Autoplay]"
+                        :pagination="{ clickable: true }">
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s6/4-1.webp"
-                                alt="pic"
-                            />
+                            <img src="./s6/4-1.webp" alt="pic" />
                             <p class="absolute text-[#fff]">偶得設計</p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s6/4-2.webp"
-                                alt="pic"
-                            />
+                            <img src="./s6/4-2.webp" alt="pic" />
                             <p class="absolute text-[#fff]">新竹市美術館</p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s6/4-3.webp"
-                                alt="pic"
-                            />
+                            <img src="./s6/4-3.webp" alt="pic" />
                             <p class="absolute text-[#fff]">太子建設 君峰會</p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s6/4-4.webp"
-                                alt="pic"
-                            />
+                            <img src="./s6/4-4.webp" alt="pic" />
                             <p class="absolute text-[#fff]">惠宇千曦</p>
                         </SwiperSlide>
                     </Swiper>
@@ -354,23 +231,28 @@ function changeOrder(target) {
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
+
 .fade-enter-active,
 .fade-leave-active {
     transition: 0.3s ease;
 }
+
 .fade-enter-from,
 .fade-leave-to {
     opacity: 0;
 }
+
 .s6 {
     width: 100%;
     background: #fffcf1;
     padding-top: size(170);
     padding-bottom: size(200);
+
     @media screen and (max-width: 768px) {
         padding-top: size-m(15);
         padding-bottom: size-m(40);
     }
+
     .item {
         display: grid;
         grid-template-columns: 52% 48%;
@@ -383,6 +265,7 @@ function changeOrder(target) {
 
         padding-left: size(200);
         padding-right: size(120);
+
         @media screen and (max-width: 768px) {
             padding-left: size-m(35);
             padding-right: size-m(35);
@@ -394,14 +277,17 @@ function changeOrder(target) {
                 'text';
             grid-template-rows: unset;
         }
+
         .title {
             grid-area: title;
             align-self: start;
+
             h3 {
                 font-weight: 700;
                 font-size: size(42);
                 letter-spacing: size(1.26);
                 margin-bottom: size(32);
+
                 @media screen and (max-width: 768px) {
                     margin-bottom: size-m(12);
                     font-size: size-m(22);
@@ -409,19 +295,23 @@ function changeOrder(target) {
                     text-align: center;
                 }
             }
+
             ul {
                 display: flex;
                 flex-wrap: wrap;
+
                 @media screen and (max-width: 768px) {
                     margin-bottom: size-m(23);
                     justify-content: center;
                     gap: size-m(5) size-m(10);
                 }
+
                 li {
                     cursor: pointer;
                     font-size: size(28);
                     font-weight: 500;
                     letter-spacing: size(2.24);
+
                     @media screen and (max-width: 768px) {
                         text-align: center;
                         padding: size-m(5) size-m(12);
@@ -430,23 +320,28 @@ function changeOrder(target) {
                         font-size: size-m(12);
                         line-height: size-m(22);
                     }
+
                     &.active {
                         span {
                             color: #e1554b;
                         }
+
                         @media screen and (max-width: 768px) {
                             border: size-m(1) solid #e1554b;
                             background: #e1554b;
                             color: #fff;
+
                             span {
                                 color: #fff;
                             }
                         }
                     }
+
                     &:not(:last-child)::after {
                         content: '|';
                         display: inline-block;
                         margin: 0 size(12);
+
                         @media screen and (max-width: 768px) {
                             display: none;
                         }
@@ -454,40 +349,48 @@ function changeOrder(target) {
                 }
             }
         }
+
         .text {
             grid-area: text;
             align-self: end;
+
             .item_content {
                 h4 {
                     font-size: size(46);
                     font-weight: 700;
                     letter-spacing: size(2.3);
                     margin-bottom: size(30);
+
                     @media screen and (max-width: 768px) {
                         font-size: size-m(20);
                         letter-spacing: size-m(0);
                         margin-bottom: size-m(20);
                     }
                 }
+
                 p {
                     font-size: size(20);
                     font-weight: 500;
                     line-height: size(39);
                     letter-spacing: size(1.6);
+
                     @media screen and (max-width: 768px) {
                         font-size: size-m(12);
                         line-height: size-m(20);
                     }
                 }
+
                 &:not(:last-child) {
                     padding-bottom: size(65);
                     border-bottom: size(1) solid #e1554b;
                     margin-bottom: size(65);
+
                     @media screen and (max-width: 768px) {
                         padding-bottom: size-m(15);
                         border-bottom: size-m(1) solid #e1554b;
                         margin-bottom: size-m(15);
                     }
+
                     &.no_line {
                         padding-bottom: 0;
                         border-bottom: none;
@@ -495,6 +398,7 @@ function changeOrder(target) {
                     }
                 }
             }
+
             @media screen and (max-width: 768px) {
                 width: 100%;
                 order: 2;
@@ -502,13 +406,16 @@ function changeOrder(target) {
                 margin-top: size-m(25);
             }
         }
+
         .pic {
             grid-area: pic;
             box-sizing: border-box;
+
             @media screen and (max-width: 768px) {
                 width: 100%;
                 order: 1;
             }
+
             img {
                 width: 100%;
             }
@@ -516,12 +423,15 @@ function changeOrder(target) {
             .swiper {
                 position: relative;
                 width: 100%;
+
                 img {
                     width: 100%;
                 }
+
                 .swiper-pagination {
                     text-align: right;
                     padding-right: size(30);
+
                     .swiper-pagination-bullet {
                         border-radius: 100%;
                         border: size(1) solid #fff;
@@ -529,20 +439,24 @@ function changeOrder(target) {
                         height: size(20);
                         margin-right: 0;
                         margin-left: size(20);
+
                         @media screen and (max-width: 768px) {
                             width: size-m(8);
                             height: size-m(8);
                             margin-left: size-m(8);
                         }
+
                         &.swiper-pagination-bullet-active {
                             background-color: #fff;
                         }
                     }
                 }
+
                 p {
                     position: absolute;
                     left: size(35);
                     bottom: size(20);
+
                     @media screen and (max-width: 768px) {
                         left: size-m(10);
                         bottom: size-m(5);

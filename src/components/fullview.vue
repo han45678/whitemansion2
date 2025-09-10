@@ -43,7 +43,7 @@ onMounted(() => {
     >
         <img
             ref="viewImg"
-            src="@/section/s2/map.webp"
+            src="@/section/s2/bg.jpg"
             alt=""
             srcset=""
         />

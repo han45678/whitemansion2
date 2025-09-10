@@ -1,26 +1,23 @@
 <template>
-    <div
-        class="flex flex-col md:flex-row items-center justify-between md:bg-white bg-[#F4F1E7]"
-    >
+    <div class="flex flex-col md:flex-row items-center justify-between md:bg-white bg-[#F4F1E7]">
         <!-- <div class="map"></div> -->
         <div class="flex-1 items-center justify-center py-4 md:py-10">
             <div class="info-box mx-auto mt-4 flex items-center justify-center">
-                <div class="title font-['Noto_Sans_TC']">
-                    <img
-                        ta-aos="fade-in"
-                        src="../form/title.svg"
-                        alt="title"
-                    />
+                <div class="title font-['Noto_Sans_TC']" data-aos="fade-up" data-aos-duration="400">
+                    <img ta-aos="fade-in" src="../form/title.svg" alt="title" />
                     <p>建案資訊</p>
                 </div>
 
-                <div
-                    class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2"
-                >
-                    <div
-                        class="item font-bold flex items-center w-full whitespace-nowrap"
-                        v-for="item in info.houseInfos"
-                    >
+                <div class="info-items mt-4 w-full grid grid-cols-1">
+                    <div class="item flex items-center w-full whitespace-nowrap" v-for="item in info.houseInfos1">
+                        <p class="mr-5">
+                            {{ item[0] }}
+                        </p>
+                        <p class="whitespace-pre-line leading-normal text-left">
+                            {{ item[1] }}
+                        </p>
+                    </div>
+                    <div class="item flex items-center w-full whitespace-nowrap" v-for="item in info.houseInfos2">
                         <p class="mr-5">
                             {{ item[0] }}
                         </p>
@@ -32,23 +29,12 @@
             </div>
         </div>
     </div>
-    <div
-        class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]"
-    >
-        <a
-            href="https://www.lixin.com.tw/"
-            target="_blank"
-            ><img
-                class="hover:opacity-50"
-                src="@/section/form/footerlogo.png"
-                alt="戀JIA"
-                srcset=""
-        /></a>
-        <a
-            href="https://www.h65.tw/admin/test/login"
-            target="_blank"
-            ><p class="text-white text-xs">網頁製作</p></a
-        >
+    <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
+        <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
+                src="@/section/form/footerlogo.png" alt="長築白樓" srcset="" /></a>
+        <a href="https://www.h65.tw/admin/test/login" target="_blank">
+            <p class="text-white text-xs">網頁製作</p>
+        </a>
     </div>
 </template>
 
@@ -56,14 +42,14 @@
 @import '@/assets/style/function.scss';
 
 .info-box {
-    width: 100%;
-    padding-left: size(250);
-    padding-right: size(200);
+    width: 80%;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
+
     .title {
-        width: 100%;
+        width: 50%;
         font-size: size(30);
         font-weight: 700;
         color: #595757;
@@ -72,12 +58,19 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+
+        img {
+            width: size(300);
+        }
+
         @media screen and (max-width: 768px) {
             width: 100%;
         }
+
         p {
-            width: 100%;
+            width: 50%;
             margin-top: size(30);
+
             @media screen and (max-width: 768px) {
                 margin-top: size-m(15);
                 color: #000;
@@ -88,16 +81,18 @@
     }
 
     .info-items {
-        width: 70%;
+        width: 60%;
         row-gap: size(20);
         column-gap: size(20);
         padding-left: size(55);
         border-left: size(3) solid #aca7a6;
+
         @media screen and (max-width: 768px) {
             padding-left: 0;
             border-left: none;
             width: 100%;
         }
+
         .item {
             line-height: size(17);
             font-size: size(17);
@@ -107,7 +102,9 @@
 
             p {
                 color: #595757;
+                font-weight: 500;
             }
+
             p:first-child {
                 width: 4.5em;
             }
@@ -123,6 +120,7 @@
         .title {
             font-size: size-m(29);
             margin-bottom: size-m(45);
+
             img {
                 width: 100%;
                 max-width: size-m(207);

@@ -8,28 +8,17 @@ import 'swiper/css/pagination';
 <template>
     <section class="s8 text-[#000] relative">
         <div class="pic hidden md:block">
-            <Swiper
-                :slidesPerView="1"
-                :loop="true"
-                :autoplay="true"
-                :modules="[Pagination, Autoplay]"
-                :pagination="{ clickable: true }"
-            >
+            <Swiper :slidesPerView="1" :loop="true" :autoplay="true" :modules="[Pagination, Autoplay]"
+                :pagination="{ clickable: true }">
                 <SwiperSlide>
                     <div class="pic_item relative">
-                        <img
-                            src="./s8/01.jpg"
-                            alt="pic"
-                        />
+                        <img src="./s8/01.jpg" alt="pic" />
                         <p class="absolute text-[#fff]">
                             Lobby 3d透視參考示意圖
                         </p>
                     </div>
                     <div class="pic_item relative">
-                        <img
-                            src="./s8/02.jpg"
-                            alt="pic"
-                        />
+                        <img src="./s8/02.jpg" alt="pic" />
                         <p class="absolute text-[#fff]">
                             Lobby 3d透視參考示意圖
                         </p>
@@ -37,19 +26,13 @@ import 'swiper/css/pagination';
                 </SwiperSlide>
                 <SwiperSlide>
                     <div class="pic_item relative">
-                        <img
-                            src="./s8/03.jpg"
-                            alt="pic"
-                        />
+                        <img src="./s8/03.jpg" alt="pic" />
                         <p class="absolute text-[#fff]">
                             Lobby 3d透視參考示意圖
                         </p>
                     </div>
                     <div class="pic_item relative">
-                        <img
-                            src="./s8/04.jpg"
-                            alt="pic"
-                        />
+                        <img src="./s8/04.jpg" alt="pic" />
                         <p class="absolute text-[#fff]">
                             Lobby 3d透視參考示意圖
                         </p>
@@ -58,56 +41,32 @@ import 'swiper/css/pagination';
             </Swiper>
         </div>
         <div class="pic block md:hidden">
-            <Swiper
-                :slidesPerView="1"
-                :loop="true"
-                :autoplay="true"
-                :modules="[Pagination, Autoplay]"
-                :pagination="{ clickable: true }"
-            >
+            <Swiper :slidesPerView="1" :loop="true" :autoplay="true" :modules="[Pagination, Autoplay]"
+                :pagination="{ clickable: true }">
                 <SwiperSlide class="relative">
-                    <img
-                        src="./s8/01m.jpg"
-                        alt="pic"
-                    />
+                    <img src="./s8/01m.jpg" alt="pic" />
                     <p class="absolute text-[#fff]">Lobby 3d透視參考示意圖</p>
                 </SwiperSlide>
                 <SwiperSlide class="relative">
-                    <img
-                        src="./s8/02m.jpg"
-                        alt="pic"
-                    />
+                    <img src="./s8/02m.jpg" alt="pic" />
                     <p class="absolute text-[#fff]">Lobby 3d透視參考示意圖</p>
                 </SwiperSlide>
                 <SwiperSlide class="relative">
-                    <img
-                        src="./s8/03m.jpg"
-                        alt="pic"
-                    />
+                    <img src="./s8/03m.jpg" alt="pic" />
                     <p class="absolute text-[#fff]">Lobby 3d透視參考示意圖</p>
                 </SwiperSlide>
                 <SwiperSlide class="relative">
-                    <img
-                        src="./s8/04m.jpg"
-                        alt="pic"
-                    />
+                    <img src="./s8/04m.jpg" alt="pic" />
                     <p class="absolute text-[#fff]">Lobby 3d透視參考示意圖</p>
                 </SwiperSlide>
             </Swiper>
         </div>
         <div class="text">
-            <span class="text-[#595757] block md:hidden"
-                >＊3d示意圖僅供參考，以上之傢俱、飾品、畫作及植栽為情境示意表現，建設公司保有修正之權利</span
-            >
-            <h3 data-aos="fade-in">精緻而實用，放大「家」的生活維度。</h3>
-            <div
-                class="content_text"
-                data-aos="fade-up"
-            >
-                <span class="text-[#595757] hidden md:block"
-                    >＊3d示意圖僅供參考，以上之傢俱、飾品、畫作及植栽為情境示意表現，建設公司保有修正之權利</span
-                >
-                <p>
+            <span class="text-[#595757] block md:hidden">＊3d示意圖僅供參考，以上之傢俱、飾品、畫作及植栽為情境示意表現，建設公司保有修正之權利</span>
+            <h3 data-aos="fade-in" data-aos-duration="400">精緻而實用，放大「家」的生活維度。</h3>
+            <div class="content_text">
+                <span class="text-[#595757] hidden md:block">＊3d示意圖僅供參考，以上之傢俱、飾品、畫作及植栽為情境示意表現，建設公司保有修正之權利</span>
+                <p data-aos="fade-up" data-aos-duration="600">
                     長磯機構｜長築興業以「實用 ×
                     質感」的生活美學規劃公設，讓公領域真正融入居者日常。視公共空間為居家功能與尺度的延伸；在簡潔俐落的設計中，營造精緻優雅、易於維護的共享場域。
                 </p>
@@ -147,6 +106,7 @@ import 'swiper/css/pagination';
                 width: 100%;
                 display: flex;
             }
+
             img {
                 height: size(600);
 

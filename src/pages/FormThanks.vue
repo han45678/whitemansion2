@@ -2,8 +2,8 @@
     <div class="thanks">
         <img src="https://bcp.crwdcntrl.net/5/c=13578/b=78113418" width="1" height="1" />
         <a href="/">
-            <img src="@/assets/thank-img.png" alt="戀JIA" class="img">
-            <img src="@/assets/thank-img-hover.png" alt="戀JIA" class="img-hover">
+            <img src="@/assets/thank-img.png" alt="長築白樓" class="img">
+            <img src="@/assets/thank-img-hover.png" alt="長築白樓" class="img-hover">
         </a>
     </div>
 </template>

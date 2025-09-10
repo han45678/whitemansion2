@@ -10,70 +10,47 @@ import 'swiper/css/pagination';
         <div class="wrapper">
             <div class="item">
                 <div class="pic" data-aos="fade-in">
-                    <Swiper
-                        :slidesPerView="1"
-                        :loop="true"
-                        :autoplay="true"
-                        :modules="[Pagination, Autoplay]"
-                        :pagination="{ clickable: true }"
-                    >
+                    <Swiper :slidesPerView="1" :loop="true" :autoplay="true" :modules="[Pagination, Autoplay]"
+                        :pagination="{ clickable: true }">
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s4/1-1.webp"
-                                alt="pic"
-                            />
+                            <img src="./s4/1-1.webp" alt="pic" />
                             <p class="absolute text-[#fff]">
                                 新化系統交流道(國3X國8)
                             </p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s4/1-2.webp"
-                                alt="pic"
-                            />
+                            <img src="./s4/1-2.webp" alt="pic" />
                             <p class="absolute text-[#fff]">新港社大道</p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s4/1-3.webp"
-                                alt="pic"
-                            />
+                            <img src="./s4/1-3.webp" alt="pic" />
                             <p class="absolute text-[#fff]">北外環快速道路</p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s4/1-4.webp"
-                                alt="pic"
-                            />
+                            <img src="./s4/1-4.webp" alt="pic" />
                             <p class="absolute text-[#fff]">
                                 衛福部署立醫院新化分院
                             </p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s4/1-5.webp"
-                                alt="pic"
-                            />
+                            <img src="./s4/1-5.webp" alt="pic" />
                             <p class="absolute text-[#fff]">新化高中</p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s4/1-6.webp"
-                                alt="pic"
-                            />
+                            <img src="./s4/1-6.webp" alt="pic" />
                             <p class="absolute text-[#fff]">新化國小</p>
                         </SwiperSlide>
                     </Swiper>
                 </div>
                 <div class="text">
-                    <h3 class="hidden md:block" data-aos="fade-in">
+                    <h3 class="hidden md:block" data-aos="fade-in" data-aos-duration="400">
                         置產大南科<br />
                         慧眼秒懂新化基期<span>。</span>
                     </h3>
-                    <h3 class="block md:hidden" data-aos="fade-in">
+                    <h3 class="block md:hidden" data-aos="fade-in" data-aos-duration="400">
                         置產大南科｜慧眼秒懂新化基期<span>。</span>
                     </h3>
-                    <ul data-aos="fade-in">
+                    <ul data-aos="fade-up" data-aos-duration="600">
                         <li>
                             <span class="text-[#E1554B]">低基期低供給｜</span>
                             土地整合難度高，新住宅大樓供給少
@@ -95,63 +72,40 @@ import 'swiper/css/pagination';
             </div>
             <div class="item">
                 <div class="pic" data-aos="fade-in">
-                    <Swiper
-                        :slidesPerView="1"
-                        :loop="true"
-                        :autoplay="true"
-                        :modules="[Pagination, Autoplay]"
-                        :pagination="{ clickable: true }"
-                    >
+                    <Swiper :slidesPerView="1" :loop="true" :autoplay="true" :modules="[Pagination, Autoplay]"
+                        :pagination="{ clickable: true }">
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s4/2-1.webp"
-                                alt="pic"
-                            />
+                            <img src="./s4/2-1.webp" alt="pic" />
                             <p class="absolute text-[#fff]">新化老街</p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s4/2-2.webp"
-                                alt="pic"
-                            />
+                            <img src="./s4/2-2.webp" alt="pic" />
                             <p class="absolute text-[#fff]">新化老街</p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s4/2-3.webp"
-                                alt="pic"
-                            />
+                            <img src="./s4/2-3.webp" alt="pic" />
                             <p class="absolute text-[#fff]">新化星巴克</p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s4/2-4.webp"
-                                alt="pic"
-                            />
+                            <img src="./s4/2-4.webp" alt="pic" />
                             <p class="absolute text-[#fff]">新化體育公園</p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s4/2-5.webp"
-                                alt="pic"
-                            />
+                            <img src="./s4/2-5.webp" alt="pic" />
                             <p class="absolute text-[#fff]">新化果菜市場</p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
-                            <img
-                                src="./s4/2-6.webp"
-                                alt="pic"
-                            />
+                            <img src="./s4/2-6.webp" alt="pic" />
                             <p class="absolute text-[#fff]">虎頭埤風景區</p>
                         </SwiperSlide>
                     </Swiper>
                 </div>
                 <div class="text">
-                    <h3 data-aos="fade-in">
+                    <h3 data-aos="fade-in" data-aos-duration="400">
                         生活大南科<br />
                         新化埕心繁華富域<span>。</span>
                     </h3>
-                    <ul data-aos="fade-in">
+                    <ul data-aos="fade-up" data-aos-duration="600">
                         <li>
                             <span class="text-[#E1554B]">緊鄰新化高中旁｜</span>
                             軸心重劃區收攘商圈與生活餘裕

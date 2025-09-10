@@ -1,39 +1,41 @@
 <script setup>
 import { ref } from 'vue';
+import 'swiper/css';
+import 'swiper/css/pagination';
 </script>
 
 <template>
     <article class="s10">
-        <ul>
-            <li data-aos="fade-in">
-                <h4 class="text-[#E1554B]">ALL IN ONE精裝修</h4>
-                <p class="text-[#000]">
+        <ul data-aos="fade-up">
+            <li>
+                <h4 class="text-[#E1554B]" data-aos="fade-in">ALL IN ONE精裝修</h4>
+                <p class="text-[#000]" data-aos="fade-in">
                     一條龍服務精省<br />
                     入住快又安心
                 </p>
             </li>
-            <li data-aos="fade-in" data-aos-delay="200">
-                <h4 class="text-[#E1554B]">預組工法</h4>
+            <li>
+                <h4 class=" text-[#E1554B]">預組工法</h4>
                 <p class="text-[#000]">
                     日本晴空塔等級<br />
                     進口螺紋鋼筋
                 </p>
             </li>
-            <li data-aos="fade-in" data-aos-delay="400">
+            <li>
                 <h4 class="text-[#E1554B]">三方勘驗</h4>
                 <p class="text-[#000]">
                     監造、建築師、<br />
                     結構技師把關
                 </p>
             </li>
-            <li data-aos="fade-in" data-aos-delay="600">
+            <li>
                 <h4 class="text-[#E1554B]">生產履歷</h4>
                 <p class="text-[#000]">
                     官方依實際進度<br />
                     公告工程紀錄
                 </p>
             </li>
-            <li data-aos="fade-in" data-aos-delay="800">
+            <li>
                 <h4 class="text-[#E1554B]">售後服務</h4>
                 <p class="text-[#000]">
                     line即時線上客服<br />
@@ -53,21 +55,25 @@ import { ref } from 'vue';
     padding-left: size(100);
     padding-right: size(100);
     padding-bottom: size(200);
+
     @media screen and (max-width: 768px) {
         padding-top: size-m(65);
         padding-left: size-m(40);
         padding-right: size-m(40);
         padding-bottom: size-m(40);
     }
+
     ul {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 0 size(30);
+
         @media screen and (max-width: 768px) {
             gap: size-m(7);
             justify-content: center;
         }
+
         li {
             flex: 0 0 calc(20% - #{size(30)}); // ✅ 電腦版五等分 (扣掉 gap)
             aspect-ratio: 1 / 1;
@@ -83,6 +89,7 @@ import { ref } from 'vue';
                 flex: 0 0 calc(50% - #{size-m(7)}); // ✅ 手機版兩等分
                 border: size-m(3) solid #e1554b;
             }
+
             h4 {
                 width: 100%;
                 text-align: center;
@@ -91,13 +98,15 @@ import { ref } from 'vue';
                 line-height: size(43);
                 letter-spacing: size(0.9);
                 margin-bottom: size(24);
+
                 @media screen and (max-width: 768px) {
-                    line-height:auto;
+                    line-height: auto;
                     margin-top: size-m(5);
                     font-size: size-m(14);
                     margin-bottom: size-m(12);
                 }
             }
+
             p {
                 width: 100%;
                 text-align: center;
@@ -105,6 +114,7 @@ import { ref } from 'vue';
                 font-weight: 500;
                 line-height: size(38);
                 letter-spacing: size(0.78);
+
                 @media screen and (max-width: 768px) {
                     font-size: size-m(14);
                     font-weight: 500;

@@ -6,7 +6,7 @@ import Fullview from '../components/fullview.vue'
   <article class="s2 relative" id="s2">
     <!-- 桌機版：自動縮放 -->
     <div class="map hidden md:block">
-      <img src="@/section/s2/map.webp" alt="bg_decor" />
+      <img src="@/section/s2/bg.jpg" alt="bg_decor" />
     </div>
 
     <!-- 手機版：左右滑動 -->
