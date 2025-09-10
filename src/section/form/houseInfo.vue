@@ -78,6 +78,12 @@
         p {
             width: 100%;
             margin-top: size(30);
+            @media screen and (max-width: 768px) {
+                margin-top: size-m(15);
+                color: #000;
+                font-size: size-m(17);
+                letter-spacing: size-m(0.886);
+            }
         }
     }
 
@@ -99,6 +105,9 @@
             line-height: 1.5;
             text-align: left;
 
+            p {
+                color: #595757;
+            }
             p:first-child {
                 width: 4.5em;
             }
@@ -107,18 +116,14 @@
 }
 
 @media screen and (max-width: 768px) {
-    // .footer {
-    //     margin-bottom: size-m(63);
-    // }
-
     .info-box {
         width: size-m(313);
-        padding: size-m(30) 0;
+        padding: size-m(30) 0 size-m(60) 0;
 
         .title {
             font-size: size-m(29);
             margin-bottom: size-m(45);
-            img{
+            img {
                 width: 100%;
                 max-width: size-m(207);
             }

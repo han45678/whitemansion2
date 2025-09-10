@@ -48,6 +48,7 @@ import { ref } from 'vue';
 @import '@/assets/style/function.scss';
 
 .s10 {
+    background-color: #FFFDF1;
     padding-top: size(245);
     padding-left: size(100);
     padding-right: size(100);
@@ -62,13 +63,13 @@ import { ref } from 'vue';
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        gap: 0 size(40);
+        gap: 0 size(30);
         @media screen and (max-width: 768px) {
-            gap: size-m(17);
+            gap: size-m(7);
             justify-content: center;
         }
         li {
-            flex: 0 0 calc(20% - #{size(40)}); // ✅ 電腦版五等分 (扣掉 gap)
+            flex: 0 0 calc(20% - #{size(30)}); // ✅ 電腦版五等分 (扣掉 gap)
             aspect-ratio: 1 / 1;
             border-radius: 100%;
             border: size(3) solid #e1554b;
@@ -79,7 +80,7 @@ import { ref } from 'vue';
             align-content: center;
 
             @media screen and (max-width: 768px) {
-                flex: 0 0 calc(50% - #{size-m(17)}); // ✅ 手機版兩等分
+                flex: 0 0 calc(50% - #{size-m(7)}); // ✅ 手機版兩等分
                 border: size-m(3) solid #e1554b;
             }
             h4 {
@@ -91,6 +92,8 @@ import { ref } from 'vue';
                 letter-spacing: size(0.9);
                 margin-bottom: size(24);
                 @media screen and (max-width: 768px) {
+                    line-height:auto;
+                    margin-top: size-m(5);
                     font-size: size-m(14);
                     margin-bottom: size-m(12);
                 }

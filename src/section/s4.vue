@@ -66,9 +66,12 @@ import 'swiper/css/pagination';
                     </Swiper>
                 </div>
                 <div class="text">
-                    <h3 data-aos="fade-in">
+                    <h3 class="hidden md:block" data-aos="fade-in">
                         置產大南科<br />
                         慧眼秒懂新化基期<span>。</span>
+                    </h3>
+                    <h3 class="block md:hidden" data-aos="fade-in">
+                        置產大南科｜慧眼秒懂新化基期<span>。</span>
                     </h3>
                     <ul data-aos="fade-in">
                         <li>
@@ -218,7 +221,7 @@ import 'swiper/css/pagination';
                         left: size-m(10);
                         bottom: size-m(5);
                     }
-                }
+                }   
 
                 .swiper-pagination {
                     text-align: right;
@@ -249,7 +252,7 @@ import 'swiper/css/pagination';
                 box-sizing: border-box;
                 @media screen and (max-width: 768px) {
                     width: 100%;
-                    padding: size-m(30) size-m(40);
+                    padding: size-m(30) size-m(30) !important;
                 }
                 h3 {
                     width: 100%;

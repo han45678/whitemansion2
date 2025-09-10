@@ -6,7 +6,13 @@ import { ref } from 'vue';
     <article class="s11">
         <div class="pic">
             <img
+                class="hidden md:block"    
                 src="./s11/banner.webp"
+                alt="banner"
+            />
+            <img
+                class="block md:hidden"
+                src="./s11/banner_m.webp"
                 alt="banner"
             />
         </div>
@@ -27,11 +33,11 @@ import { ref } from 'vue';
 @import '@/assets/style/function.scss';
 
 .s11 {
+    background-color: #FFFDF1;
     .pic {
         width: 100%;
         img {
             width: 100%;
-            display: block;
         }
     }
     .text {

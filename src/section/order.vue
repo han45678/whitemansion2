@@ -4,42 +4,23 @@
         <div class="title mx-auto order-title text-left text-[#E1554B]">
             {{ info.order.title }}
         </div>
-        <!-- Title Image -->
-        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="戀JIA" srcset=""
-      data-aos="fade" data-aos-duration="1000">
-    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="戀JIA" srcset="" data-aos="fade"
-      data-aos-duration="1000"> -->
         <!-- Form -->
         <div class="form mx-auto relative flex items-start justify-center">
             <div class="left h-full flex flex-col justify-between items-center">
                 <input
                     type="text"
-                    placeholder="姓名"
+                    placeholder="*姓名"
                     class="input w-full rounded-none"
                     :value="formData.name"
                     @input="(event) => (formData.name = event.target.value)"
                 />
                 <input
                     type="text"
-                    placeholder="手機"
+                    placeholder="*手機"
                     class="input w-full rounded-none"
                     :value="formData.phone"
                     @input="(event) => (formData.phone = event.target.value)"
                 />
-                <select
-                    class="select w-full rounded-none"
-                    v-model="formData.room_type"
-                >
-                    <option
-                        value=""
-                        selected
-                        disabled
-                    >
-                        需求房型
-                    </option>
-                    <option value="2房">2 房</option>
-                    <option value="3房">3 房</option>
-                </select>
                 <select
                     class="select w-full rounded-none"
                     v-model="formData.city"
@@ -49,7 +30,7 @@
                         selected
                         disabled
                     >
-                        居住縣市
+                        *居住縣市
                     </option>
                     <option
                         v-for="city in cityList"
@@ -67,7 +48,7 @@
                         selected
                         disabled
                     >
-                        居住地區
+                        *居住地區
                     </option>
                     <option
                         v-for="area in areaList"
@@ -99,7 +80,7 @@
                 <p>
                     本人知悉並同意<label
                         for="policy-modal"
-                        class="modal-button font-bold cursor-pointer hover:opacity-70"
+                        class="modal-button font-bold cursor-pointer hover:opacity-70 text-[#E1554B] "
                         >「個資告知事項聲明」</label
                     >內容
                 </p>
@@ -117,10 +98,10 @@
 
             <!-- Send -->
             <div
-                class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#D9374B] text-white"
+                class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#E1554B] text-white"
                 @click="send()"
             >
-                送出表單
+                立即預約
             </div>
         </div>
         <!-- Contact Info -->
@@ -221,7 +202,9 @@
         width: 100%;
         height: 3.3em;
         line-height: 3.3;
+        font-weight: 500;
         border: 0;
+        border-radius: 0;
         // border-radius: 1.6em;
         z-index: 10;
         position: relative;
@@ -325,11 +308,11 @@ const bypass = [];
 const formDataRef = ref([
     '姓名', //name
     '手機', //phone
-    '房型', //room_type
+    // '房型', //room_type
     // "信箱", //email
     '居住縣市', //city
     '居住地區', //area
-    '備註訊息', //note
+    '請輸入您的留言', //note
     '個資告知事項聲明', //policyChecked
     '機器人驗證' //r_verify
 ]);

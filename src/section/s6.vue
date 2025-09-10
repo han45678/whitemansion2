@@ -1,42 +1,77 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, watchEffect, onUnmounted } from 'vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Pagination, Autoplay } from 'swiper'; // ✅ 正確寫法
 import 'swiper/css';
 import 'swiper/css/pagination';
 
 const order = ref(0);
+const text = ref(null); // 對應你的 ref="text"
+const textHeight = ref(0);
+
+function updateHeight() {
+    if (window.innerWidth > 768 && text.value) {
+        textHeight.value = text.value.offsetHeight + "px";
+    } else {
+        textHeight.value = "auto";
+    }
+}
+
+onMounted(() => {
+    updateHeight();
+    window.addEventListener('resize', updateHeight);
+});
+
+onUnmounted(() => {
+    window.removeEventListener('resize', updateHeight);
+});
+
+function changeOrder(target) {
+    order.value = null; // 先清空
+    setTimeout(() => {
+        order.value = target; // 0.3 秒後切換
+    }, 300);
+}
 </script>
 
 <template>
     <section class="s6 text-[#000] font-['Noto_Sans_TC']">
         <div class="item">
             <div class="title">
-                <h3 class="text-[#E1554B]" data-aos="fade-in">國際團隊</h3>
+                <h3
+                    class="text-[#E1554B]"
+                    data-aos="fade-in"
+                >
+                    國際團隊
+                </h3>
                 <ul data-aos="fade-in">
                     <li
                         :class="{ active: order === 0 }"
-                        @click="order = 0"
+                        @click="changeOrder(0)"
                     >
-                        全案規劃及建築設計
+                        <span>全案規劃及建築設計</span>
                     </li>
                     <li
+                        class="block md:hidden"
+                        style="opacity: 0; width: 100%; height: 1px; padding: 0"
+                    />
+                    <li
                         :class="{ active: order === 1 }"
-                        @click="order = 1"
+                        @click="changeOrder(1)"
                     >
-                        公設規劃
+                        <span>公設規劃</span>
                     </li>
                     <li
                         :class="{ active: order === 2 }"
-                        @click="order = 2"
+                        @click="changeOrder(2)"
                     >
-                        景觀美學
+                        <span>景觀美學</span>
                     </li>
                     <li
                         :class="{ active: order === 3 }"
-                        @click="order = 3"
+                        @click="changeOrder(3)"
                     >
-                        燈光表情
+                        <span>燈光表情</span>
                     </li>
                 </ul>
             </div>
@@ -44,9 +79,11 @@ const order = ref(0);
             <!-- 文字 -->
             <transition name="fade">
                 <div
+                    ref="text"
                     class="text"
                     v-if="order === 0"
                     data-aos="fade-up"
+                    :style="{minHeight: textHeight + 'px'  }"
                 >
                     <div class="item_content">
                         <h4>全案規劃｜U.tech技聯組工程顧問</h4>
@@ -70,7 +107,7 @@ const order = ref(0);
                 <div
                     class="text"
                     v-if="order === 1"
-                    data-aos="fade-up"
+                    :style="{minHeight: textHeight + 'px'  }"
                 >
                     <div class="item_content no_line">
                         <h4>公設規劃｜三向＋先奕設計團隊</h4>
@@ -84,7 +121,7 @@ const order = ref(0);
                 <div
                     class="text"
                     v-if="order === 2"
-                    data-aos="fade-up"
+                    :style="{minHeight: textHeight + 'px'  }"
                 >
                     <div class="item_content no_line">
                         <h4>景觀美學｜三生規劃</h4>
@@ -98,7 +135,7 @@ const order = ref(0);
                 <div
                     class="text"
                     v-if="order === 3"
-                    data-aos="fade-up"
+                    :style="{minHeight: textHeight + 'px'  }"
                 >
                     <div class="item_content no_line">
                         <h4>燈光表情｜偶得設計</h4>
@@ -129,7 +166,7 @@ const order = ref(0);
                                 alt="pic"
                             />
                             <p class="absolute text-[#fff]">
-                                新化系統交流道(國3X國8)
+                                技聯組實績 惠宇千曦
                             </p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
@@ -137,14 +174,18 @@ const order = ref(0);
                                 src="./s6/1-2.webp"
                                 alt="pic"
                             />
-                            <p class="absolute text-[#fff]">新港社大道</p>
+                            <p class="absolute text-[#fff]">
+                                技聯組實績 惠宇敦北
+                            </p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
                             <img
                                 src="./s6/1-3.webp"
                                 alt="pic"
                             />
-                            <p class="absolute text-[#fff]">北外環快速道路</p>
+                            <p class="absolute text-[#fff]">
+                                技聯組實績 惠宇敦南
+                            </p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
                             <img
@@ -152,7 +193,7 @@ const order = ref(0);
                                 alt="pic"
                             />
                             <p class="absolute text-[#fff]">
-                                衛福部署立醫院新化分院
+                                技聯組實績 惠宇樂觀
                             </p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
@@ -160,9 +201,7 @@ const order = ref(0);
                                 src="./s6/1-5.webp"
                                 alt="pic"
                             />
-                            <p class="absolute text-[#fff]">
-                                衛福部署立醫院新化分院
-                            </p>
+                            <p class="absolute text-[#fff]">蔡詠爲建築師</p>
                         </SwiperSlide>
                     </Swiper>
                 </div>
@@ -345,8 +384,8 @@ const order = ref(0);
         padding-left: size(200);
         padding-right: size(120);
         @media screen and (max-width: 768px) {
-            padding-left: size-m(40);
-            padding-right: size-m(40);
+            padding-left: size-m(35);
+            padding-right: size-m(35);
 
             grid-template-columns: 100%;
             grid-template-areas:
@@ -384,6 +423,7 @@ const order = ref(0);
                     font-weight: 500;
                     letter-spacing: size(2.24);
                     @media screen and (max-width: 768px) {
+                        text-align: center;
                         padding: size-m(5) size-m(12);
                         border: size-m(1) solid #e1554b;
                         background: #f7f8f8;
@@ -391,11 +431,16 @@ const order = ref(0);
                         line-height: size-m(22);
                     }
                     &.active {
-                        color: #e1554b;
+                        span {
+                            color: #e1554b;
+                        }
                         @media screen and (max-width: 768px) {
                             border: size-m(1) solid #e1554b;
                             background: #e1554b;
                             color: #fff;
+                            span {
+                                color: #fff;
+                            }
                         }
                     }
                     &:not(:last-child)::after {

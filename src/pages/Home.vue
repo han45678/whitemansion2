@@ -14,16 +14,13 @@ import S10 from "@/section/s10.vue"
 import S11 from "@/section/s11.vue"
 import S12 from "@/section/s12.vue"
 import Order from "@/section/order.vue"
-import Nav from "@/layout/navbar.vue"
+import Menu from "@/section/menu.vue"
 import { onMounted, ref } from "vue"
 
 import AOS from 'aos';
 
 const isLoading = ref(true)
 const gtmNoScript = ref('')
-const config = ref({
-  showNav: false
-})
 
 onMounted(() => {
   window.onload = function () {
@@ -45,7 +42,7 @@ onMounted(() => {
     <img class="w-32" src="@/assets/loading_w.gif" alt="戀JIA" srcset="">
   </div>
   <!--loading end-->
-  <Nav v-if="config.showNav" />
+  <Menu />
   <div class="home bg-white overflow-hidden font-['Noto_Sans_TC']">
     <S1 />
     <S2 />

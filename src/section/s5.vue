@@ -46,28 +46,28 @@ import 'swiper/css/pagination';
                         src="./s5/1.webp"
                         alt="pic"
                     />
-                    <p class="absolute text-[#fff]">新化系統交流道(國3X國8)</p>
+                    <p class="absolute text-[#fff]">長築白樓1</p>
                 </SwiperSlide>
                 <SwiperSlide class="relative">
                     <img
                         src="./s5/2.webp"
                         alt="pic"
                     />
-                    <p class="absolute text-[#fff]">新港社大道</p>
+                    <p class="absolute text-[#fff]">白樓3璞墅</p>
                 </SwiperSlide>
                 <SwiperSlide class="relative">
                     <img
                         src="./s5/3.webp"
                         alt="pic"
                     />
-                    <p class="absolute text-[#fff]">北外環快速道路</p>
+                    <p class="absolute text-[#fff]">聽心苑2</p>
                 </SwiperSlide>
                 <SwiperSlide class="relative">
                     <img
                         src="./s5/4.webp"
                         alt="pic"
                     />
-                    <p class="absolute text-[#fff]">衛福部署立醫院新化分院</p>
+                    <p class="absolute text-[#fff]">聽心苑</p>
                 </SwiperSlide>
             </Swiper>
         </div>
@@ -99,9 +99,15 @@ import 'swiper/css/pagination';
         }
         .logo_pic {
             display: flex;
-            justify-content: center;
+            justify-content: left;
             gap: size(40);
             margin-bottom: size(20);
+            @media screen and (max-width: 768px) {
+                justify-content: center;
+                img{
+                    max-height: size-m(17);
+                }
+            }
         }
         h3 {
             font-size: size(50);
@@ -140,8 +146,7 @@ import 'swiper/css/pagination';
     .text_pic {
         width: size(115);
         top: 0;
-        right: 50%;
-        transform: translateX(-50%);
+        right: calc(50% + size(57.5));
         z-index: 10;
         @media screen and (max-width: 768px) {
             display: none;

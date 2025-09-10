@@ -179,12 +179,12 @@ const orderType = ref(true);
             </Swiper>
         </div>
         <div class="text text-[#000]">
-            <div class="text_content">
+            <div class="text_content" data-aos="fade-up">
                 <div
                     class="item"
                     v-if="orderType"
                 >
-                    <div class="title"  data-aos="fade-up">
+                    <div class="title">
                         <h3>2房精裝修</h3>
                         <h4>25-27坪｜光合角間</h4>
                     </div>
@@ -268,6 +268,7 @@ const orderType = ref(true);
                 font-size: size(44);
                 letter-spacing: size(3.96);
                 width: calc(100% - size(40) - size(690));
+                font-weight: 700;
                 @media screen and (max-width: 768px) {
                     font-size: 30px;
                     line-height: 45px;
@@ -275,6 +276,8 @@ const orderType = ref(true);
                     position: absolute;
                     top: size-m(10);
                     left: size-m(35);
+                    width: calc(100% - size-m(35));
+                    padding-right: size-m(35);
                 }
             }
             p {
@@ -291,9 +294,10 @@ const orderType = ref(true);
                     letter-spacing: 2.7px;
                     position: absolute;
                     bottom: size-m(10);
-                    left: size-m(35);
+                    left: size-m(15);
                     font-size: size-m(10);
                     line-height: size-m(14);
+                    width: calc(100% - size-m(30));
                 }
             }
         }

@@ -51,7 +51,7 @@
             line-height: size(43);
             letter-spacing: size(2);
             @media screen and (max-width: 768px) {
-                width: size-m(288);
+                width: 100%;
                 margin: size-m(20) auto 0 auto;
                 font-size: size-m(12);
                 line-height: size-m(20);

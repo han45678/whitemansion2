@@ -86,7 +86,7 @@ import 'swiper/css/pagination';
         padding-right: size(30);
         @media screen and (max-width: 768px) {
             position: absolute;
-            left: size-m(20);
+            left: size-m(10);
             top: size-m(35);
             right: unset;
             height: unset;
@@ -160,7 +160,7 @@ import 'swiper/css/pagination';
         top: size(140);
         width: size(570);
         z-index: 11;
-        color: #000;
+        color: #fff;
         @media screen and (max-width: 768px) {
             position: static;
             left: unset;
@@ -169,6 +169,7 @@ import 'swiper/css/pagination';
             padding-left: size-m(40);
             padding-right: size-m(40);
             padding-bottom: size-m(30);
+            color: #000;
         }
         h3 {
             font-size: size(45);

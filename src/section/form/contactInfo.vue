@@ -205,7 +205,7 @@
                 max-width: size(27);
                 height: auto;
                 max-height: size(27);
-                filter: brightness(0) invert(0);
+                // filter: brightness(0) invert(0);
                 transition: all 0.5s;
             }
 
