@@ -153,7 +153,11 @@
     }
 
     .title {
-        width: size(1600);
+        width: size(1480);
+
+        @media screen and (max-width: 768px) {
+            width: size(1600);
+        }
     }
 
     .form {
