@@ -8,8 +8,8 @@ import 'swiper/css/pagination';
     <article class="s10">
         <ul data-aos="fade-up">
             <li>
-                <h4 class="text-[#E1554B]" data-aos="fade-in">ALL IN ONE精裝修</h4>
-                <p class="text-[#000]" data-aos="fade-in">
+                <h4 class="text-[#E1554B]" >ALL IN ONE精裝修</h4>
+                <p class="text-[#000]">
                     一條龍服務精省<br />
                     入住快又安心
                 </p>
@@ -117,7 +117,7 @@ import 'swiper/css/pagination';
 
                 @media screen and (max-width: 768px) {
                     font-size: size-m(14);
-                    font-weight: 500;
+                    font-weight: 400;
                     line-height: unset;
                     letter-spacing: size-m(0.42);
                 }

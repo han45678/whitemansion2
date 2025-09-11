@@ -140,7 +140,7 @@ function changeOrder(target) {
                             </p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
-                            <img src="./s6/1-5.webp" alt="pic" />
+                            <img src="./s6/1-5.jpg" alt="pic" />
                             <p class="absolute text-[#fff]">蔡詠爲建築師</p>
                         </SwiperSlide>
                     </Swiper>
@@ -151,7 +151,7 @@ function changeOrder(target) {
                     <Swiper :slidesPerView="1" :loop="true" :autoplay="true" :modules="[Pagination, Autoplay]"
                         :pagination="{ clickable: true }">
                         <SwiperSlide class="relative">
-                            <img src="./s6/2-1.webp" alt="pic" />
+                            <img src="./s6/2-1.jpg" alt="pic" />
                             <p class="absolute text-[#fff]">
                                 三向＋先奕設計團隊
                             </p>
@@ -180,7 +180,7 @@ function changeOrder(target) {
                     <Swiper :slidesPerView="1" :loop="true" :autoplay="true" :modules="[Pagination, Autoplay]"
                         :pagination="{ clickable: true }">
                         <SwiperSlide class="relative">
-                            <img src="./s6/3-1.webp" alt="pic" />
+                            <img src="./s6/3-1.jpg" alt="pic" />
                             <p class="absolute text-[#fff]">三生規劃</p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
@@ -207,7 +207,7 @@ function changeOrder(target) {
                     <Swiper :slidesPerView="1" :loop="true" :autoplay="true" :modules="[Pagination, Autoplay]"
                         :pagination="{ clickable: true }">
                         <SwiperSlide class="relative">
-                            <img src="./s6/4-1.webp" alt="pic" />
+                            <img src="./s6/4-1.jpg" alt="pic" />
                             <p class="absolute text-[#fff]">偶得設計</p>
                         </SwiperSlide>
                         <SwiperSlide class="relative">
@@ -373,9 +373,10 @@ function changeOrder(target) {
                     font-weight: 500;
                     line-height: size(39);
                     letter-spacing: size(1.6);
+                    text-align: justify;
 
                     @media screen and (max-width: 768px) {
-                        font-size: size-m(12);
+                        font-size: size-m(12.1);
                         line-height: size-m(20);
                     }
                 }

@@ -17,7 +17,6 @@ import 'swiper/css/pagination';
                         此為廣告效果示意，為單一建物電腦3d透視表現，周遭環境係電腦合成，建設公司保有建物外觀修正之權利
                     </p>
                 </div>
-                <span class="m_text absolute">新化老街</span>
             </SwiperSlide>
             <SwiperSlide class="item relative">
                 <img src="./s7/2.jpg" alt="pic" />
@@ -27,7 +26,6 @@ import 'swiper/css/pagination';
                         此為廣告效果示意，為單一建物電腦3d透視表現，周遭環境係電腦合成，建設公司保有建物外觀修正之權利
                     </p>
                 </div>
-                <span class="m_text absolute">新化老街</span>
             </SwiperSlide>
             <SwiperSlide class="item relative">
                 <img src="./s7/3.jpg" alt="pic" />
@@ -37,7 +35,6 @@ import 'swiper/css/pagination';
                         此為廣告效果示意，為單一建物電腦3d透視表現，周遭環境係電腦合成，建設公司保有建物外觀修正之權利
                     </p>
                 </div>
-                <span class="m_text absolute">新化老街</span>
             </SwiperSlide>
         </Swiper>
 
@@ -73,8 +70,8 @@ import 'swiper/css/pagination';
 
         @media screen and (max-width: 768px) {
             position: absolute;
-            left: size-m(10);
-            top: size-m(35);
+            left: size-m(14);
+            top: size-m(25);
             right: unset;
             height: unset;
             width: unset;
@@ -124,8 +121,9 @@ import 'swiper/css/pagination';
             margin-bottom: size(30);
 
             @media screen and (max-width: 768px) {
-                font-size: size-m(12);
+                font-size: 12px;
                 letter-spacing: size-m(0.84);
+                font-weight: 400;
             }
         }
 
@@ -190,7 +188,7 @@ import 'swiper/css/pagination';
 
             @media screen and (max-width: 768px) {
                 color: #e1554b;
-                font-size: size-m(12);
+                font-size: size-m(13);
                 letter-spacing: size-m(1.08);
                 margin-top: size-m(10);
                 margin-bottom: size-m(10);
@@ -203,9 +201,10 @@ import 'swiper/css/pagination';
             font-weight: 500;
             line-height: size(44);
             letter-spacing: size(1.68);
+            text-align: justify;
 
             @media screen and (max-width: 768px) {
-                font-size: size-m(12);
+                font-size: size-m(12.1);
                 line-height: size-m(20);
             }
         }

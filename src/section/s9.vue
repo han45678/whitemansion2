@@ -219,17 +219,14 @@ const orderType = ref(true);
                 width: size(690);
 
                 @media screen and (max-width: 768px) {
-                    text-align: left;
-                    width: size-m(250);
-                    font-size: 30px;
-                    line-height: 45px;
-                    letter-spacing: 2.7px;
+                    text-align: justify;
+                    letter-spacing: 1px;
                     position: absolute;
                     bottom: size-m(10);
                     left: size-m(15);
-                    font-size: size-m(10);
+                    font-size: size-m(9.5);
                     line-height: size-m(14);
-                    width: calc(100% - size-m(30));
+                    width: calc(80% - size-m(30));
                 }
             }
         }
@@ -312,11 +309,15 @@ const orderType = ref(true);
                     }
 
                     @media screen and (max-width: 768px) {
-                        margin-left: 0;
+                        margin-left: 0.5em;
                         display: block;
                         font-size: size-m(15);
                         line-height: size-m(30);
                         letter-spacing: size-m(1.8);
+
+                        &:nth-child(1) {
+                            margin-left: 0.5em;
+                        }
                     }
                 }
             }
@@ -348,7 +349,7 @@ const orderType = ref(true);
 
                 @media screen and (max-width: 768px) {
                     width: calc(50% - size-m(5));
-                    height: size-m(25);
+                    height: size-m(30);
                     font-size: size-m(14);
                     letter-spacing: size-m(1.434);
                 }

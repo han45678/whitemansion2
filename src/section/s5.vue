@@ -118,7 +118,7 @@ import 'swiper/css/pagination';
             letter-spacing: size(2.4);
 
             @media screen and (max-width: 768px) {
-                font-size: size-m(12);
+                font-size: size-m(12.1);
                 line-height: size-m(20);
                 letter-spacing: size-m(0.6);
             }
@@ -128,7 +128,7 @@ import 'swiper/css/pagination';
     .text_pic {
         width: size(115);
         top: 0;
-        right: calc(50% + size(57.5));
+        right: calc(50% + size(40));
         z-index: 10;
 
         @media screen and (max-width: 768px) {

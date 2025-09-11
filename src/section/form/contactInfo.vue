@@ -63,7 +63,7 @@
             modalType = 'fb';
             ">
                 <img src="@/section/form/messenger.svg" alt="長築白樓" srcset="" />
-                <div class="flex-1">FB 諮詢</div>
+                <div class="flex-1" style="letter-spacing: 0.5em;">F B 諮詢</div>
             </div>
             <div class="flex contact-item justify-between items-center btfanpage hover" @click="open()">
                 <img src="@/section/form/fb.svg" alt="長築白樓" srcset="" />
@@ -74,7 +74,7 @@
             <div class="flex contact-item justify-between items-center address">
                 <div><span v-if="info.address1">{{ info.address1 }}：</span>{{ info.address }}</div>
             </div>
-            <div class="map_btn flex contact-item justify-between items-center" @click="
+            <div class="map_btn flex contact-item justify-between items-center hover" @click="
                 modalOpen = true;
             modalType = 'gmap';
             ">
@@ -98,21 +98,21 @@
             <!-- title -->
             <div class="text-xl mt-4 font-bold">
                 {{
-                modalType == 'phone'
-                ? '賞屋專線'
-                : modalType == 'fb'
-                ? 'Facebook Messenger'
-                : '接待會館'
+                    modalType == 'phone'
+                        ? '賞屋專線'
+                        : modalType == 'fb'
+                            ? 'Facebook Messenger'
+                            : '接待會館'
                 }}
             </div>
             <!-- content -->
             <div class="text-md mt-4">
                 {{
-                modalType == 'phone'
-                ? info.phone
-                : modalType == 'fb'
-                ? '線上諮詢'
-                : `接待中心：${info.address}`
+                    modalType == 'phone'
+                        ? info.phone
+                        : modalType == 'fb'
+                            ? '線上諮詢'
+                            : `接待中心：${info.address}`
                 }}
             </div>
             <!-- btn -->
@@ -123,11 +123,11 @@
                 btcontac: modalType == 'phone'
             }">
                 {{
-                modalType == 'phone'
-                ? '撥打電話'
-                : modalType == 'fb'
-                ? '立即諮詢'
-                : '開啟導航'
+                    modalType == 'phone'
+                        ? '撥打電話'
+                        : modalType == 'fb'
+                            ? '立即諮詢'
+                            : '開啟導航'
                 }}
             </div>
         </div>
@@ -240,6 +240,10 @@
                 align-items: center;
                 position: relative;
 
+                &:active {
+                    background-color: #e1554ba3;
+                }
+
                 @media screen and (max-width: 768px) {
                     height: size-m(65);
                     display: block;
@@ -255,6 +259,8 @@
                             max-height: size-m(5.2);
                         }
                     }
+
+
                 }
 
                 &::after {
@@ -290,9 +296,14 @@
     position: relative;
 
     @media screen and (max-width: 768px) {
-        width: 100%; // 手機版滿版
         grid-template-columns: 100%;
         grid-template-rows: auto auto auto; // 三列
+        width: size-m(375);
+        height: auto;
+        padding: size-m(50) size-m(32);
+        margin-top: 0;
+        position: relative;
+        justify-content: flex-start;
     }
 
     .logo {
@@ -302,11 +313,30 @@
         background-repeat: no-repeat;
         background-position: center;
         margin-bottom: size(73);
+
+        @media screen and (max-width: 768px) {
+            width: size-m(177.42);
+            height: size-m(81.98);
+            background-image: url('@/section/form/logo.svg');
+            margin-bottom: size-m(39);
+        }
     }
 
     .contact-item-box {
         position: relative;
         margin-top: size(20);
+
+        @media screen and (max-width: 768px) {
+            position: relative;
+            margin-top: size-m(0);
+            gap: size-m(20);
+            flex-direction: column;
+
+            &.address-wrap {
+                margin-top: size-m(20);
+            }
+        }
+
         .contact-item {
             border: 1px solid #e1554b;
             background-color: #fff;
@@ -321,6 +351,13 @@
             transition: all 0.3s;
             cursor: pointer;
 
+            @media screen and (max-width: 768px) {
+                padding: 0 size-m(65);
+                font-size: size-m(16);
+                max-width: 100%;
+                justify-content: space-around;
+            }
+
             &.hover:hover {
                 background-color: #e1554ba3;
             }
@@ -334,11 +371,15 @@
             }
 
             img {
-                max-width: size(27);
+                width: size(27);
                 height: auto;
-                max-height: size(27);
-                // filter: brightness(0) invert(0);
                 transition: all 0.5s;
+                margin: auto;
+
+                @media screen and (max-width: 768px) {
+                    width: size(80);
+                    height: auto;
+                }
             }
 
             &.address {
@@ -347,6 +388,17 @@
                 position: relative;
                 max-width: 9999px;
                 justify-content: center;
+
+                @media screen and (max-width: 768px) {
+                    padding: 0 0;
+
+                    &::before {
+                        width: 100%;
+                        height: 100%;
+                        bottom: -50%;
+                        left: 0;
+                    }
+                }
             }
 
             &.map_btn {
@@ -361,64 +413,6 @@
 
         &.no-gap {
             gap: 0 !important;
-        }
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .contact-info {
-        width: size-m(375);
-        height: auto;
-        padding: size-m(50) size-m(32);
-        margin-top: size-m(60);
-        position: relative;
-        justify-content: flex-start;
-
-        .logo {
-            width: size-m(177.42);
-            height: size-m(81.98);
-            background-image: url('@/section/form/logo.svg');
-            margin-bottom: size-m(39);
-        }
-
-        .contact-item-box {
-            position: relative;
-            margin-top: size-m(0);
-            gap: size-m(20);
-            flex-direction: column;
-
-            &.address-wrap {
-                // border-radius: size-m(50);
-                margin-top: size-m(20);
-            }
-
-            .contact-item {
-                padding: 0 size-m(65);
-                font-size: size-m(16);
-                max-width: 100%;
-                justify-content: space-around;
-
-                img {
-                    max-width: size-m(27);
-                    height: auto;
-                    max-height: size-m(27);
-                }
-
-                &.address {
-                    padding: 0 0;
-
-                    &::before {
-                        width: 100%;
-                        height: 100%;
-                        bottom: -50%;
-                        left: 0;
-                    }
-                }
-            }
-
-            &.no-gap {
-                gap: 0 !important;
-            }
         }
     }
 }

@@ -68,9 +68,10 @@ import { ref } from 'vue';
             line-height: size(50);
             letter-spacing: size(2.07);
             width: size(805);
+            text-align: justify;
 
             @media screen and (max-width: 768px) {
-                font-size: size-m(12);
+                font-size: size-m(12.1);
                 font-weight: 500;
                 line-height: size-m(22);
                 width: 100%;

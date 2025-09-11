@@ -155,17 +155,13 @@ import 'swiper/css/pagination';
     }
 
     .text {
-        padding-top: size(10);
-        padding-left: size(200);
-        padding-right: size(180);
+        padding: size(10) size(150) 0;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
 
         @media screen and (max-width: 768px) {
-            padding-top: size-m(10);
-            padding-left: size-m(40);
-            padding-right: size-m(40);
+            padding: size-m(10) size-m(13) 0;
         }
 
         h3 {
@@ -173,6 +169,7 @@ import 'swiper/css/pagination';
             font-size: size(45);
             font-weight: 700;
             letter-spacing: size(2.25);
+            margin-top: size(25);
 
             @media screen and (max-width: 768px) {
                 width: 100%;
@@ -182,10 +179,11 @@ import 'swiper/css/pagination';
         }
 
         .content_text {
-            width: 45%;
+            width: 40%;
 
             @media screen and (max-width: 768px) {
                 width: 100%;
+                padding: 0 size-m(20);
             }
         }
 
@@ -202,6 +200,7 @@ import 'swiper/css/pagination';
                 line-height: size-m(12);
                 margin-bottom: size-m(30);
                 width: 100%;
+                padding: 0 size-m(20);
             }
         }
 
@@ -210,9 +209,10 @@ import 'swiper/css/pagination';
             font-weight: 500;
             line-height: size(43);
             letter-spacing: size(0.8);
+            text-align: justify;
 
             @media screen and (max-width: 768px) {
-                font-size: size-m(12);
+                font-size: size-m(12.1);
                 line-height: size-m(20);
             }
         }

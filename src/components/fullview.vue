@@ -1,4 +1,3 @@
-
 <script setup>
 import BScroll from '@better-scroll/core';
 import { onMounted, ref, computed, getCurrentInstance } from 'vue';
@@ -37,26 +36,10 @@ onMounted(() => {
 </script>
 
 <template>
-    <div
-        class="viewbox"
-        ref="viewbox"
-    >
-        <img
-            ref="viewImg"
-            src="@/section/s2/bg.jpg"
-            alt=""
-            srcset=""
-        />
-        <div
-            class="mask"
-            v-bind:class="{ hide: swiped }"
-            v-if="$isMobile()"
-        >
-            <img
-                src="../components/fullview/finger.svg"
-                alt=""
-                srcset=""
-            />
+    <div class="viewbox" ref="viewbox">
+        <img ref="viewImg" src="@/section/s2/bg.jpg" alt="" srcset="" />
+        <div class="mask" v-bind:class="{ hide: swiped }" v-if="$isMobile()">
+            <img src="../components/fullview/finger.svg" alt="" srcset="" />
         </div>
     </div>
 </template>
@@ -68,10 +51,11 @@ onMounted(() => {
     position: relative;
     width: 100%;
     height: 100%;
-    > img {
+
+    >img {
         height: 100%;
         max-width: unset;
-        background: url('@/section/s2/map.webp') 50%;
+        background: url('@/section/s2/bg.jpg') 50%;
         background-size: 100% auto;
         width: 100%;
     }
@@ -86,7 +70,8 @@ onMounted(() => {
         img {
             height: 100%;
         }
-        > img {
+
+        >img {
             width: auto;
         }
 

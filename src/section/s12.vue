@@ -11,10 +11,10 @@
                 <li>邊間 2~3 房</li>
             </ul>
 
-            <a href="tel:065802368" class="text-[#000]">
+            <h5>
                 <span>06</span>
                 580-2368
-            </a>
+            </h5>
 
             <h3>小成本 大未來</h3>
 
@@ -34,10 +34,10 @@
                 <li>新化軸心</li>
                 <li>邊間 2~3 房</li>
             </ul>
-            <a href="tel:065802368" class="text-[#000]">
+            <h5>
                 <span>06</span>
                 580-2368
-            </a>
+            </h5>
             <img class="logo" src="./s1/logo.svg" alt="logo" data-aos="fade-in" data-aos-duration="800" />
         </div>
         <div class="title hidden md:inline">
@@ -66,6 +66,12 @@
     height: size(1080);
     max-height: size(1080);
     background-color: #fde360;
+
+    @media screen and (max-width: 768px) {
+        min-height: size(3800);
+        height: size(3800);
+        max-height: size(3800);
+    }
 
     .title {
         position: absolute;
@@ -201,11 +207,12 @@
             }
         }
 
-        a {
-            display: block;
+        h5 {
+            display: flex;
             margin-bottom: size(160);
             font-size: size(100);
             font-weight: 500;
+            justify-content: center;
 
             @media screen and (max-width: 768px) {
                 margin-bottom: size-m(35);
@@ -218,11 +225,11 @@
             span {
                 font-weight: 500;
                 font-size: size(55);
+                margin: size(25) size(15) 0 0;
 
                 @media screen and (max-width: 768px) {
                     font-size: size-m(24);
-                    margin-right: size-m(7.5);
-                    margin-top: size-m(6);
+                    margin: size-m(10) size-m(7.5) 0 0;
                 }
             }
         }

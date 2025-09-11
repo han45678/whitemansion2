@@ -74,10 +74,22 @@
     width: 100%;
     padding-top: size(115);
 
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        padding-top: size-m(40);
+        margin-top: size-m(0);
+    }
+
     .order-title {
         font-size: size(43);
         font-weight: 500;
         margin-bottom: size(25);
+
+        @media screen and (max-width: 768px) {
+            font-size: size-m(29);
+            font-weight: 500;
+            margin-bottom: size-m(20);
+        }
     }
 
     .textarea,
@@ -88,16 +100,13 @@
         color: #595757;
         font-size: size(16);
 
+        @media screen and (max-width: 768px) {
+            font-size: size-m(14);
+        }
+
         &::placeholder,
         option:first-child {
             color: #595757;
-            padding-left: size(20);
-            padding: 0;
-
-            @media screen and (max-width: 768px) {
-                font-size: size-m(14);
-                padding-left: size(10);
-            }
         }
     }
 
@@ -111,6 +120,11 @@
         width: size(859);
         margin: 0 auto;
         margin-bottom: size(40);
+
+        @media screen and (max-width: 768px) {
+            width: size-m(208);
+            margin-bottom: size-m(20);
+        }
     }
 
     .policy {
@@ -122,11 +136,24 @@
 
         @media screen and (max-width: 768px) {
             display: block;
+            width: size(1600);
+
+            p {
+                font-size: size-m(13.5);
+            }
+        }
+
+        .control {
+            margin-top: 35px;
+
+            @media screen and (max-width: 768px) {
+                padding-left: size-m(10);
+            }
         }
     }
 
     .title {
-        width: size(1480);
+        width: size(1600);
     }
 
     .form {
@@ -135,12 +162,30 @@
         gap: size(80);
         margin-bottom: size(50);
 
+        @media screen and (max-width: 768px) {
+            width: size-m(310);
+            height: auto;
+            gap: size-m(15);
+            margin-bottom: size-m(20);
+            flex-direction: column;
+        }
+
         .left {
             width: calc(50% - size(15));
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                gap: size-m(15);
+            }
         }
 
         .right {
             width: calc(50% - size(15));
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                height: size-m(100);
+            }
         }
 
         &::after {
@@ -149,6 +194,10 @@
             height: 100%;
             background-color: #fff;
             position: absolute;
+
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
         }
     }
 
@@ -162,70 +211,18 @@
         font-weight: 500;
         border: 0;
         border-radius: 0;
-        // border-radius: 1.6em;
         z-index: 10;
         position: relative;
+
+        &:hover {
+            background-color: #e1554ba3 !important;
+        }
 
         @media screen and (max-width: 768px) {
             box-sizing: border-box;
             width: 100%;
-        }
-    }
-
-    .control {
-        font-size: size(20);
-        color: #000;
-        position: relative;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .order {
-        width: 100%;
-        // border-radius: size-m(68) size-m(68) 0 0;
-        padding-top: size-m(40);
-        margin-top: size-m(0);
-
-        .order-title {
-            font-size: size-m(29);
-            font-weight: 500;
-            margin-bottom: size-m(20);
-        }
-
-        .order-title-img {
-            width: size-m(208);
-            margin-bottom: size-m(20);
-        }
-
-        .form {
-            width: size-m(310);
-            height: auto;
-            gap: size-m(15);
-            margin-bottom: size-m(20);
-            flex-direction: column;
-
-            .left {
-                width: 100%;
-                gap: size-m(15);
-            }
-
-            .right {
-                width: 100%;
-                height: size-m(100);
-            }
-
-            &::after {
-                display: none;
-            }
-        }
-
-        .send {
             font-size: size-m(21);
             width: 100%;
-        }
-
-        .control {
-            font-size: size-m(14.6);
         }
     }
 }

@@ -60,8 +60,9 @@
             @media screen and (max-width: 768px) {
                 width: 100%;
                 margin: size-m(20) auto 0 auto;
-                font-size: size-m(12);
-                line-height: size-m(20);
+                font-size: size-m(12.1);
+                font-weight: 400;
+                line-height: size-m(22);
             }
         }
     }

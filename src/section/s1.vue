@@ -11,10 +11,10 @@
                 <li>邊間 2~3 房</li>
             </ul>
 
-            <a href="tel:065802368" class="text-[#000]">
+            <h5>
                 <span>06</span>
                 580-2368
-            </a>
+            </h5>
 
             <h3>小成本 大未來</h3>
 
@@ -203,7 +203,8 @@
             }
         }
 
-        a {
+        h5 {
+
             @media screen and (max-width: 768px) {
                 text-decoration: none;
                 font-size: size-m(44);

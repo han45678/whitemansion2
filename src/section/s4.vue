@@ -100,7 +100,7 @@ import 'swiper/css/pagination';
                         </SwiperSlide>
                     </Swiper>
                 </div>
-                <div class="text">
+                <div class="text p-2">
                     <h3 data-aos="fade-in" data-aos-duration="400">
                         生活大南科<br />
                         新化埕心繁華富域<span>。</span>
@@ -134,28 +134,34 @@ import 'swiper/css/pagination';
 
 .s4 {
     background-color: #fffcf1;
+
     .wrapper {
         width: 100%;
         max-width: size(1520);
         padding: size(125) 0;
         margin-left: auto;
         margin-right: auto;
+
         @media screen and (max-width: 768px) {
             padding: 0;
             max-width: 100%;
         }
+
         .item {
             display: flex;
             align-items: center;
             flex-wrap: wrap;
+
             &:nth-child(1) {
                 flex-direction: row-reverse;
                 margin-bottom: size(130);
+
                 @media screen and (max-width: 768px) {
                     flex-direction: unset;
                     margin-bottom: 0;
                 }
             }
+
             &:nth-child(2) {
                 .text {
                     padding-left: size(95);
@@ -165,21 +171,25 @@ import 'swiper/css/pagination';
             .pic {
                 width: 60%;
                 position: relative;
+
                 img {
                     width: 100%;
                 }
+
                 p {
                     left: size(35);
                     bottom: size(20);
+
                     @media screen and (max-width: 768px) {
                         left: size-m(10);
                         bottom: size-m(5);
                     }
-                }   
+                }
 
                 .swiper-pagination {
                     text-align: right;
                     padding-right: size(30);
+
                     .swiper-pagination-bullet {
                         border-radius: 100%;
                         border: 1px solid #fff;
@@ -187,27 +197,41 @@ import 'swiper/css/pagination';
                         height: size(20);
                         margin-right: 0;
                         margin-left: size(20);
+
                         @media screen and (max-width: 768px) {
                             width: size-m(8);
                             height: size-m(8);
                             margin-left: size-m(8);
                         }
+
                         &.swiper-pagination-bullet-active {
                             background-color: #fff;
                         }
                     }
                 }
+
                 @media screen and (max-width: 768px) {
                     width: 100%;
                 }
             }
+
             .text {
                 width: 40%;
                 box-sizing: border-box;
+
                 @media screen and (max-width: 768px) {
                     width: 100%;
-                    padding: size-m(30) size-m(30) !important;
+                    padding: size-m(30) size-m(37) !important;
+
                 }
+
+                &.p-2 {
+                    @media screen and (max-width: 768px) {
+                        padding: size-m(30) size-m(45) !important;
+
+                    }
+                }
+
                 h3 {
                     width: 100%;
                     font-weight: 700;
@@ -217,6 +241,7 @@ import 'swiper/css/pagination';
                     margin-bottom: size(70);
                     max-width: size(510);
                     border-bottom: size(1) solid #e1554b;
+
                     @media screen and (max-width: 768px) {
                         max-width: 100%;
                         font-size: size-m(20);
@@ -225,23 +250,27 @@ import 'swiper/css/pagination';
                         margin-bottom: size-m(15);
                         border-bottom: none;
                     }
+
                     span {
                         font-weight: 500;
                     }
+
                     br {
                         @media screen and (max-width: 768px) {
                             display: none;
                         }
                     }
                 }
+
                 ul {
                     li {
                         font-weight: 500;
                         font-size: size(20);
                         line-height: size(43);
                         letter-spacing: size(2);
+
                         @media screen and (max-width: 768px) {
-                            font-size: size-m(12);
+                            font-size: size-m(12.1);
                             line-height: size-m(20);
                         }
                     }
@@ -249,5 +278,6 @@ import 'swiper/css/pagination';
             }
         }
     }
+
 }
 </style>
