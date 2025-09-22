@@ -1,4 +1,4 @@
-const caseName = '長築白樓';
+const caseName = '白樓2璞域';
 
 export default {
     meta: {

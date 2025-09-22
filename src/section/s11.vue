@@ -15,7 +15,7 @@ import { ref } from 'vue';
             </h3>
             <p data-aos="fade-up" data-aos-duration="600">
                 隨大南方新矽谷落地，南科共榮圈成為長線焦點。新化座落南科、沙崙雙核心之間，低基期
-                × ALL IN ONE精裝修，小成本兼顧自住與置產，迎接產業大未來。
+                × ALL IN ONE全室裝修，小成本兼顧自住與置產，迎接產業大未來。
             </p>
         </div>
     </article>

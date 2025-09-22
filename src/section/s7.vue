@@ -44,7 +44,7 @@ import 'swiper/css/pagination';
         </div>
         <div class="title" data-aos="fade-in" data-aos-duration="400">
             <h3>白派流域，重劃築新境。</h3>
-            <h4>長築白樓2</h4>
+            <h4>白樓2璞域</h4>
             <p data-aos="fade-up" data-aos-duration="600">
                 長磯機構｜長築興業延續長築白樓1白派建築精神，寬容城市景觀、交織大地色系；於自辦重劃區中，重新依居住細節做整體性安排規劃，兼得私院安逸與開闊視野、並存開放與靜謐，安享永續新美學。
             </p>

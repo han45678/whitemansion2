@@ -55,18 +55,18 @@
                 modalOpen = true;
             modalType = 'phone';
             ">
-                <img src="@/section/form/phone.svg" alt="長築白樓" srcset="" />
+                <img src="@/section/form/phone.svg" alt="白樓2璞域" srcset="" />
                 <div class="flex-1">{{ info.phone }}</div>
             </div>
             <div class="flex contact-item justify-between items-center hover" @click="
                 modalOpen = true;
             modalType = 'fb';
             ">
-                <img src="@/section/form/messenger.svg" alt="長築白樓" srcset="" />
+                <img src="@/section/form/messenger.svg" alt="白樓2璞域" srcset="" />
                 <div class="flex-1" style="letter-spacing: 0.5em;">F B 諮詢</div>
             </div>
             <div class="flex contact-item justify-between items-center btfanpage hover" @click="open()">
-                <img src="@/section/form/fb.svg" alt="長築白樓" srcset="" />
+                <img src="@/section/form/fb.svg" alt="白樓2璞域" srcset="" />
                 <div class="flex-1">前往粉絲專頁</div>
             </div>
         </div>
@@ -78,7 +78,7 @@
                 modalOpen = true;
             modalType = 'gmap';
             ">
-                <img src="@/section/form/gmap.svg" alt="長築白樓" srcset="" />
+                <img src="@/section/form/gmap.svg" alt="白樓2璞域" srcset="" />
                 <div>導航 GoogleMap</div>
             </div>
         </div>
@@ -92,27 +92,27 @@
         <div class="modal-box py-12 relative flex flex-col items-center justify-center">
             <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
             <!-- icon -->
-            <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="長築白樓" srcset="" />
-            <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="長築白樓" srcset="" />
-            <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="長築白樓" srcset="" />
+            <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="白樓2璞域" srcset="" />
+            <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="白樓2璞域" srcset="" />
+            <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="白樓2璞域" srcset="" />
             <!-- title -->
             <div class="text-xl mt-4 font-bold">
                 {{
-                    modalType == 'phone'
-                        ? '賞屋專線'
-                        : modalType == 'fb'
-                            ? 'Facebook Messenger'
-                            : '接待會館'
+                modalType == 'phone'
+                ? '賞屋專線'
+                : modalType == 'fb'
+                ? 'Facebook Messenger'
+                : '接待會館'
                 }}
             </div>
             <!-- content -->
             <div class="text-md mt-4">
                 {{
-                    modalType == 'phone'
-                        ? info.phone
-                        : modalType == 'fb'
-                            ? '線上諮詢'
-                            : `接待中心：${info.address}`
+                modalType == 'phone'
+                ? info.phone
+                : modalType == 'fb'
+                ? '線上諮詢'
+                : `接待中心：${info.address}`
                 }}
             </div>
             <!-- btn -->
@@ -123,11 +123,11 @@
                 btcontac: modalType == 'phone'
             }">
                 {{
-                    modalType == 'phone'
-                        ? '撥打電話'
-                        : modalType == 'fb'
-                            ? '立即諮詢'
-                            : '開啟導航'
+                modalType == 'phone'
+                ? '撥打電話'
+                : modalType == 'fb'
+                ? '立即諮詢'
+                : '開啟導航'
                 }}
             </div>
         </div>

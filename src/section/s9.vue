@@ -17,10 +17,10 @@ const orderType = ref(true);
                     <img class="block md:hidden" src="./s9/m_1.webp" alt="pic" />
                     <div class="pic_text">
                         <h3 class="hidden md:block" data-aos="fade-up">
-                            ALL IN ONE精裝修・圓夢更輕鬆
+                            ALL IN ONE全室裝修・圓夢更輕鬆
                         </h3>
                         <h3 class="block md:hidden" data-aos="fade-up">
-                            ALL IN ONE精裝修<br />圓夢更輕鬆
+                            ALL IN ONE全室裝修<br />圓夢更輕鬆
                         </h3>
                         <p>
                             ＊全裝修包含：全室天花板、電視牆、鞋櫃、臥室衣櫃、床頭背板及冷氣室內外機<br>
@@ -33,10 +33,10 @@ const orderType = ref(true);
                     <img class="block md:hidden" src="./s9/m_2.webp" alt="pic" />
                     <div class="pic_text">
                         <h3 class="hidden md:block" data-aos="fade-up">
-                            ALL IN ONE精裝修・圓夢更輕鬆
+                            ALL IN ONE全室裝修・圓夢更輕鬆
                         </h3>
                         <h3 class="block md:hidden" data-aos="fade-up">
-                            ALL IN ONE精裝修<br />圓夢更輕鬆
+                            ALL IN ONE全室裝修<br />圓夢更輕鬆
                         </h3>
                         <p>
                             ＊全裝修包含：全室天花板、電視牆、鞋櫃、臥室衣櫃、床頭背板及冷氣室內外機<br>
@@ -49,10 +49,10 @@ const orderType = ref(true);
                     <img class="block md:hidden" src="./s9/m_3.webp" alt="pic" />
                     <div class="pic_text">
                         <h3 class="hidden md:block" data-aos="fade-up">
-                            ALL IN ONE精裝修・圓夢更輕鬆
+                            ALL IN ONE全室裝修・圓夢更輕鬆
                         </h3>
                         <h3 class="block md:hidden" data-aos="fade-up">
-                            ALL IN ONE精裝修<br />圓夢更輕鬆
+                            ALL IN ONE全室裝修<br />圓夢更輕鬆
                         </h3>
                         <p>
                             ＊全裝修包含：全室天花板、電視牆、鞋櫃、臥室衣櫃、床頭背板及冷氣室內外機<br>
@@ -69,10 +69,10 @@ const orderType = ref(true);
                     <img class="block md:hidden" src="./s9/m_1.webp" alt="pic" />
                     <div class="pic_text">
                         <h3 class="hidden md:block" data-aos="fade-up">
-                            ALL IN ONE精裝修・圓夢更輕鬆
+                            ALL IN ONE全室裝修・圓夢更輕鬆
                         </h3>
                         <h3 class="block md:hidden" data-aos="fade-up">
-                            ALL IN ONE精裝修<br />圓夢更輕鬆
+                            ALL IN ONE全室裝修<br />圓夢更輕鬆
                         </h3>
                         <p>
                             ＊全裝修包含：全室天花板、電視牆、鞋櫃、臥室衣櫃、床頭背板及冷氣室內外機<br>
@@ -85,10 +85,10 @@ const orderType = ref(true);
                     <img class="block md:hidden" src="./s9/m_2.webp" alt="pic" />
                     <div class="pic_text">
                         <h3 class="hidden md:block" data-aos="fade-up">
-                            ALL IN ONE精裝修・圓夢更輕鬆
+                            ALL IN ONE全室裝修・圓夢更輕鬆
                         </h3>
                         <h3 class="block md:hidden" data-aos="fade-up">
-                            ALL IN ONE精裝修<br />圓夢更輕鬆
+                            ALL IN ONE全室裝修<br />圓夢更輕鬆
                         </h3>
                         <p>
                             ＊全裝修包含：全室天花板、電視牆、鞋櫃、臥室衣櫃、床頭背板及冷氣室內外機<br>
@@ -101,10 +101,10 @@ const orderType = ref(true);
                     <img class="block md:hidden" src="./s9/m_3.webp" alt="pic" />
                     <div class="pic_text">
                         <h3 class="hidden md:block" data-aos="fade-up">
-                            ALL IN ONE精裝修・圓夢更輕鬆
+                            ALL IN ONE全室裝修・圓夢更輕鬆
                         </h3>
                         <h3 class="block md:hidden" data-aos="fade-up">
-                            ALL IN ONE精裝修<br />圓夢更輕鬆
+                            ALL IN ONE全室裝修<br />圓夢更輕鬆
                         </h3>
                         <p>
                             ＊全裝修包含：全室天花板、電視牆、鞋櫃、臥室衣櫃、床頭背板及冷氣室內外機<br>
@@ -118,7 +118,7 @@ const orderType = ref(true);
             <div class="text_content" data-aos="fade-up">
                 <div class="item" v-if="orderType">
                     <div class="title">
-                        <h3>2房精裝修</h3>
+                        <h3>2房全室裝修</h3>
                         <h4>25-27坪｜光合角間</h4>
                     </div>
                     <p>
@@ -129,7 +129,7 @@ const orderType = ref(true);
                 </div>
                 <div class="item" v-else>
                     <div class="title" data-aos="fade-up">
-                        <h3>3房精裝修</h3>
+                        <h3>3房全室裝修</h3>
                         <h4>35-36坪｜向陽邊間</h4>
                     </div>
                     <p>
@@ -142,10 +142,10 @@ const orderType = ref(true);
 
             <div class="text_btn">
                 <button :class="{ active: orderType }" @click="orderType = true">
-                    2房精裝修
+                    2房全室裝修
                 </button>
                 <button :class="{ active: !orderType }" @click="orderType = false">
-                    3房精裝修
+                    3房全室裝修
                 </button>
             </div>
         </div>

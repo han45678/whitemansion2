@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
     <article class="s10">
         <ul data-aos="fade-up">
             <li>
-                <h4 class="text-[#E1554B]" >ALL IN ONE精裝修</h4>
+                <h4 class="text-[#E1554B]">ALL IN ONE全室裝修</h4>
                 <p class="text-[#000]">
                     一條龍服務精省<br />
                     入住快又安心
@@ -52,14 +52,14 @@ import 'swiper/css/pagination';
 .s10 {
     background-color: #FFFDF1;
     padding-top: size(245);
-    padding-left: size(100);
-    padding-right: size(100);
+    padding-left: size(70);
+    padding-right: size(70);
     padding-bottom: size(200);
 
     @media screen and (max-width: 768px) {
         padding-top: size-m(65);
-        padding-left: size-m(40);
-        padding-right: size-m(40);
+        padding-left: size-m(20);
+        padding-right: size-m(20);
         padding-bottom: size-m(40);
     }
 
@@ -87,13 +87,13 @@ import 'swiper/css/pagination';
 
             @media screen and (max-width: 768px) {
                 flex: 0 0 calc(50% - #{size-m(7)}); // ✅ 手機版兩等分
-                border: size-m(3) solid #e1554b;
+                border: size-m(2) solid #e1554b;
             }
 
             h4 {
                 width: 100%;
                 text-align: center;
-                font-size: size(30);
+                font-size: size(28);
                 font-weight: 700;
                 line-height: size(43);
                 letter-spacing: size(0.9);
@@ -102,7 +102,7 @@ import 'swiper/css/pagination';
                 @media screen and (max-width: 768px) {
                     line-height: auto;
                     margin-top: size-m(5);
-                    font-size: size-m(14);
+                    font-size: size-m(14.5);
                     margin-bottom: size-m(12);
                 }
             }
@@ -110,7 +110,7 @@ import 'swiper/css/pagination';
             p {
                 width: 100%;
                 text-align: center;
-                font-size: size(26);
+                font-size: size(24);
                 font-weight: 500;
                 line-height: size(38);
                 letter-spacing: size(0.78);

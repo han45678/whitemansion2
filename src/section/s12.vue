@@ -4,7 +4,7 @@
     <section class="s12 text-[#000] font-['Noto_Sans_TC']">
         <!-- 手機板 -->
         <div class="text block md:hidden" data-aos="fade-in" data-aos-duration="400">
-            <h2>ALL IN ONE<span>精裝修</span></h2>
+            <h2>ALL IN ONE<span>全室裝修</span></h2>
             <h4>大南科共榮圈</h4>
             <ul>
                 <li>新化軸心</li>
@@ -28,7 +28,7 @@
         </div>
         <!-- 電腦版 -->
         <div class="text hidden md:inline" data-aos="fade-in" data-aos-duration="400">
-            <h2>ALL IN ONE<span>精裝修</span></h2>
+            <h2>ALL IN ONE<span>全室裝修</span></h2>
             <h4>大南科共榮圈</h4>
             <ul>
                 <li>新化軸心</li>
