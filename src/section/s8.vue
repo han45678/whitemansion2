@@ -3,63 +3,61 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Pagination, Autoplay } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
+
+import { computed, getCurrentInstance, ref, inject, onMounted } from "vue";
+const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
+
+const splide = ref();
+const currentSlideIndex = ref(0);
+const moved = (newIdx, prevIdx, destIdx) => {
+    currentSlideIndex.value = prevIdx
+}
+
+const options = computed(() => {
+    // 根據目前滑塊決定顯示數量
+    let perPage = 1.5;
+    if (currentSlideIndex.value === 1) { // 02.jpg 在 imgs 陣列 index 1
+        perPage = 1.5;
+    }
+    return {
+        rewind: true,
+        arrows: false,
+        pagination: false,
+        autoplay: true,
+        interval: 4000,
+        perPage,
+        focus: "left",
+        gap: 10,
+        type: 'loop'
+    }
+});
+
+const imgs = [
+    {
+        img: new URL("./s8/01.jpg", import.meta.url).href,
+        caption: "Lobby 3d透視參考示意圖"
+    },
+    {
+        img: new URL("./s8/03.jpg", import.meta.url).href,
+        caption: "Lobby 3d透視參考示意圖"
+    },
+    {
+        img: new URL("./s8/01.jpg", import.meta.url).href,
+        caption: "Lobby 3d透視參考示意圖"
+    },
+]
 </script>
 
 <template>
     <section class="s8 text-[#000] relative">
-        <div class="pic hidden md:block">
-            <Swiper :slidesPerView="1" :loop="true" :autoplay="true" :modules="[Pagination, Autoplay]"
-                :pagination="{ clickable: true }">
-                <SwiperSlide>
-                    <div class="pic_item relative">
-                        <img src="./s8/01.jpg" alt="pic" />
-                        <p class="absolute text-[#fff]">
-                            Lobby 3d透視參考示意圖
-                        </p>
-                    </div>
-                    <div class="pic_item relative">
-                        <img src="./s8/02.jpg" alt="pic" />
-                        <p class="absolute text-[#fff]">
-                            Lobby 3d透視參考示意圖
-                        </p>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div class="pic_item relative">
-                        <img src="./s8/03.jpg" alt="pic" />
-                        <p class="absolute text-[#fff]">
-                            Lobby 3d透視參考示意圖
-                        </p>
-                    </div>
-                    <div class="pic_item relative">
-                        <img src="./s8/04.jpg" alt="pic" />
-                        <p class="absolute text-[#fff]">
-                            Lobby 3d透視參考示意圖
-                        </p>
-                    </div>
-                </SwiperSlide>
-            </Swiper>
-        </div>
-        <div class="pic block md:hidden">
-            <Swiper :slidesPerView="1" :loop="true" :autoplay="true" :modules="[Pagination, Autoplay]"
-                :pagination="{ clickable: true }">
-                <SwiperSlide class="relative">
-                    <img src="./s8/01m.jpg" alt="pic" />
-                    <p class="absolute text-[#fff]">Lobby 3d透視參考示意圖</p>
-                </SwiperSlide>
-                <SwiperSlide class="relative">
-                    <img src="./s8/02m.jpg" alt="pic" />
-                    <p class="absolute text-[#fff]">Lobby 3d透視參考示意圖</p>
-                </SwiperSlide>
-                <SwiperSlide class="relative">
-                    <img src="./s8/03m.jpg" alt="pic" />
-                    <p class="absolute text-[#fff]">Lobby 3d透視參考示意圖</p>
-                </SwiperSlide>
-                <SwiperSlide class="relative">
-                    <img src="./s8/04m.jpg" alt="pic" />
-                    <p class="absolute text-[#fff]">Lobby 3d透視參考示意圖</p>
-                </SwiperSlide>
-            </Swiper>
+        <div class="slider" data-aos="fade">
+            <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
+                <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
+                    <img :src="img.img" :alt="img.caption">
+                    <span class="caption absolute">{{ img.caption }}</span>
+                </SplideSlide>
+            </Splide>
         </div>
         <div class="text">
             <span class="text-[#595757] block md:hidden">＊3d示意圖僅供參考，以上之傢俱、飾品、畫作及植栽為情境示意表現，建設公司保有修正之權利</span>
@@ -109,6 +107,7 @@ import 'swiper/css/pagination';
 
             img {
                 height: size(600);
+                width: 100%;
 
                 @media screen and (max-width: 768px) {
                     height: auto;
@@ -152,6 +151,26 @@ import 'swiper/css/pagination';
                 }
             }
         }
+    }
+
+    .pic_item.not-compress img {
+        width: auto !important;
+        height: size(600);
+        max-width: 130%;
+        object-fit: contain;
+    }
+
+    .pic_item.overflow-right {
+        position: relative;
+        z-index: 1;
+    }
+
+    .pic_item.overflow-right img {
+        position: relative;
+        right: -250px;
+        width: auto;
+        height: size(600);
+        max-width: none;
     }
 
     .text {
@@ -214,6 +233,29 @@ import 'swiper/css/pagination';
             @media screen and (max-width: 768px) {
                 font-size: size-m(12.1);
                 line-height: size-m(20);
+            }
+        }
+    }
+
+    .caption {
+        position: absolute;
+        color: #fff;
+        font-size: size(16);
+        left: size(35);
+        top: size(20);
+
+        @media screen and (max-width: 768px) {
+            font-size: sizem(12);
+            left: sizem(10);
+            bottom: sizem(5);
+        }
+
+
+        span {
+            font-size: size(25);
+
+            @media screen and (max-width: 768px) {
+                font-size: sizem(15);
             }
         }
     }
