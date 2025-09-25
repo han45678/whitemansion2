@@ -15,11 +15,7 @@ const moved = (newIdx, prevIdx, destIdx) => {
 }
 
 const options = computed(() => {
-    // 根據目前滑塊決定顯示數量
     let perPage = 1.5;
-    if (currentSlideIndex.value === 1) { // 02.jpg 在 imgs 陣列 index 1
-        perPage = 1.5;
-    }
     return {
         rewind: true,
         arrows: false,
@@ -36,15 +32,18 @@ const options = computed(() => {
 const imgs = [
     {
         img: new URL("./s8/01.jpg", import.meta.url).href,
-        caption: "Lobby 3d透視參考示意圖"
+        caption: "Lobby 3d透視參考示意圖",
+        width: '1210px'
     },
     {
         img: new URL("./s8/03.jpg", import.meta.url).href,
-        caption: "Lobby 3d透視參考示意圖"
+        caption: "Lobby 3d透視參考示意圖",
+        width: '898px'
     },
     {
         img: new URL("./s8/01.jpg", import.meta.url).href,
-        caption: "Lobby 3d透視參考示意圖"
+        caption: "Lobby 3d透視參考示意圖",
+        width: '1210px'
     },
 ]
 </script>
@@ -53,7 +52,8 @@ const imgs = [
     <section class="s8 text-[#000] relative">
         <div class="slider" data-aos="fade">
             <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-                <SplideSlide class="slide-item" v-for="img in imgs" :key="img">
+                <SplideSlide class="slide-item" v-for="(img, idx) in imgs" :key="img"
+                    :style="{ maxWidth: img.width }">
                     <img :src="img.img" :alt="img.caption">
                     <span class="caption absolute">{{ img.caption }}</span>
                 </SplideSlide>
@@ -87,92 +87,7 @@ const imgs = [
         padding-bottom: size-m(35);
     }
 
-    .pic {
-        width: 100%;
-        position: relative;
-
-        @media screen and (max-width: 768px) {
-            width: 100%;
-        }
-
-        .swiper-slide {
-            display: flex;
-            width: 100%;
-            gap: 0 size(40);
-
-            .swiper-slide {
-                width: 100%;
-                display: flex;
-            }
-
-            img {
-                height: size(600);
-                width: 100%;
-
-                @media screen and (max-width: 768px) {
-                    height: auto;
-                    width: 100%;
-                }
-            }
-        }
-
-        p {
-            left: size(35);
-            top: size(20);
-
-            @media screen and (max-width: 768px) {
-                left: size-m(10);
-                top: size-m(5);
-            }
-        }
-
-        .swiper-pagination {
-            text-align: right;
-            padding-right: size(30);
-
-            .swiper-pagination-bullet {
-                border-radius: 100%;
-                border: 1px solid #fff;
-                width: size(20);
-                height: size(20);
-                margin-right: 0;
-                margin-left: size(20);
-                display: none;
-
-                @media screen and (max-width: 768px) {
-                    width: size-m(8);
-                    height: size-m(8);
-                    margin-left: size-m(8);
-                    display: inline-block;
-                }
-
-                &.swiper-pagination-bullet-active {
-                    background-color: #fff;
-                }
-            }
-        }
-    }
-
-    .pic_item.not-compress img {
-        width: auto !important;
-        height: size(600);
-        max-width: 130%;
-        object-fit: contain;
-    }
-
-    .pic_item.overflow-right {
-        position: relative;
-        z-index: 1;
-    }
-
-    .pic_item.overflow-right img {
-        position: relative;
-        right: -250px;
-        width: auto;
-        height: size(600);
-        max-width: none;
-    }
-
+    //文字區
     .text {
         padding: size(10) size(150) 0;
         display: flex;
@@ -237,25 +152,29 @@ const imgs = [
         }
     }
 
-    .caption {
-        position: absolute;
-        color: #fff;
-        font-size: size(16);
-        left: size(35);
-        top: size(20);
+    //輪播
+    .slider {
 
-        @media screen and (max-width: 768px) {
-            font-size: sizem(12);
-            left: sizem(10);
-            bottom: sizem(5);
-        }
-
-
-        span {
-            font-size: size(25);
+        //圖說
+        .caption {
+            position: absolute;
+            color: #fff;
+            font-size: size(16);
+            left: size(35);
+            top: size(20);
 
             @media screen and (max-width: 768px) {
-                font-size: sizem(15);
+                font-size: sizem(12);
+                left: sizem(10);
+                bottom: sizem(5);
+            }
+
+            span {
+                font-size: size(25);
+
+                @media screen and (max-width: 768px) {
+                    font-size: sizem(15);
+                }
             }
         }
     }
