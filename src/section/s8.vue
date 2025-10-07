@@ -4,61 +4,34 @@ import { Pagination, Autoplay } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import { computed, getCurrentInstance, ref, inject, onMounted } from "vue";
+import { computed, getCurrentInstance, ref, onMounted } from "vue";
 const globals = getCurrentInstance().appContext.config.globalProperties;
 const isMobile = computed(() => globals.$isMobile());
+
+const modules = [Pagination, Autoplay];
 
 const splide = ref();
 const currentSlideIndex = ref(0);
 const moved = (newIdx, prevIdx, destIdx) => {
     currentSlideIndex.value = prevIdx
 }
-
-const options = computed(() => {
-    let perPage = 1.5;
-    return {
-        rewind: true,
-        arrows: false,
-        pagination: false,
-        autoplay: true,
-        interval: 4000,
-        perPage,
-        focus: "left",
-        gap: 10,
-        type: 'loop'
-    }
-});
-
-const imgs = [
-    {
-        img: new URL("./s8/01.jpg", import.meta.url).href,
-        caption: "Lobby 3d透視參考示意圖",
-        width: '1210px'
-    },
-    {
-        img: new URL("./s8/03.jpg", import.meta.url).href,
-        caption: "Lobby 3d透視參考示意圖",
-        width: '898px'
-    },
-    {
-        img: new URL("./s8/01.jpg", import.meta.url).href,
-        caption: "Lobby 3d透視參考示意圖",
-        width: '1210px'
-    },
-]
 </script>
 
 <template>
     <section class="s8 text-[#000] relative">
-        <div class="slider" data-aos="fade">
-            <Splide ref="splide" class="slide" @splide:move="moved" :options="options">
-                <SplideSlide class="slide-item" v-for="(img, idx) in imgs" :key="img"
-                    :style="{ maxWidth: img.width }">
-                    <img :src="img.img" :alt="img.caption">
-                    <span class="caption absolute">{{ img.caption }}</span>
-                </SplideSlide>
-            </Splide>
-        </div>
+        <swiper :loop="true" :autoplay="{ delay: 3000 }" :slidesPerView="'auto'" :spaceBetween="30" :modules="modules"
+            class="mySwiper">
+            <swiper-slide>
+                <p>Lobby 3d透視參考示意圖</p><img src="./s8/01.jpg" />
+            </swiper-slide>
+            <swiper-slide>
+                <p>Lobby 3d透視參考示意圖</p><img src="./s8/03.jpg" />
+            </swiper-slide>
+            <swiper-slide>
+                <p>Lobby 3d透視參考示意圖</p><img src="./s8/01.jpg" />
+            </swiper-slide>
+        </swiper>
+
         <div class="text">
             <span class="text-[#595757] block md:hidden">＊3d示意圖僅供參考，以上之傢俱、飾品、畫作及植栽為情境示意表現，建設公司保有修正之權利</span>
             <h3 data-aos="fade-in" data-aos-duration="400">精緻而實用，放大「家」的生活維度。</h3>
@@ -153,13 +126,21 @@ const imgs = [
     }
 
     //輪播
-    .slider {
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
 
-        //圖說
-        .caption {
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+
+        p {
             position: absolute;
             color: #fff;
-            font-size: size(16);
+            font-size: size(20);
             left: size(35);
             top: size(20);
 
@@ -168,14 +149,13 @@ const imgs = [
                 left: sizem(10);
                 bottom: sizem(5);
             }
+        }
 
-            span {
-                font-size: size(25);
-
-                @media screen and (max-width: 768px) {
-                    font-size: sizem(15);
-                }
-            }
+        img {
+            display: block;
+            width: auto;
+            height: size(700);
+            object-fit: cover;
         }
     }
 }

@@ -13,8 +13,8 @@ const orderType = ref(true);
         <div class="pic text-[#fff]" v-if="orderType">
             <Swiper :slidesPerView="1" :loop="true" :autoplay="true" :modules="[Pagination, Autoplay]">
                 <SwiperSlide class="relative">
-                    <img class="hidden md:block" src="./s9/1.webp" alt="pic" />
-                    <img class="block md:hidden" src="./s9/m_1.webp" alt="pic" />
+                    <img class="hidden md:block" src="./s9/1.jpg" alt="pic" />
+                    <img class="block md:hidden" src="./s9/m1.jpg" alt="pic" />
                     <div class="pic_text">
                         <h3 class="hidden md:block" data-aos="fade-up">
                             ALL IN ONE全室裝修・圓夢更輕鬆
@@ -29,8 +29,8 @@ const orderType = ref(true);
                     </div>
                 </SwiperSlide>
                 <SwiperSlide class="relative">
-                    <img class="hidden md:block" src="./s9/2.webp" alt="pic" />
-                    <img class="block md:hidden" src="./s9/m_2.webp" alt="pic" />
+                    <img class="hidden md:block" src="./s9/2.jpg" alt="pic" />
+                    <img class="block md:hidden" src="./s9/m2.jpg" alt="pic" />
                     <div class="pic_text">
                         <h3 class="hidden md:block" data-aos="fade-up">
                             ALL IN ONE全室裝修・圓夢更輕鬆
@@ -45,8 +45,56 @@ const orderType = ref(true);
                     </div>
                 </SwiperSlide>
                 <SwiperSlide class="relative">
-                    <img class="hidden md:block" src="./s9/3.webp" alt="pic" />
-                    <img class="block md:hidden" src="./s9/m_3.webp" alt="pic" />
+                    <img class="hidden md:block" src="./s9/3.jpg" alt="pic" />
+                    <img class="block md:hidden" src="./s9/m3.jpg" alt="pic" />
+                    <div class="pic_text">
+                        <h3 class="hidden md:block" data-aos="fade-up">
+                            ALL IN ONE全室裝修・圓夢更輕鬆
+                        </h3>
+                        <h3 class="block md:hidden" data-aos="fade-up">
+                            ALL IN ONE全室裝修<br />圓夢更輕鬆
+                        </h3>
+                        <p>
+                            ＊全裝修包含：全室天花板、電視牆、鞋櫃、臥室衣櫃、床頭背板及冷氣室內外機<br>
+                            ＊3d示意圖僅供參考，以上之家電（除冷氣外）、傢俱、飾品、畫作及植栽為情境示意表現，實際依施工圖為主
+                        </p>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide class="relative">
+                    <img class="hidden md:block" src="./s9/4.jpg" alt="pic" />
+                    <img class="block md:hidden" src="./s9/m4.jpg" alt="pic" />
+                    <div class="pic_text">
+                        <h3 class="hidden md:block" data-aos="fade-up">
+                            ALL IN ONE全室裝修・圓夢更輕鬆
+                        </h3>
+                        <h3 class="block md:hidden" data-aos="fade-up">
+                            ALL IN ONE全室裝修<br />圓夢更輕鬆
+                        </h3>
+                        <p>
+                            ＊全裝修包含：全室天花板、電視牆、鞋櫃、臥室衣櫃、床頭背板及冷氣室內外機<br>
+                            ＊3d示意圖僅供參考，以上之家電（除冷氣外）、傢俱、飾品、畫作及植栽為情境示意表現，實際依施工圖為主
+                        </p>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide class="relative">
+                    <img class="hidden md:block" src="./s9/5.jpg" alt="pic" />
+                    <img class="block md:hidden" src="./s9/m5.jpg" alt="pic" />
+                    <div class="pic_text">
+                        <h3 class="hidden md:block" data-aos="fade-up">
+                            ALL IN ONE全室裝修・圓夢更輕鬆
+                        </h3>
+                        <h3 class="block md:hidden" data-aos="fade-up">
+                            ALL IN ONE全室裝修<br />圓夢更輕鬆
+                        </h3>
+                        <p>
+                            ＊全裝修包含：全室天花板、電視牆、鞋櫃、臥室衣櫃、床頭背板及冷氣室內外機<br>
+                            ＊3d示意圖僅供參考，以上之家電（除冷氣外）、傢俱、飾品、畫作及植栽為情境示意表現，實際依施工圖為主
+                        </p>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide class="relative">
+                    <img class="hidden md:block" src="./s9/6.jpg" alt="pic" />
+                    <img class="block md:hidden" src="./s9/m6.jpg" alt="pic" />
                     <div class="pic_text">
                         <h3 class="hidden md:block" data-aos="fade-up">
                             ALL IN ONE全室裝修・圓夢更輕鬆
@@ -65,8 +113,8 @@ const orderType = ref(true);
         <div class="pic text-[#fff]" v-else>
             <Swiper :slidesPerView="1" :loop="true" :autoplay="true" :modules="[Pagination, Autoplay]">
                 <SwiperSlide class="relative">
-                    <img class="hidden md:block" src="./s9/1.webp" alt="pic" />
-                    <img class="block md:hidden" src="./s9/m_1.webp" alt="pic" />
+                    <img class="hidden md:block" src="./s9/3-1.jpg" alt="pic" />
+                    <img class="block md:hidden" src="./s9/m3-1.jpg" alt="pic" />
                     <div class="pic_text">
                         <h3 class="hidden md:block" data-aos="fade-up">
                             ALL IN ONE全室裝修・圓夢更輕鬆
@@ -81,8 +129,8 @@ const orderType = ref(true);
                     </div>
                 </SwiperSlide>
                 <SwiperSlide class="relative">
-                    <img class="hidden md:block" src="./s9/2.webp" alt="pic" />
-                    <img class="block md:hidden" src="./s9/m_2.webp" alt="pic" />
+                    <img class="hidden md:block" src="./s9/3-2.jpg" alt="pic" />
+                    <img class="block md:hidden" src="./s9/m3-2.jpg" alt="pic" />
                     <div class="pic_text">
                         <h3 class="hidden md:block" data-aos="fade-up">
                             ALL IN ONE全室裝修・圓夢更輕鬆
@@ -97,8 +145,88 @@ const orderType = ref(true);
                     </div>
                 </SwiperSlide>
                 <SwiperSlide class="relative">
-                    <img class="hidden md:block" src="./s9/3.webp" alt="pic" />
-                    <img class="block md:hidden" src="./s9/m_3.webp" alt="pic" />
+                    <img class="hidden md:block" src="./s9/3-3.jpg" alt="pic" />
+                    <img class="block md:hidden" src="./s9/m3-3.jpg" alt="pic" />
+                    <div class="pic_text">
+                        <h3 class="hidden md:block" data-aos="fade-up">
+                            ALL IN ONE全室裝修・圓夢更輕鬆
+                        </h3>
+                        <h3 class="block md:hidden" data-aos="fade-up">
+                            ALL IN ONE全室裝修<br />圓夢更輕鬆
+                        </h3>
+                        <p>
+                            ＊全裝修包含：全室天花板、電視牆、鞋櫃、臥室衣櫃、床頭背板及冷氣室內外機<br>
+                            ＊3d示意圖僅供參考，以上之家電（除冷氣外）、傢俱、飾品、畫作及植栽為情境示意表現，實際依施工圖為主
+                        </p>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide class="relative">
+                    <img class="hidden md:block" src="./s9/3-4.jpg" alt="pic" />
+                    <img class="block md:hidden" src="./s9/m3-4.jpg" alt="pic" />
+                    <div class="pic_text">
+                        <h3 class="hidden md:block" data-aos="fade-up">
+                            ALL IN ONE全室裝修・圓夢更輕鬆
+                        </h3>
+                        <h3 class="block md:hidden" data-aos="fade-up">
+                            ALL IN ONE全室裝修<br />圓夢更輕鬆
+                        </h3>
+                        <p>
+                            ＊全裝修包含：全室天花板、電視牆、鞋櫃、臥室衣櫃、床頭背板及冷氣室內外機<br>
+                            ＊3d示意圖僅供參考，以上之家電（除冷氣外）、傢俱、飾品、畫作及植栽為情境示意表現，實際依施工圖為主
+                        </p>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide class="relative">
+                    <img class="hidden md:block" src="./s9/3-5.jpg" alt="pic" />
+                    <img class="block md:hidden" src="./s9/m3-5.jpg" alt="pic" />
+                    <div class="pic_text">
+                        <h3 class="hidden md:block" data-aos="fade-up">
+                            ALL IN ONE全室裝修・圓夢更輕鬆
+                        </h3>
+                        <h3 class="block md:hidden" data-aos="fade-up">
+                            ALL IN ONE全室裝修<br />圓夢更輕鬆
+                        </h3>
+                        <p>
+                            ＊全裝修包含：全室天花板、電視牆、鞋櫃、臥室衣櫃、床頭背板及冷氣室內外機<br>
+                            ＊3d示意圖僅供參考，以上之家電（除冷氣外）、傢俱、飾品、畫作及植栽為情境示意表現，實際依施工圖為主
+                        </p>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide class="relative">
+                    <img class="hidden md:block" src="./s9/3-6.jpg" alt="pic" />
+                    <img class="block md:hidden" src="./s9/m3-6.jpg" alt="pic" />
+                    <div class="pic_text">
+                        <h3 class="hidden md:block" data-aos="fade-up">
+                            ALL IN ONE全室裝修・圓夢更輕鬆
+                        </h3>
+                        <h3 class="block md:hidden" data-aos="fade-up">
+                            ALL IN ONE全室裝修<br />圓夢更輕鬆
+                        </h3>
+                        <p>
+                            ＊全裝修包含：全室天花板、電視牆、鞋櫃、臥室衣櫃、床頭背板及冷氣室內外機<br>
+                            ＊3d示意圖僅供參考，以上之家電（除冷氣外）、傢俱、飾品、畫作及植栽為情境示意表現，實際依施工圖為主
+                        </p>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide class="relative">
+                    <img class="hidden md:block" src="./s9/3-7.jpg" alt="pic" />
+                    <img class="block md:hidden" src="./s9/m3-7.jpg" alt="pic" />
+                    <div class="pic_text">
+                        <h3 class="hidden md:block" data-aos="fade-up">
+                            ALL IN ONE全室裝修・圓夢更輕鬆
+                        </h3>
+                        <h3 class="block md:hidden" data-aos="fade-up">
+                            ALL IN ONE全室裝修<br />圓夢更輕鬆
+                        </h3>
+                        <p>
+                            ＊全裝修包含：全室天花板、電視牆、鞋櫃、臥室衣櫃、床頭背板及冷氣室內外機<br>
+                            ＊3d示意圖僅供參考，以上之家電（除冷氣外）、傢俱、飾品、畫作及植栽為情境示意表現，實際依施工圖為主
+                        </p>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide class="relative">
+                    <img class="hidden md:block" src="./s9/3-8.jpg" alt="pic" />
+                    <img class="block md:hidden" src="./s9/m3-8.jpg" alt="pic" />
                     <div class="pic_text">
                         <h3 class="hidden md:block" data-aos="fade-up">
                             ALL IN ONE全室裝修・圓夢更輕鬆
@@ -207,7 +335,7 @@ const orderType = ref(true);
                     top: size-m(10);
                     left: size-m(35);
                     width: calc(100% - size-m(35));
-                    padding-right: size-m(35);
+                    padding-right: size-m(0);
                 }
             }
 
@@ -277,7 +405,7 @@ const orderType = ref(true);
                         margin-top: size-m(30);
                         margin-bottom: size-m(10);
                         font-size: size-m(42);
-                        letter-spacing: size-m(4.2);
+                        letter-spacing: size-m(3);
                         margin-right: 0;
                     }
                 }
