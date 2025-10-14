@@ -15,20 +15,26 @@ const currentSlideIndex = ref(0);
 const moved = (newIdx, prevIdx, destIdx) => {
     currentSlideIndex.value = prevIdx
 }
+// 輪播手機版無間距，電腦版30
+const swiperSpaceBetween = computed(() => isMobile.value ? 0 : 30);
+const swiperSlidesPerView = computed(() => isMobile.value ? 1 : 'auto');
 </script>
 
 <template>
     <section class="s8 text-[#000] relative">
-        <swiper :loop="true" :autoplay="{ delay: 3000 }" :slidesPerView="'auto'" :spaceBetween="30" :modules="modules"
-            class="mySwiper">
+        <swiper :loop="true" :autoplay="{ delay: 3000 }" :slidesPerView="swiperSlidesPerView"
+            :spaceBetween="swiperSpaceBetween" :modules="modules" class="mySwiper">
             <swiper-slide>
-                <p>Lobby 3d透視參考示意圖</p><img src="./s8/01.jpg" />
+                <p>Lobby 3d透視參考示意圖</p><img src="./s8/1.jpg" />
             </swiper-slide>
             <swiper-slide>
-                <p>Lobby 3d透視參考示意圖</p><img src="./s8/03.jpg" />
+                <p>Lounge 3d透視參考示意圖</p><img src="./s8/2.jpg" />
             </swiper-slide>
             <swiper-slide>
-                <p>Lobby 3d透視參考示意圖</p><img src="./s8/01.jpg" />
+                <p>Kitchen 3d透視參考示意圖</p><img src="./s8/3.jpg" />
+            </swiper-slide>
+            <swiper-slide>
+                <p>Gym 3d透視參考示意圖</p><img src="./s8/4.jpg" />
             </swiper-slide>
         </swiper>
 
@@ -141,21 +147,24 @@ const moved = (newIdx, prevIdx, destIdx) => {
             position: absolute;
             color: #fff;
             font-size: size(20);
-            left: size(35);
-            top: size(20);
+            right: size(35);
+            bottom: size(20);
 
             @media screen and (max-width: 768px) {
-                font-size: sizem(12);
-                left: sizem(10);
-                bottom: sizem(5);
+                font-size: size(60);
             }
         }
 
         img {
             display: block;
-            width: auto;
+            width: 100%;
             height: size(700);
             object-fit: cover;
+
+            @media screen and (max-width: 768px) {
+                height: auto;
+                max-height: 70vw;
+            }
         }
     }
 }
