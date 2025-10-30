@@ -1,3 +1,147 @@
+<script setup>
+import Policy from '@/section/form/policy.vue';
+import ContactInfo from '@/section/form/contactInfo.vue';
+import Map from '@/section/form/map.vue';
+import HouseInfo from '@/section/form/houseInfo.vue';
+
+import info from '@/info';
+
+import { cityList, renderAreaList } from '@/info/address.js';
+import { ref, reactive, watch, onMounted } from 'vue';
+import { VueRecaptcha } from 'vue-recaptcha';
+
+import { useToast } from 'vue-toastification';
+const toast = useToast();
+
+const formData = reactive({
+    name: '',
+    phone: '',
+    city: '',
+    area: '',
+    note: '',
+    policyChecked: false,
+    r_verify: false
+});
+
+//非必填
+// const bypass = ["note", "room_type", "email"]
+const bypass = [];
+
+//中文對照
+const formDataRef = ref([
+    '姓名',       // name
+    '手機',       // phone
+    '居住縣市',   // city
+    '居住地區',   // area
+    '請輸入您的留言', // note
+    '個資告知事項聲明', // policyChecked
+    '機器人驗證'  // r_verify
+]);
+
+
+const areaList = ref([]);
+
+watch(
+    () => formData.city,
+    (newVal) => {
+        areaList.value = renderAreaList(newVal) || [];
+        formData.area =
+            areaList.value.length > 0 ? areaList.value[0].value : '';
+    }
+);
+
+const onRecaptchaVerify = () => {
+    formData.r_verify = true;
+};
+const onRecaptchaUnVerify = () => {
+    formData.r_verify = false;
+};
+
+const send = () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmSource = urlParams.get('utm_source');
+    const utmMedium = urlParams.get('utm_medium');
+    const utmContent = urlParams.get('utm_content');
+    const utmCampaign = urlParams.get('utm_campaign');
+    const time = new Date();
+    const year = time.getFullYear();
+    const month = time.getMonth() + 1;
+    const day = time.getDate();
+    const hour = time.getHours();
+    const min = time.getMinutes();
+    const sec = time.getSeconds();
+    const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
+
+    const presend = new FormData();
+    let pass = true;
+    let unfill = [];
+    let idx = 0;
+
+    //驗證
+    for (const [key, value] of Object.entries(formData)) {
+        if (!bypass.includes(key)) {
+            if (value === '' || value === false || value === undefined) {
+                unfill.push(formDataRef.value[idx]);
+            }
+        }
+        idx++;
+        presend.append(key, value);
+    }
+
+    presend.append('utm_source', utmSource);
+    presend.append('utm_medium', utmMedium);
+    presend.append('utm_content', utmContent);
+    presend.append('utm_campaign', utmCampaign);
+
+    //有未填寫
+    if (unfill.length > 0) {
+        pass = false;
+        toast.error(`「${unfill.join(', ')}」為必填或必選`);
+        return;
+    }
+
+    //手機驗證
+    const MobileReg = /^(09)[0-9]{8}$/;
+    if (!formData.phone.match(MobileReg)) {
+        pass = false;
+        toast.error(`手機格式錯誤 ( 09開頭10位數字 )`);
+        return;
+    }
+
+    if (pass) {
+        fetch(
+            `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
+                &phone=${formData.phone}
+                &room_type=${formData.room_type}
+                &email=${formData.email}
+                &city=${formData.city}
+                &area=${formData.area}
+                &msg=${formData.msg}
+                &utm_source=${utmSource}
+                &utm_medium=${utmMedium}
+                &utm_content=${utmContent}
+                &utm_campaign=${utmCampaign}
+                &date=${date}
+                &campaign_name=${info.caseName}`,
+            {
+                method: 'GET'
+            }
+        ).then(() => {
+            fetch('contact-form.php', {
+                method: 'POST',
+                body: presend
+            }).then((response) => {
+                if (response.status === 200) {
+                    window.location.href = 'formThanks';
+                }
+            });
+        });
+
+        // toast.success(`表單已送出，感謝您的填寫`)
+    }
+};
+</script>
+
 <template>
     <div class="order relative bg-[#FFF] text-center font-['Noto_Sans_TC']">
         <!-- Title -->
@@ -7,50 +151,100 @@
         <!-- Form -->
         <div class="form mx-auto relative flex items-start justify-center">
             <div class="left h-full flex flex-col justify-between items-center">
-                <input type="text" placeholder="姓名*" class="input w-full rounded-none" :value="formData.name"
-                    @input="(event) => (formData.name = event.target.value)" />
-                <input type="text" placeholder="聯絡電話*" class="input w-full rounded-none" :value="formData.phone"
-                    @input="(event) => (formData.phone = event.target.value)" />
-                <select class="select w-full rounded-none" v-model="formData.city">
-                  <option value="" disabled>選擇縣市*</option>
-                  <option v-for="city in cityList" :key="city.value" :value="city.value">
-                    {{ city.label }}
-                  </option>
+                <input
+                    type="text"
+                    placeholder="姓名*"
+                    class="input w-full rounded-none"
+                    :value="formData.name"
+                    @input="(event) => (formData.name = event.target.value)"
+                />
+                <input
+                    type="text"
+                    placeholder="聯絡電話*"
+                    class="input w-full rounded-none"
+                    :value="formData.phone"
+                    @input="(event) => (formData.phone = event.target.value)"
+                />
+                <select
+                    class="select w-full rounded-none"
+                    v-model="formData.city"
+                >
+                    <option
+                        value=""
+                        disabled
+                    >
+                        選擇縣市*
+                    </option>
+                    <option
+                        v-for="city in cityList"
+                        :key="city.value"
+                        :value="city.value"
+                    >
+                        {{ city.label }}
+                    </option>
                 </select>
-                <select class="select w-full rounded-none" v-model="formData.area">
-                    <option value="" selected disabled>
+                <select
+                    class="select w-full rounded-none"
+                    v-model="formData.area"
+                >
+                    <option
+                        value=""
+                        selected
+                        disabled
+                    >
                         選擇區域*
                     </option>
-                    <option v-for="area in areaList" :value="area.value">
+                    <option
+                        v-for="area in areaList"
+                        :value="area.value"
+                    >
                         {{ area.label }}
                     </option>
                 </select>
             </div>
             <div class="right h-full">
-                <textarea :value="formData.note" @input="(event) => (formData.note = event.target.value)"
-                    class="textarea w-full h-full rounded-none" placeholder="請輸入您的留言"></textarea>
+                <textarea
+                    :value="formData.note"
+                    @input="(event) => (formData.note = event.target.value)"
+                    class="textarea w-full h-full rounded-none"
+                    placeholder="請輸入您的留言"
+                ></textarea>
             </div>
         </div>
 
         <!-- Policy -->
         <div class="policy">
             <div class="flex gap-2 items-center control">
-                <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
-                    class="checkbox bg-white rounded-md" />
+                <input
+                    type="checkbox"
+                    v-model="formData.policyChecked"
+                    :checked="formData.policyChecked"
+                    class="checkbox bg-white rounded-md"
+                />
                 <p>
-                    本人知悉並同意<label for="policy-modal"
-                        class="modal-button cursor-pointer hover:opacity-70 ">「個資告知事項聲明」</label>內容
+                    本人知悉並同意<label
+                        for="policy-modal"
+                        class="modal-button cursor-pointer hover:opacity-70"
+                        >「個資告知事項聲明」</label
+                    >內容
                 </p>
             </div>
             <Policy />
 
             <!-- Recaptcha -->
-            <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
-                @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
+            <vue-recaptcha
+                class="flex justify-center mt-8 z-10"
+                ref="recaptcha"
+                :sitekey="info.recaptcha_site_key_v2"
+                @verify="onRecaptchaVerify"
+                @expired="onRecaptchaUnVerify"
+            />
 
             <!-- Send -->
-            <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#E1554B] text-white"
-                @click="send()">
+            <div
+                class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#E1554B] text-white"
+                @click="send()"
+            >
                 立即預約
             </div>
         </div>
@@ -229,149 +423,3 @@
     }
 }
 </style>
-
-<script setup>
-import Policy from '@/section/form/policy.vue';
-import ContactInfo from '@/section/form/contactInfo.vue';
-import Map from '@/section/form/map.vue';
-import HouseInfo from '@/section/form/houseInfo.vue';
-
-import info from '@/info';
-
-import { cityList, renderAreaList } from '@/info/address.js';
-import { ref, reactive, watch, onMounted } from 'vue';
-import { VueRecaptcha } from 'vue-recaptcha';
-
-import { useToast } from 'vue-toastification';
-const toast = useToast();
-
-const formData = reactive({
-    name: '',
-    phone: '',
-    room_type: '',
-    // email: "",
-    city: '',
-    area: '',
-    note: '',
-    policyChecked: false,
-    r_verify: false
-});
-
-//非必填
-// const bypass = ["note", "room_type", "email"]
-const bypass = [];
-
-//中文對照
-const formDataRef = ref([
-    '姓名', //name
-    '手機', //phone
-    // '房型', //room_type
-    // "信箱", //email
-    '居住縣市', //city
-    '居住地區', //area
-    '請輸入您的留言', //note
-    '個資告知事項聲明', //policyChecked
-    '機器人驗證' //r_verify
-]);
-
-const areaList = ref([]);
-
-watch(
-  () => formData.city,
-  (newVal) => {
-    areaList.value = renderAreaList(newVal) || [];
-    formData.area = areaList.value.length > 0 ? areaList.value[0].value : '';
-  }
-);
-
-const onRecaptchaVerify = () => {
-    formData.r_verify = true;
-};
-const onRecaptchaUnVerify = () => {
-    formData.r_verify = false;
-};
-
-const send = () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const utmSource = urlParams.get('utm_source');
-    const utmMedium = urlParams.get('utm_medium');
-    const utmContent = urlParams.get('utm_content');
-    const utmCampaign = urlParams.get('utm_campaign');
-    const time = new Date();
-    const year = time.getFullYear();
-    const month = time.getMonth() + 1;
-    const day = time.getDate();
-    const hour = time.getHours();
-    const min = time.getMinutes();
-    const sec = time.getSeconds();
-    const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
-
-    const presend = new FormData();
-    let pass = true;
-    let unfill = [];
-    let idx = 0;
-
-    //驗證
-    for (const [key, value] of Object.entries(formData)) {
-        if (!bypass.includes(key)) {
-            if (value === '' || value === false || value === undefined) {
-                unfill.push(formDataRef.value[idx]);
-            }
-        }
-        idx++;
-        presend.append(key, value);
-    }
-
-    presend.append('utm_source', utmSource);
-    presend.append('utm_medium', utmMedium);
-    presend.append('utm_content', utmContent);
-    presend.append('utm_campaign', utmCampaign);
-
-    //有未填寫
-    if (unfill.length > 0) {
-        pass = false;
-        toast.error(`「${unfill.join(', ')}」為必填或必選`);
-        return;
-    }
-
-    //手機驗證
-    const MobileReg = /^(09)[0-9]{8}$/;
-    if (!formData.phone.match(MobileReg)) {
-        pass = false;
-        toast.error(`手機格式錯誤 ( 09開頭10位數字 )`);
-        return;
-    }
-
-    if (pass) {
-        fetch(
-            `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
-      &phone=${formData.phone}
-      &room_type=${formData.room_type}
-      &email=${formData.email}
-      &city=${formData.city}
-      &area=${formData.area}
-      &msg=${formData.msg}
-      &utm_source=${utmSource}
-      &utm_medium=${utmMedium}
-      &utm_content=${utmContent}
-      &utm_campaign=${utmCampaign}
-      &date=${date}
-      &campaign_name=${info.caseName}`,
-            {
-                method: 'GET'
-            }
-        ).then(() => {
-            fetch('contact-form.php', {
-                method: 'POST',
-                body: presend
-            }).then((response) => {
-                if (response.status === 200) {
-                    window.location.href = 'formThanks';
-                }
-            });
-        });
-
-        // toast.success(`表單已送出，感謝您的填寫`)
-    }
-};
-</script>
