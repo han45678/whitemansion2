@@ -415,10 +415,8 @@ const addressList = [
   });
   
   export const renderAreaList = city => {
-    if (city.length === 0) return [];
-    const findArea = address => address[0] === city;
-    return addressList
-      .find(findArea)
-      .slice(1)
-      .map(addr => ({ value: addr, label: addr }));
-  };
+      if (!city) return [];
+      const address = addressList.find(address => address[0] === city);
+      if (!address) return [];
+      return address.slice(1).map(addr => ({ value: addr, label: addr }));
+   };
