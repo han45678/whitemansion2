@@ -350,7 +350,8 @@ const send = () => {
       &phone=${formData.phone}
       &room_type=${formData.room_type}
       &email=${formData.email}
-      &cityarea=${formData.city}${formData.area}
+      &city=${formData.city}
+      &area=${formData.area}
       &msg=${formData.msg}
       &utm_source=${utmSource}
       &utm_medium=${utmMedium}
