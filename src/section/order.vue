@@ -143,7 +143,7 @@ const send = () => {
 </script>
 
 <template>
-    <div class="order relative bg-[#FFF] text-center font-['Noto_Sans_TC']">
+    <div id="booknow" class="order relative bg-[#FFF] text-center font-['Noto_Sans_TC']">
         <!-- Title -->
         <div class="title mx-auto order-title text-left text-[#E1554B]">
             {{ info.order.title }}
