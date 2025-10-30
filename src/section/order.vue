@@ -16,8 +16,8 @@ const toast = useToast();
 const formData = reactive({
     name: '',
     phone: '',
-    city: '',
-    area: '',
+    // city: '',
+    // area: '',
     note: '',
     policyChecked: false,
     r_verify: false
@@ -31,8 +31,8 @@ const bypass = [];
 const formDataRef = ref([
     '姓名',       // name
     '手機',       // phone
-    '居住縣市',   // city
-    '居住地區',   // area
+    // '居住縣市',   // city
+    // '居住地區',   // area
     '請輸入您的留言', // note
     '個資告知事項聲明', // policyChecked
     '機器人驗證'  // r_verify
@@ -150,11 +150,11 @@ const send = () => {
         </div>
         <!-- Form -->
         <div class="form mx-auto relative flex items-start justify-center">
-            <div class="left h-full flex flex-col justify-between items-center">
+            <div class="left h-full flex flex-col items-center">
                 <input
                     type="text"
                     placeholder="姓名*"
-                    class="input w-full rounded-none"
+                    class="input w-full rounded-none mb-5"
                     :value="formData.name"
                     @input="(event) => (formData.name = event.target.value)"
                 />
@@ -165,7 +165,7 @@ const send = () => {
                     :value="formData.phone"
                     @input="(event) => (formData.phone = event.target.value)"
                 />
-                <select
+                <!-- <select
                     class="select w-full rounded-none"
                     v-model="formData.city"
                 >
@@ -200,7 +200,7 @@ const send = () => {
                     >
                         {{ area.label }}
                     </option>
-                </select>
+                </select> -->
             </div>
             <div class="right h-full">
                 <textarea
@@ -354,7 +354,7 @@ const send = () => {
 
     .form {
         width: size(1480);
-        height: 300px;
+        height: 115px;
         gap: size(80);
         margin-bottom: size(50);
 
