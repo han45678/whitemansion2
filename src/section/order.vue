@@ -12,12 +12,10 @@
                 <input type="text" placeholder="聯絡電話*" class="input w-full rounded-none" :value="formData.phone"
                     @input="(event) => (formData.phone = event.target.value)" />
                 <select class="select w-full rounded-none" v-model="formData.city">
-                    <option value="" selected disabled>
-                        選擇縣市*
-                    </option>
-                    <option v-for="city in cityList" :value="city.value">
-                        {{ city.label }}
-                    </option>
+                  <option value="" disabled>選擇縣市*</option>
+                  <option v-for="city in cityList" :key="city.value" :value="city.value">
+                    {{ city.label }}
+                  </option>
                 </select>
                 <select class="select w-full rounded-none" v-model="formData.area">
                     <option value="" selected disabled>
@@ -279,11 +277,11 @@ const formDataRef = ref([
 const areaList = ref([]);
 
 watch(
-    () => formData.city,
-    (newVal, oldVal) => {
-        areaList.value = renderAreaList(newVal);
-        formData.area = areaList.value[0].value;
-    }
+  () => formData.city,
+  (newVal) => {
+    areaList.value = renderAreaList(newVal) || [];
+    formData.area = areaList.value.length > 0 ? areaList.value[0].value : '';
+  }
 );
 
 const onRecaptchaVerify = () => {
@@ -316,7 +314,7 @@ const send = () => {
     //驗證
     for (const [key, value] of Object.entries(formData)) {
         if (!bypass.includes(key)) {
-            if (value == '' || value == false) {
+            if (value === '' || value === false || value === undefined) {
                 unfill.push(formDataRef.value[idx]);
             }
         }
