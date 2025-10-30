@@ -73,7 +73,6 @@ const send = () => {
     const min = time.getMinutes();
     const sec = time.getSeconds();
     const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
-
     const presend = new FormData();
     let pass = true;
     let unfill = [];
