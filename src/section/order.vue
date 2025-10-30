@@ -16,37 +16,39 @@ const toast = useToast();
 const formData = reactive({
     name: '',
     phone: '',
-    // city: '',
-    // area: '',
+    room_type: '',
+    email: "",
+    city: '',
+    area: '',
     note: '',
     policyChecked: false,
     r_verify: false
 });
 
 //非必填
-// const bypass = ["note", "room_type", "email"]
-const bypass = [];
+const bypass = ["note", "room_type", "email","city","area"]
+// const bypass = [];
 
 //中文對照
 const formDataRef = ref([
-    '姓名',       // name
-    '手機',       // phone
-    // '居住縣市',   // city
-    // '居住地區',   // area
-    '請輸入您的留言', // note
-    '個資告知事項聲明', // policyChecked
-    '機器人驗證'  // r_verify
+    '姓名', //name
+    '手機', //phone
+    '房型', //room_type
+    "信箱", //email
+    '居住縣市', //city
+    '居住地區', //area
+    '備註訊息', //note
+    '個資告知事項聲明', //policyChecked
+    '機器人驗證' //r_verify
 ]);
-
 
 const areaList = ref([]);
 
 watch(
     () => formData.city,
-    (newVal) => {
-        areaList.value = renderAreaList(newVal) || [];
-        formData.area =
-            areaList.value.length > 0 ? areaList.value[0].value : '';
+    (newVal, oldVal) => {
+        areaList.value = renderAreaList(newVal);
+        formData.area = areaList.value[0].value;
     }
 );
 
@@ -80,7 +82,7 @@ const send = () => {
     //驗證
     for (const [key, value] of Object.entries(formData)) {
         if (!bypass.includes(key)) {
-            if (value === '' || value === false || value === undefined) {
+            if (value == '' || value == false) {
                 unfill.push(formDataRef.value[idx]);
             }
         }
@@ -114,8 +116,7 @@ const send = () => {
                 &phone=${formData.phone}
                 &room_type=${formData.room_type}
                 &email=${formData.email}
-                &city=${formData.city}
-                &area=${formData.area}
+                &cityarea=${formData.city}${formData.area}
                 &msg=${formData.msg}
                 &utm_source=${utmSource}
                 &utm_medium=${utmMedium}
@@ -143,18 +144,18 @@ const send = () => {
 </script>
 
 <template>
-    <div id="booknow" class="order relative bg-[#FFF] text-center font-['Noto_Sans_TC']">
+    <div class="order relative bg-[#FFF] text-center font-['Noto_Sans_TC']">
         <!-- Title -->
         <div class="title mx-auto order-title text-left text-[#E1554B]">
             {{ info.order.title }}
         </div>
         <!-- Form -->
         <div class="form mx-auto relative flex items-start justify-center">
-            <div class="left h-full flex flex-col items-center">
+            <div class="left h-full flex flex-col justify-between items-center">
                 <input
                     type="text"
                     placeholder="姓名*"
-                    class="input w-full rounded-none mb-5"
+                    class="input w-full rounded-none"
                     :value="formData.name"
                     @input="(event) => (formData.name = event.target.value)"
                 />
@@ -165,7 +166,7 @@ const send = () => {
                     :value="formData.phone"
                     @input="(event) => (formData.phone = event.target.value)"
                 />
-                <!-- <select
+                <select
                     class="select w-full rounded-none"
                     v-model="formData.city"
                 >
@@ -200,7 +201,7 @@ const send = () => {
                     >
                         {{ area.label }}
                     </option>
-                </select> -->
+                </select>
             </div>
             <div class="right h-full">
                 <textarea
@@ -354,7 +355,7 @@ const send = () => {
 
     .form {
         width: size(1480);
-        height: 115px;
+        height: 300px;
         gap: size(80);
         margin-bottom: size(50);
 
