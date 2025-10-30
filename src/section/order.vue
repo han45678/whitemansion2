@@ -17,7 +17,7 @@ const formData = reactive({
     name: '',
     phone: '',
     room_type: '',
-    email: "",
+    email: '',
     city: '',
     area: '',
     note: '',
@@ -26,7 +26,7 @@ const formData = reactive({
 });
 
 //非必填
-const bypass = ["note", "room_type", "email","city","area"]
+const bypass = ['note', 'room_type', 'email', 'city', 'area'];
 // const bypass = [];
 
 //中文對照
@@ -34,7 +34,7 @@ const formDataRef = ref([
     '姓名', //name
     '手機', //phone
     '房型', //room_type
-    "信箱", //email
+    '信箱', //email
     '居住縣市', //city
     '居住地區', //area
     '備註訊息', //note
@@ -144,7 +144,10 @@ const send = () => {
 </script>
 
 <template>
-    <div id="booknow" class="order relative bg-[#FFF] text-center font-['Noto_Sans_TC']">
+    <div
+        id="booknow"
+        class="order relative bg-[#FFF] text-center font-['Noto_Sans_TC']"
+    >
         <!-- Title -->
         <div class="title mx-auto order-title text-left text-[#E1554B]">
             {{ info.order.title }}
