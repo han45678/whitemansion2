@@ -11,18 +11,23 @@
                     <img src="../menu/close.svg" alt="icon" />
                 </li>
                 <li>
+                    <a @click="scrollTo('.order')">
+                        <img class="icon_5" src="../menu/icon_5.svg" alt="icon" />
+                    </a>
+                </li>
+                <li>
                     <a @click="
                         modalOpen = true;
                     modalType = 'gmap';
                     ">
-                        <img src="../menu/icon_1.svg" alt="icon" />
-                        <img src="../menu/icon_1_text.svg" alt="text" />
+                        <img class="icon" src="../menu/icon_1.svg" alt="icon" />
+                        <img class="icon_text" src="../menu/icon_1_text.svg" alt="text" />
                     </a>
                 </li>
                 <li>
                     <a @click="open()">
-                        <img src="../menu/icon_2.svg" alt="icon" />
-                        <img src="../menu/icon_2_text.svg" alt="text" />
+                        <img class="icon" src="../menu/icon_2.svg" alt="icon" />
+                        <img class="icon_text" src="../menu/icon_2_text.svg" alt="text" />
                     </a>
                 </li>
                 <li>
@@ -30,8 +35,8 @@
                         modalOpen = true;
                     modalType = 'fb';
                     ">
-                        <img src="../menu/icon_3.svg" alt="icon" />
-                        <img src="../menu/icon_3_text.svg" alt="text" />
+                        <img class="icon" src="../menu/icon_3.svg" alt="icon" />
+                        <img class="icon_text" src="../menu/icon_3_text.svg" alt="text" />
                     </a>
                 </li>
                 <li>
@@ -39,10 +44,11 @@
                         modalOpen = true;
                     modalType = 'phone';
                     ">
-                        <img src="../menu/icon_4.svg" alt="icon" />
-                        <img src="../menu/icon_4_text.svg" alt="text" />
+                        <img class="icon" src="../menu/icon_4.svg" alt="icon" />
+                        <img class="icon_text" src="../menu/icon_4_text.svg" alt="text" />
                     </a>
                 </li>
+
             </ul>
         </nav>
     </section>
@@ -98,21 +104,21 @@
             <!-- title -->
             <div class="text-xl mt-4 font-bold">
                 {{
-                modalType == 'phone'
-                ? '賞屋專線'
-                : modalType == 'fb'
-                ? 'Facebook Messenger'
-                : '接待會館'
+                    modalType == 'phone'
+                        ? '賞屋專線'
+                        : modalType == 'fb'
+                            ? 'Facebook Messenger'
+                            : '接待會館'
                 }}
             </div>
             <!-- content -->
             <div class="text-md mt-4">
                 {{
-                modalType == 'phone'
-                ? info.phone
-                : modalType == 'fb'
-                ? '線上諮詢'
-                : `接待中心：${info.address}`
+                    modalType == 'phone'
+                        ? info.phone
+                        : modalType == 'fb'
+                            ? '線上諮詢'
+                            : `接待中心：${info.address}`
                 }}
             </div>
             <!-- btn -->
@@ -120,14 +126,15 @@
                 hidden: modalType == 'phone' && !$isMobile(),
                 btlead: modalType == 'fb',
                 btsearch: modalType == 'gmap',
-                btcontac: modalType == 'phone'
+                btcontac: modalType == 'phone',
+                btreserve: modalType == 'reserve' && $isMobile()
             }">
                 {{
-                modalType == 'phone'
-                ? '撥打電話'
-                : modalType == 'fb'
-                ? '立即諮詢'
-                : '開啟導航'
+                    modalType == 'phone'
+                        ? '撥打電話'
+                        : modalType == 'fb'
+                            ? '立即諮詢'
+                            : '開啟導航'
                 }}
             </div>
         </div>
@@ -162,6 +169,33 @@
 
         @media screen and (max-width: 768px) {
             display: none;
+        }
+
+    }
+
+    //icon
+    .icon {
+        height: size(35);
+
+        @media screen and (max-width: 768px) {
+            height: size(120);
+        }
+    }
+
+    .icon_text {
+        height: size(9);
+
+        @media screen and (max-width: 768px) {
+            height: size(30);
+        }
+    }
+
+    .icon_5 {
+        width: size(90);
+
+        @media screen and (max-width: 768px) {
+            margin-top: size(40);
+            width: size(290);
         }
     }
 
