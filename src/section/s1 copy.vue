@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-    <section class="s12 text-[#000] font-['Noto_Sans_TC']">
+    <section class="s1 text-[#000] font-['Noto_Sans_TC']">
         <!-- 手機板 -->
         <div class="text block md:hidden" data-aos="fade-in" data-aos-duration="400">
             <h2>ALL IN ONE<span>全室裝修</span></h2>
@@ -34,11 +34,7 @@
                 <li>新化軸心</li>
                 <li>邊間 2~3 房</li>
             </ul>
-            <h5>
-                <span>06</span>
-                580-2368
-            </h5>
-            <img class="logo" src="./s12/logo.svg" alt="logo" data-aos="fade-in" data-aos-duration="800" />
+            <img class="logo" src="./s1/logo.svg" alt="logo" data-aos="fade-in" data-aos-duration="800" />
         </div>
         <div class="title hidden md:inline">
             <h3>小成本 大未來</h3>
@@ -51,15 +47,15 @@
             </p>
         </div>
 
-        <img class="logo block md:hidden" src="./s12/logo_m.svg" alt="logo" data-aos="fade-in" data-aos-duration="800" />
-        <img class="pic" src="./s12/pic.webp" alt="pic" />
+        <img class="logo block md:hidden" src="./s1/logo_m.svg" alt="logo" data-aos="fade-in" data-aos-duration="800" />
+        <img class="pic" src="./s1/pic.webp" alt="pic" />
     </section>
 </template>
 
 <style lang="scss">
 @import '@/assets/style/function.scss';
 
-.s12 {
+.s1 {
     position: relative;
     width: 100%;
     min-height: 100vh;
@@ -150,7 +146,7 @@
             display: flex;
             justify-content: center;
             margin-top: size(25);
-            margin-bottom: size(15);
+            margin-bottom: size(230);
 
             @media screen and (max-width: 768px) {
                 margin-top: size-m(8.5);
@@ -186,7 +182,7 @@
             @media screen and (max-width: 768px) {
                 font-weight: 700;
                 font-size: size-m(26);
-                margin-top: 0;
+                margin-top: size-m(37);
             }
         }
 
@@ -208,28 +204,18 @@
         }
 
         h5 {
-            display: flex;
-            margin-bottom: size(160);
-            font-size: size(100);
-            font-weight: 500;
-            justify-content: center;
 
             @media screen and (max-width: 768px) {
-                margin-bottom: size-m(35);
                 text-decoration: none;
                 font-size: size-m(44);
+                font-weight: 500;
                 display: flex;
                 justify-content: center;
-            }
 
-            span {
-                font-weight: 500;
-                font-size: size(55);
-                margin: size(25) size(15) 0 0;
-
-                @media screen and (max-width: 768px) {
+                span {
                     font-size: size-m(24);
-                    margin: size-m(10) size-m(7.5) 0 0;
+                    margin-right: size-m(7.5);
+                    margin-top: size-m(6);
                 }
             }
         }
@@ -247,9 +233,8 @@
         @media screen and (max-width: 768px) {
             position: absolute;
             width: calc(100% - size-m(60));
-            left: 0;
-            right: 0;
-            bottom: size-m(30);
+            left: size-m(30);
+            bottom: size-m(20);
             margin: auto;
             z-index: 1;
         }
@@ -263,8 +248,8 @@
         bottom: 0;
 
         @media screen and (max-width: 768px) {
-            width: size-m(405);
-            left: size-m(-55);
+            width: size-m(430);
+            left: size-m(-40);
         }
     }
 }

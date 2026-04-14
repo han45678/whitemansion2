@@ -24,7 +24,10 @@ const gtmNoScript = ref('')
 onMounted(() => {
   window.onload = function () {
     isLoading.value = false
-    AOS.init();
+  AOS.init({
+    duration: 2000,   // 動畫時間
+    once: true       // 是否只執行一次
+  })
   };
 
 })

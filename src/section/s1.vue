@@ -2,53 +2,13 @@
 
 <template>
     <section class="s1 text-[#000] font-['Noto_Sans_TC']">
-        <!-- 手機板 -->
-        <div class="text block md:hidden" data-aos="fade-in" data-aos-duration="400">
-            <h2>ALL IN ONE<span>全室裝修</span></h2>
-            <h4>大南科共榮圈</h4>
-            <ul>
-                <li>新化軸心</li>
-                <li>邊間 2~3 房</li>
-            </ul>
+        <!-- <img class="t0" src="./s1/1.jpg"> -->
+        <div class="w1" data-aos="fade-right" data-aos-delay="600"><img src="./s1/w.svg" alt="波浪" /></div>
+        <div class="w2" data-aos="fade-right" data-aos-delay="400"><img src="./s1/w.svg" alt="波浪" /></div>
+        <img class="pic" src="./s1/pic.webp" data-aos="fade-right" alt="pic" data-aos-delay="0" />
+        <img class="logo" src="./s1/logo.svg" alt="logo" data-aos="zoom-in" />
+        <img class="slogo" src="./s1/slogo.svg" alt="slogo" data-aos="zoom-in" data-aos-delay="1000" />
 
-            <h5>
-                <span>06</span>
-                580-2368
-            </h5>
-
-            <h3>小成本 大未來</h3>
-
-            <p class="text-[#E1554B]">
-                Light Start Big Future
-                <span>
-                    Every tomorrow begins with<br />
-                    a place we call home.
-                </span>
-            </p>
-        </div>
-        <!-- 電腦版 -->
-        <div class="text hidden md:inline" data-aos="fade-in" data-aos-duration="400">
-            <h2>ALL IN ONE<span>全室裝修</span></h2>
-            <h4>大南科共榮圈</h4>
-            <ul>
-                <li>新化軸心</li>
-                <li>邊間 2~3 房</li>
-            </ul>
-            <img class="logo" src="./s1/logo.svg" alt="logo" data-aos="fade-in" data-aos-duration="800" />
-        </div>
-        <div class="title hidden md:inline">
-            <h3>小成本 大未來</h3>
-            <p class="text-[#E1554B]">
-                Light Start Big Future
-                <span>
-                    Every tomorrow begins with<br />
-                    a place we call home.
-                </span>
-            </p>
-        </div>
-
-        <img class="logo block md:hidden" src="./s1/logo_m.svg" alt="logo" data-aos="fade-in" data-aos-duration="800" />
-        <img class="pic" src="./s1/pic.webp" alt="pic" />
     </section>
 </template>
 
@@ -58,198 +18,115 @@
 .s1 {
     position: relative;
     width: 100%;
-    min-height: 100vh;
-    height: size(1080);
-    max-height: size(1080);
-    background-color: #fde360;
+    min-height: size(900);
+    height: 100dvh;
+    max-height: size(1070);
+    background: url("./s1/bg.jpg") center center / cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-left: size(680);
+
+
+    // background-color: #fde360;
 
     @media screen and (max-width: 768px) {
-        min-height: size(3800);
-        height: size(3800);
-        max-height: size(3800);
+        min-height: size-m(604);
+        max-height: size-m(720);
+        background-image: url("./s1/bgm.jpg");
+        padding-left: size(0);
+
     }
 
-    .title {
+    .t0 {
+        pointer-events: none;
         position: absolute;
-        top: size(125);
-        left: size(175);
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 10;
+        opacity: 0.5;
 
-        h3 {
-            font-weight: 700;
-            font-size: size(70);
-        }
-
-        p {
-            display: flex;
-            align-items: center;
-            font-weight: 500;
-            font-size: size(30);
-            gap: size(24);
-            margin-top: size(15);
-
-            span {
-                font-size: size(11);
-            }
-        }
     }
 
-    .text {
-        text-align: center;
-        position: absolute;
-        left: size(947);
-        bottom: size(130);
-
-        @media screen and (max-width: 768px) {
-            width: 100%;
-            left: 0;
-            right: 0;
-            top: size-m(84);
-            bottom: unset;
-            margin: auto;
-        }
-
-        h2 {
-            font-weight: 600;
-            font-size: size(90);
-
-            @media screen and (max-width: 768px) {
-                font-size: size-m(34);
-                letter-spacing: size-m(0.34);
-            }
-
-            span {
-                display: inline-block;
-                margin-left: size(25);
-                font-size: size(80);
-                letter-spacing: size(4);
-
-                @media screen and (max-width: 768px) {
-                    font-size: size-m(32);
-                    margin-left: size-m(8);
-                    letter-spacing: size-m(1.6);
-                }
-            }
-        }
-
-        h4 {
-            font-weight: 600;
-            font-size: size(80);
-            letter-spacing: size(17.6);
-
-            @media screen and (max-width: 768px) {
-                font-size: size-m(36);
-                letter-spacing: size-m(2);
-            }
-        }
-
-        ul {
-            display: flex;
-            justify-content: center;
-            margin-top: size(25);
-            margin-bottom: size(230);
-
-            @media screen and (max-width: 768px) {
-                margin-top: size-m(8.5);
-                margin-bottom: size-m(7);
-            }
-
-            li {
-                font-weight: 500;
-                font-size: size(40);
-                padding-left: size(40);
-                padding-right: size(40);
-                border-left: size(3) solid #e1554b;
-
-                @media screen and (max-width: 768px) {
-                    font-size: size-m(16);
-                    padding-left: size-m(12);
-                    letter-spacing: size-m(2.56);
-                    padding-right: size-m(12);
-                    border-left: size-m(1) solid #e1554b;
-                }
-
-                &:last-child {
-                    border-right: size(3) solid #e1554b;
-
-                    @media screen and (max-width: 768px) {
-                        border-right: size-m(1) solid #e1554b;
-                    }
-                }
-            }
-        }
-
-        h3 {
-            @media screen and (max-width: 768px) {
-                font-weight: 700;
-                font-size: size-m(26);
-                margin-top: size-m(37);
-            }
-        }
-
-        p {
-            @media screen and (max-width: 768px) {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: size-m(6);
-                font-size: size-m(24);
-                font-size: size-m(10);
-                font-weight: 500;
-
-                span {
-                    font-size: size-m(4);
-                    text-align: left;
-                }
-            }
-        }
-
-        h5 {
-
-            @media screen and (max-width: 768px) {
-                text-decoration: none;
-                font-size: size-m(44);
-                font-weight: 500;
-                display: flex;
-                justify-content: center;
-
-                span {
-                    font-size: size-m(24);
-                    margin-right: size-m(7.5);
-                    margin-top: size-m(6);
-                }
-            }
-        }
-
-        .logo {
-            pointer-events: none;
-            width: size(860);
-        }
-    }
 
     .logo {
         pointer-events: none;
-        width: size(860);
+        width: size(720);
+        margin-top: size(80);
+
 
         @media screen and (max-width: 768px) {
-            position: absolute;
-            width: calc(100% - size-m(60));
-            left: size-m(30);
-            bottom: size-m(20);
-            margin: auto;
-            z-index: 1;
+        margin-top: size-m(103);
+        width: size-m(330);
+        }
+    }
+
+    .slogo {
+        margin-top: size(90);
+        width: size(550);
+
+        @media screen and (max-width: 768px) {
+            width: size-m(240);
+            margin: auto size-m(20) size-m(15) auto;
         }
     }
 
     .pic {
         pointer-events: none;
         position: absolute;
-        width: size(877);
+        width: size(707);
         left: 0;
-        bottom: 0;
+        bottom: size(-65);
+
+        @media screen and (max-width: 768px) {
+            width: size-m(310);
+            left: size-m(-25);
+            bottom: 0;
+        }
+    }
+
+    .w1 {
+        pointer-events: none;
+        position: absolute;
+        width: size(721);
+        height: size(190);
+        left: size(-260);
+        bottom: size(500);
 
         @media screen and (max-width: 768px) {
             width: size-m(430);
-            left: size-m(-40);
+            height: size-m(100);
+            left: size-m(-135);
+            bottom: size-m(130);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            transform: rotate(175deg);
+        }
+    }
+
+    .w2 {
+        pointer-events: none;
+        position: absolute;
+        width: size(750);
+        height: size(150);
+        left: size(300);
+        bottom: size(4);
+
+        @media screen and (max-width: 768px) {
+            width: size-m(630);
+            height: size-m(150);
+            left: size-m(-80);
+            bottom:  size-m(10);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
         }
     }
 }

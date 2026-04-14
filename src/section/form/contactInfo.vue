@@ -141,7 +141,7 @@
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" >
 @import '@/assets/style/function.scss';
 
 .menu {
@@ -249,7 +249,7 @@
                 }
 
                 &:hover {
-                    background-color: #e1554ba3;
+               //     background-color: #e1554ba3;
                 }
             }
 
