@@ -3,11 +3,11 @@
 <template>
     <section class="s1 text-[#000] font-['Noto_Sans_TC']">
         <!-- <img class="t0" src="./s1/1.jpg"> -->
-        <div class="w1" data-aos="fade-right" data-aos-delay="600"><img src="./s1/w.svg" alt="波浪" /></div>
-        <div class="w2" data-aos="fade-right" data-aos-delay="400"><img src="./s1/w.svg" alt="波浪" /></div>
-        <img class="pic" src="./s1/pic.webp" data-aos="fade-right" alt="pic" data-aos-delay="0" />
-        <img class="logo" src="./s1/logo.svg" alt="logo" data-aos="zoom-in" />
-        <img class="slogo" src="./s1/slogo.svg" alt="slogo" data-aos="zoom-in" data-aos-delay="1000" />
+        <div class="w1" data-aos="fade-right" data-aos-delay="600"><img src="./s1/w.svg" alt="波浪" data-aos-offset="-300" /></div>
+        <div class="w2" data-aos="fade-right" data-aos-delay="400"><img src="./s1/w.svg" alt="波浪" data-aos-offset="-300" /></div>
+        <img class="pic" src="./s1/pic.webp" data-aos="fade-right" alt="pic" data-aos-delay="0" data-aos-offset="-300" />
+        <img class="logo" src="./s1/logo.svg" alt="logo" data-aos="zoom-in" data-aos-offset="-300" />
+        <img class="slogo" src="./s1/slogo.svg" alt="slogo" data-aos="zoom-in" data-aos-delay="1000" data-aos-offset="-300" />
 
     </section>
 </template>
